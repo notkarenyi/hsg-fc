@@ -1,0 +1,153 @@
+---
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+mainfont: Arial
+sansfont: Arial
+fontsize: 16pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F,message = F)
+library(tidyverse)
+```
+
+# HSG Finance Committee Transparency Report Fall 2024
+
+```{r}
+df = read.csv("2024.csv")
+
+df <- df %>%
+  group_by(org) %>%
+  mutate(totalrequested=sum(amount)) 
+
+style <- function(p) {
+  p <- p  +
+    xlab("") +
+    ylab("") +
+    scale_y_continuous(
+      breaks = seq(0,3000,by=200),
+      labels = scales::dollar_format()
+    ) +
+    coord_flip() +
+    theme_classic() +
+    theme(
+      axis.line.y=element_blank(),
+      axis.ticks.y=element_blank(),
+      axis.line.x=element_blank(),
+      axis.ticks.x=element_blank(),
+      panel.grid.major.x=element_line(color="gray80")
+    )
+
+  return(p)
+}
+```
+
+## Summary
+
+In Fall 2024, HSG Finance Committee met X times for a total of X minutes.
+
+HSG funded `r sum(summarize(group_by(df,org),n=n())["n"])` events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$20,000.
+
+There were two rounds of allocations:
+
+* Main allocations: \$15,000
+* Special allocations: \$5,000
+
+Special allocations were released due to the HSG Executive Board decision to replace the annual Harris Gala in spring quarter with a less costly celebration. Historically, the Harris Gala cost over \$30,000 annually. 
+
+## Allocations by Organization
+
+The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),amount)["amount"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),amount)["amount"],na.rm=T)`.
+
+```{r}
+p <- df %>%
+  group_by(org) %>%
+  summarize(total=mean(totalreceived)) %>%
+  mutate(org=str_wrap(org,20)) %>%
+  ggplot(aes(org,total,fill=org)) +
+  geom_bar(stat="identity",show.legend=F) +
+  labs(title="Total Amount Received by Organization, Fall 2024")
+
+style(p)
+```
+
+## Allocations by Event Type
+
+Service events included volunteering.
+
+```{r}
+p <- df %>%
+  group_by(org,category) %>%
+  summarize(
+    # scale the amount requested by 
+    adjusted=sum(amount)/mean(totalrequested)*mean(totalreceived)
+  ) %>%
+  group_by(category) %>%
+  summarize(adjusted=round(sum(adjusted))) %>%
+  filter(!is.na(adjusted)) %>%
+  mutate(
+    category=fct_reorder(str_to_sentence(category), adjusted)
+  ) %>%
+  ggplot(aes(category,adjusted,fill=category)) +
+  geom_bar(stat="identity",show.legend=F) +
+  labs(title="Allocations by Event Type, Fall 2024",
+       subtitle="Estimated from amount requested per category")
+
+style(p)
+```
+
+## Allocations by Item Type
+
+Services included bartending. Gifts included speaker honorariums, promotional merchandise, and raffle prizes. Equipment included reusable supplies, such as board games.
+
+```{r}
+p <- df %>%
+  group_by(org,type) %>%
+  summarize(
+    # scale the amount requested by 
+    adjusted=sum(amount)/mean(totalrequested)*mean(totalreceived)
+  ) %>%
+  group_by(type) %>%
+  summarize(adjusted=round(sum(adjusted))) %>%
+  filter(!is.na(adjusted)) %>%
+  mutate(
+    type=fct_reorder(str_to_sentence(type), adjusted)
+  ) %>%
+  ggplot(aes(type,adjusted,fill=type)) +
+  geom_bar(stat="identity",show.legend=F) +
+  labs(title="Allocations by Item Type, Fall 2024",
+       subtitle="Estimated from amount requested per item type")
+
+style(p)
+```
+
+## Survey
+
+We need your voice to determine what types of events we, as the Harris student body, want to fund next quarter. Please fill the following 1-minute form to let us know your opinion.
+
+## Future improvements
+
+Improvements for next quarter: (use slides)
+
+* Expedite funding timelines
+  * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. Next quarter, HSOs can expect to receive funding by Week 1.
+* Increase funding transparency
+  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new [budgeting template]() and new [funding criteria]() to address these issues.
+  
+Sincerely,
+
+Tony Jiang, Finance Committee Chair
+
+Karen Yi, Finance Committee Member
+
+Andrea , Finance Committee Member
+
+Shivani Patel, Finance Committee Member
+
+Faris, Finance Committee Member
+
+Moe, Finance Committee Member
+
+Tiffany Tu, Finance Committee Member

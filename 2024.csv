@@ -127,8 +127,8 @@ Harris Consulting Club,workshop,beverages,90,1270,118,12
 Harris Consulting Club,workshop,food,30,1270,118,12
 Harris Consulting Club,social,food,140,1270,118,12
 Harris Consulting Club,social,beverages,210,1270,118,12
-Harris Consulting Club,social,food,560,1270,118,12
-Harris Consulting Club,social,beverages,160,1270,118,12
+Harris Consulting Club,workshop,food,560,1270,118,12
+Harris Consulting Club,workshop,beverages,160,1270,118,12
 Harris Consulting Club,speaker,food,50,1270,118,12
 Harris Consulting Club,social,printing,10,1270,118,12
 Harris Consulting Club,workshop,food,200,1270,118,12
@@ -181,7 +181,7 @@ Latin America Matters,speaker,food,600,760,3137,3
 Latin America Matters,speaker,services,1090,760,3137,3
 Military-Affiliated Students and Veterans,social,food,220,150,4061,3
 Military-Affiliated Students and Veterans,social,beverages,220,150,4061,3
-Military-Affiliated Students and Veterans,social,services,150,150,4061,3
+Military-Affiliated Students and Veterans,workshop,services,150,150,4061,3
 Military-Affiliated Students and Veterans,social,food,265,150,4061,3
 Military-Affiliated Students and Veterans,social,beverages,190,150,4061,3
 Military-Affiliated Students and Veterans,social,non-reusable supplies,304,150,4061,3
@@ -201,3 +201,39 @@ Minorities in Public Policy Studies,cultural,,200,1270,461,7
 Minorities in Public Policy Studies,social,food,100,1270,461,7
 Minorities in Public Policy Studies,social,beverages,100,1270,461,7
 Minorities in Public Policy Studies,community engagement,non-reusable supplies,30,1270,461,7
+OutPolitik,social,food,72,1140,1335,12
+OutPolitik,social,beverages,88,1140,1335,12
+OutPolitik,social,non-reusable supplies,45,1140,1335,12
+OutPolitik,speaker,food,300,1140,1335,12
+OutPolitik,speaker,beverages,104,1140,1335,12
+OutPolitik,social,food,987,1140,1335,12
+OutPolitik,social,non-reusable supplies,7,1140,1335,12
+OutPolitik,social,food,15,1140,1335,12
+OutPolitik,social,beverages,72,1140,1335,12
+OutPolitik,workshop,food,190,1140,1335,12
+OutPolitik,community engagement,food,285,1140,1335,12
+OutPolitik,speaker,food,300,1140,1335,12
+OutPolitik,speaker,beverages,105,1140,1335,12
+OutPolitik,speaker,gift,250,1140,1335,12
+OutPolitik,social,food,309,1140,1335,12
+OutPolitik,social,beverages,5,1140,1335,12
+OutPolitik,community engagement,services,750,1140,1335,12
+OutPolitik,social,food,56,1140,1335,12
+OutPolitik,promotion,non-reusable supplies,135,1140,1335,12
+OutPolitik,social,food,160,1140,1335,12
+OutPolitik,social,non-reusable supplies,22,1140,1335,12
+OutPolitik,social,beverages,6,1140,1335,12
+Public Finance Association,workshop,food,527,820,18,5
+Public Finance Association,workshop,beverages,68,820,18,5
+Public Finance Association,workshop,non-reusable supplies,33,820,18,5
+Public Finance Association,social,food,216,820,18,5
+Public Finance Association,promotion,food,55,820,18,5
+Public Finance Association,promotion,gift,100,820,18,5
+Public Finance Association,promotion,non-reusable supplies,10,820,18,5
+Public Finance Association,speaker,food,716,820,18,5
+Public Finance Association,speaker,beverages,68,820,18,5
+Public Finance Association,speaker,non-reusable supplies,40,820,18,5
+Public Finance Association,speaker,food,292,820,18,5
+Public Finance Association,speaker,beverages,68,820,18,5
+Public Finance Association,speaker,non-reusable supplies,30,820,18,5
+Public Management and Policy Student Association,,,,,,

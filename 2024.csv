@@ -1,94 +1,203 @@
 ﻿org,category,type,amount,totalreceived,totalrollover,nevents
 Association of Latinx Students for Social Justice,social,food,75,610,50,5
-Association of Latinx Students for Social Justice,social,beverage,80,610,50,5
-Association of Latinx Students for Social Justice,social,utensils,25,610,50,5
+Association of Latinx Students for Social Justice,social,beverages,80,610,50,5
+Association of Latinx Students for Social Justice,social,non-reusable supplies,25,610,50,5
 Association of Latinx Students for Social Justice,cultural,food,150,610,50,5
-Association of Latinx Students for Social Justice,cultural,beverage,80,610,50,5
-Association of Latinx Students for Social Justice,cultural,decorations,30,610,50,5
+Association of Latinx Students for Social Justice,cultural,beverages,80,610,50,5
+Association of Latinx Students for Social Justice,cultural,reusable supplies,30,610,50,5
 Association of Latinx Students for Social Justice,social,food,355,610,50,5
-Association of Latinx Students for Social Justice,social,beverage,40,610,50,5
-Association of Latinx Students for Social Justice,social,utensils,25,610,50,5
+Association of Latinx Students for Social Justice,social,beverages,40,610,50,5
+Association of Latinx Students for Social Justice,social,non-reusable supplies,25,610,50,5
 Association of Latinx Students for Social Justice,speaker,food,650,610,50,5
-Association of Latinx Students for Social Justice,speaker,beverage,30,610,50,5
-Association of Latinx Students for Social Justice,speaker,utensils,25,610,50,5
+Association of Latinx Students for Social Justice,speaker,beverages,30,610,50,5
+Association of Latinx Students for Social Justice,speaker,non-reusable supplies,25,610,50,5
 Association of Latinx Students for Social Justice,social,food,80,610,50,5
-Association of Latinx Students for Social Justice,social,beverage,15,610,50,5
-Association of Latinx Students for Social Justice,social,utensils,25,610,50,5
+Association of Latinx Students for Social Justice,social,beverages,15,610,50,5
+Association of Latinx Students for Social Justice,social,non-reusable supplies,25,610,50,5
 Asian Policy Forum,promotion,food,120,1420,1650,6
 Asian Policy Forum,promotion,printing,120,1420,1650,6
 Asian Policy Forum,promotion,gift,500,1420,1650,6
 Asian Policy Forum,social,food,1776,1420,1650,6
-Asian Policy Forum,social,beverage,40,1420,1650,6
+Asian Policy Forum,social,beverages,40,1420,1650,6
 Asian Policy Forum,promotion,food,512,1420,1650,6
 Asian Policy Forum,promotion,services,300,1420,1650,6
 Asian Policy Forum,speaker,food,860,1420,1650,6
 Asian Policy Forum,speaker,services,40,1420,1650,6
 Asian Policy Forum,publication,printing,600,1420,1650,6
 Asian Policy Forum,cultural,services,1800,1420,1650,6
-Asian Policy Forum,cultural,decorations,330,1420,1650,6
-Asian Policy Forum,cultural,equipment,50,1420,1650,6
+Asian Policy Forum,cultural,reusable supplies,330,1420,1650,6
+Asian Policy Forum,cultural,reusable supplies,50,1420,1650,6
 Asian Policy Forum,cultural,food,480,1420,1650,6
 Asian Policy Forum,cultural,services,340,1420,1650,6
-Black Action in Public Policy Studies,social,utensils,100,1340,400,12
+Black Action in Public Policy Studies,social,non-reusable supplies,100,1340,400,12
 Black Action in Public Policy Studies,social,food,360,1340,400,12
 Black Action in Public Policy Studies,promotion,services,120,1340,400,12
 Black Action in Public Policy Studies,promotion,gift,150,1340,400,12
-Black Action in Public Policy Studies,speaker,beverage,128,1340,400,12
+Black Action in Public Policy Studies,speaker,beverages,128,1340,400,12
 Black Action in Public Policy Studies,speaker,services,100,1340,400,12
 Black Action in Public Policy Studies,speaker,food,355,1340,400,12
-Black Action in Public Policy Studies,workshop,beverage,33,1340,400,12
+Black Action in Public Policy Studies,workshop,beverages,33,1340,400,12
 Black Action in Public Policy Studies,workshop,food,265,1340,400,12
 Black Action in Public Policy Studies,promotion,services,150,1340,400,12
 Black Action in Public Policy Studies,social,food,99,1340,400,12
-Black Action in Public Policy Studies,social,beverage,33,1340,400,12
+Black Action in Public Policy Studies,social,beverages,33,1340,400,12
 Black Action in Public Policy Studies,social,food,700,1340,400,12
-Black Action in Public Policy Studies,social,equipment,50,1340,400,12
-Black Action in Public Policy Studies,social,utensils,10,1340,400,12
+Black Action in Public Policy Studies,social,reusable supplies,50,1340,400,12
+Black Action in Public Policy Studies,social,non-reusable supplies,10,1340,400,12
 Black Action in Public Policy Studies,cultural,food,721,1340,400,12
-Black Action in Public Policy Studies,cultural,decorations,100,1340,400,12
+Black Action in Public Policy Studies,cultural,reusable supplies,100,1340,400,12
 Black Action in Public Policy Studies,cultural,gift,50,1340,400,12
 Black Action in Public Policy Studies,social,food,326,1340,400,12
-Black Action in Public Policy Studies,social,beverage,66,1340,400,12
-Black Action in Public Policy Studies,social,utensils,30,1340,400,12
-Black Action in Public Policy Studies,service,services,250,1340,400,12
-Black Action in Public Policy Studies,service,food,153,1340,400,12
-Black Action in Public Policy Studies,service,beverage,28,1340,400,12
+Black Action in Public Policy Studies,social,beverages,66,1340,400,12
+Black Action in Public Policy Studies,social,non-reusable supplies,30,1340,400,12
+Black Action in Public Policy Studies,community engagement,services,250,1340,400,12
+Black Action in Public Policy Studies,community engagement,food,153,1340,400,12
+Black Action in Public Policy Studies,community engagement,beverages,28,1340,400,12
 Black Action in Public Policy Studies,speaker,food,350,1340,400,12
-Black Action in Public Policy Studies,speaker,beverage,116,1340,400,12
+Black Action in Public Policy Studies,speaker,beverages,116,1340,400,12
 Black Action in Public Policy Studies,social,food,355,1340,400,12
-Black Action in Public Policy Studies,social,beverage,168,1340,400,12
+Black Action in Public Policy Studies,social,beverages,168,1340,400,12
 Black Action in Public Policy Studies,social,services,146,1340,400,12
 Black Action in Public Policy Studies,workshop,food,122,1340,400,12
-Black Action in Public Policy Studies,workshop,beverage,33,1340,400,12
-Black Action in Public Policy Studies,workshop,utensils,30,1340,400,12
-Black Action in Public Policy Studies,social,beverage,44,1340,400,12
+Black Action in Public Policy Studies,workshop,beverages,33,1340,400,12
+Black Action in Public Policy Studies,workshop,non-reusable supplies,30,1340,400,12
+Black Action in Public Policy Studies,social,beverages,44,1340,400,12
 Black Action in Public Policy Studies,social,food,55,1340,400,12
-Crime & Justice Policy Association,,,,660,250,4
+Crime & Justice Policy Association,social,non-reusable supplies,105,660,250,4
+Crime & Justice Policy Association,social,food,280,660,250,4
+Crime & Justice Policy Association,social,beverages,45,660,250,4
+Crime & Justice Policy Association,social,non-reusable supplies,20,660,250,4
+Crime & Justice Policy Association,speaker,food,219,660,250,4
+Crime & Justice Policy Association,speaker,services,975,660,250,4
+Crime & Justice Policy Association,film screening,services,130,660,250,4
+Crime & Justice Policy Association,film screening,food,56,660,250,4
+Crime & Justice Policy Association,film screening,beverages,15,660,250,4
+Crime & Justice Policy Association,speaker,food,348,660,250,4
+Crime & Justice Policy Association,speaker,beverages,15,660,250,4
 Chicago Policy Review,social,services,1000,740,2367,6
 Chicago Policy Review,workshop,food,150,740,2367,6
-Chicago Policy Review,workshop,beverage,54,740,2367,6
+Chicago Policy Review,workshop,beverages,54,740,2367,6
 Chicago Policy Review,social,food,751,740,2367,6
 Chicago Policy Review,publication,printing,1000,740,2367,6
 Chicago Policy Review,promotion,food,100,740,2367,6
 Chicago Policy Review,workshop,food,150,740,2367,6
-Chicago Policy Review,workshop,beverage,54,740,2367,6
+Chicago Policy Review,workshop,beverages,54,740,2367,6
 Chicago Policy Review,workshop,food,150,740,2367,6
-Chicago Policy Review,workshop,beverage,54,740,2367,6
+Chicago Policy Review,workshop,beverages,54,740,2367,6
 Chicago Policy Review,workshop,food,150,740,2367,6
-Chicago Policy Review,workshop,beverage,54,740,2367,6
+Chicago Policy Review,workshop,beverages,54,740,2367,6
 "Data, Ethics, & Policy Conference",speaker,gift,2000,180,6365,4
 "Data, Ethics, & Policy Conference",speaker,food,700,180,6365,4
-"Data, Ethics, & Policy Conference",speaker,beverage,250,180,6365,4
-"Data, Ethics, & Policy Conference",speaker,utensils,250,180,6365,4
+"Data, Ethics, & Policy Conference",speaker,beverages,250,180,6365,4
+"Data, Ethics, & Policy Conference",speaker,non-reusable supplies,250,180,6365,4
 "Data, Ethics, & Policy Conference",speaker,printing,250,180,6365,4
-"Data, Ethics, & Policy Conference",speaker,equipment,50,180,6365,4
+"Data, Ethics, & Policy Conference",speaker,reusable supplies,50,180,6365,4
 European Policy Forum,debate,food,180,330,0,3
-European Policy Forum,debate,beverage,20,330,0,3
+European Policy Forum,debate,beverages,20,330,0,3
 European Policy Forum,debate,printing,50,330,0,3
-European Policy Forum,movie,beverage,70,330,0,3
-European Policy Forum,movie,food,108,330,0,3
-European Policy Forum,movie,printing,50,330,0,3
+European Policy Forum,film screening,beverages,70,330,0,3
+European Policy Forum,film screening,food,108,330,0,3
+European Policy Forum,film screening,printing,50,330,0,3
 European Policy Forum,speaker,food,220,330,0,3
-European Policy Forum,speaker,beverage,20,330,0,3
+European Policy Forum,speaker,beverages,20,330,0,3
 European Policy Forum,speaker,printing,50,330,0,3
-Education Policy Student Association,,,,680,100,6
+Education Policy Student Assocation,social,food,66,680,100,5
+Education Policy Student Assocation,social,beverages,83,680,100,5
+Education Policy Student Assocation,social,non-reusable supplies,5,680,100,5
+Education Policy Student Assocation,social,beverages,44,680,100,5
+Education Policy Student Assocation,speaker,food,217,680,100,5
+Education Policy Student Assocation,speaker,beverages,18,680,100,5
+Education Policy Student Assocation,speaker,non-reusable supplies,7,680,100,5
+Education Policy Student Assocation,speaker,gift,60,680,100,5
+Education Policy Student Assocation,speaker,food,345,680,100,5
+Education Policy Student Assocation,speaker,services,150,680,100,5
+Education Policy Student Assocation,social,food,75,680,100,5
+Education Policy Student Assocation,social,beverages,35,680,100,5
+Education Policy Student Assocation,social,non-reusable supplies,9,680,100,5
+Harris Consulting Club,social,beverages,50,1270,118,12
+Harris Consulting Club,social,food,300,1270,118,12
+Harris Consulting Club,workshop,food,200,1270,118,12
+Harris Consulting Club,workshop,food,150,1270,118,12
+Harris Consulting Club,workshop,food,150,1270,118,12
+Harris Consulting Club,workshop,food,150,1270,118,12
+Harris Consulting Club,social,food,140,1270,118,12
+Harris Consulting Club,social,beverages,210,1270,118,12
+Harris Consulting Club,workshop,food,400,1270,118,12
+Harris Consulting Club,workshop,beverages,90,1270,118,12
+Harris Consulting Club,workshop,food,30,1270,118,12
+Harris Consulting Club,social,food,140,1270,118,12
+Harris Consulting Club,social,beverages,210,1270,118,12
+Harris Consulting Club,social,food,560,1270,118,12
+Harris Consulting Club,social,beverages,160,1270,118,12
+Harris Consulting Club,speaker,food,50,1270,118,12
+Harris Consulting Club,social,printing,10,1270,118,12
+Harris Consulting Club,workshop,food,200,1270,118,12
+Harris Consulting Club,social,food,140,1270,118,12
+Harris Consulting Club,social,beverages,210,1270,118,12
+Harris Consulting Club,promotion,gift,150,1270,118,12
+Harris Consulting Club,social,services,50,1270,118,12
+Harris Consulting Club,workshop,non-reusable supplies,30,1270,118,12
+Harris Community Action,promotion,food,300,140,8935,5
+Harris Community Action,promotion,beverages,20,140,8935,5
+Harris Community Action,social,food,200,140,8935,5
+Harris Community Action,social,beverages,200,140,8935,5
+Harris Community Action,community engagement,services,1440,140,8935,5
+Harris Community Action,community engagement,food,300,140,8935,5
+Harris Community Action,community engagement,beverages,20,140,8935,5
+Harris Community Action,community engagement,food,400,140,8935,5
+Harris Community Action,community engagement,beverages,20,140,8935,5
+Harris Energy and Environmental Association,social,food,110,140,1864,4
+Harris Energy and Environmental Association,social,beverages,110,140,1864,4
+Harris Energy and Environmental Association,speaker,food,222,140,1864,4
+Harris Energy and Environmental Association,speaker,food,150,140,1864,4
+Harris Energy and Environmental Association,speaker,beverages,22,140,1864,4
+Harris Energy and Environmental Association,social,food,410,140,1864,4
+Harris Energy and Environmental Association,social,beverages,500,140,1864,4
+Harris Energy and Environmental Association,social,services,500,140,1864,4
+Harris Student Government,social,food,500,500,1000,4
+Harris Impact Investing,social,food,92,570,519,3
+Harris Impact Investing,social,beverages,156,570,519,3
+Harris Impact Investing,social,non-reusable supplies,30,570,519,3
+Harris Impact Investing,speaker,food,320,570,519,3
+Harris Impact Investing,speaker,beverages,203,570,519,3
+Harris Impact Investing,workshop,food,552,570,519,3
+Harris Impact Investing,promotion,printing,56,570,519,3
+International Development Policy Association,speaker,food,170,1020,1780,9
+International Development Policy Association,social,food,180,1020,1780,9
+International Development Policy Association,social,beverages,180,1020,1780,9
+International Development Policy Association,social,printing,25,1020,1780,9
+International Development Policy Association,speaker,food,500,1020,1780,9
+International Development Policy Association,speaker,food,500,1020,1780,9
+International Development Policy Association,speaker,food,840,1020,1780,9
+International Development Policy Association,speaker,food,738,1020,1780,9
+International Development Policy Association,speaker,services,50,1020,1780,9
+International Development Policy Association,workshop,food,340,1020,1780,9
+International Development Policy Association,workshop,food,340,1020,1780,9
+International Development Policy Association,film screening,food,500,1020,1780,9
+Latin America Matters,social,food,120,760,3137,3
+Latin America Matters,promotion,gift,60,760,3137,3
+Latin America Matters,speaker,food,250,760,3137,3
+Latin America Matters,speaker,food,600,760,3137,3
+Latin America Matters,speaker,services,1090,760,3137,3
+Military-Affiliated Students and Veterans,social,food,220,150,4061,3
+Military-Affiliated Students and Veterans,social,beverages,220,150,4061,3
+Military-Affiliated Students and Veterans,social,services,150,150,4061,3
+Military-Affiliated Students and Veterans,social,food,265,150,4061,3
+Military-Affiliated Students and Veterans,social,beverages,190,150,4061,3
+Military-Affiliated Students and Veterans,social,non-reusable supplies,304,150,4061,3
+Minorities in Public Policy Studies,promotion,gift,210,1270,461,7
+Minorities in Public Policy Studies,social,food,300,1270,461,7
+Minorities in Public Policy Studies,community engagement,services,675,1270,461,7
+Minorities in Public Policy Studies,social,food,1800,1270,461,7
+Minorities in Public Policy Studies,social,services,550,1270,461,7
+Minorities in Public Policy Studies,social,beverages,300,1270,461,7
+Minorities in Public Policy Studies,social,reusable supplies,250,1270,461,7
+Minorities in Public Policy Studies,social,non-reusable supplies,100,1270,461,7
+Minorities in Public Policy Studies,community engagement,services,550,1270,461,7
+Minorities in Public Policy Studies,community engagement,food,600,1270,461,7
+Minorities in Public Policy Studies,social,food,900,1270,461,7
+Minorities in Public Policy Studies,cultural,,200,1270,461,7
+Minorities in Public Policy Studies,cultural,,200,1270,461,7
+Minorities in Public Policy Studies,social,food,100,1270,461,7
+Minorities in Public Policy Studies,social,beverages,100,1270,461,7
+Minorities in Public Policy Studies,community engagement,non-reusable supplies,30,1270,461,7

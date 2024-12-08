@@ -17,17 +17,18 @@ library(tidyverse)
 
 ```{r}
 df = read.csv("2024.csv")
+hours = read.csv("hours.csv")
 
 df <- df %>%
   group_by(org) %>%
   mutate(totalrequested=sum(amount)) 
 
-style <- function(p) {
+style <- function(p,dist=200) {
   p <- p  +
     xlab("") +
     ylab("") +
     scale_y_continuous(
-      breaks = seq(0,3000,by=200),
+      breaks = seq(0,10000,by=dist),
       labels = scales::dollar_format()
     ) +
     coord_flip() +
@@ -46,16 +47,17 @@ style <- function(p) {
 
 ## Summary
 
-In Fall 2024, HSG Finance Committee met X times for a total of X minutes.
-
-HSG funded `r sum(summarize(group_by(df,org),n=n())["n"])` events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$20,000.
+In Fall 2024, HSG Finance Committee met `r nrow(hours)` times for a total of `r sum(hours$minutes)` minutes.
 
 There were two rounds of allocations:
 
 * Main allocations: \$15,000
 * Special allocations: \$5,000
 
-Special allocations were released due to the HSG Executive Board decision to replace the annual Harris Gala in spring quarter with a less costly celebration. Historically, the Harris Gala cost over \$30,000 annually. 
+HSG funded `r sum(summarize(group_by(df,org),n=mean(nevents
+))["n"])` events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$20,000.
+
+Special allocations were released due to the HSG Executive Board decision to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000 annually. 
 
 ## Allocations by Organization
 
@@ -71,6 +73,17 @@ p <- df %>%
   labs(title="Total Amount Received by Organization, Fall 2024")
 
 style(p)
+```
+
+```{r}
+p <- df %>%
+  group_by(org) %>%
+  summarize(rollover=mean(totalrollover)) %>%
+  ggplot(aes(org,rollover,fill=org)) +
+  geom_bar(stat="identity",show.legend=F) +
+  labs(title="Total Rollover/External Funds by Organization, Fall 2024")
+  
+style(p,2000)
 ```
 
 ## Allocations by Event Type

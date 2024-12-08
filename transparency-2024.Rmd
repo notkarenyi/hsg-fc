@@ -3,7 +3,7 @@ output:
   pdf_document: 
     latex_engine: xelatex
   html_document: default
-mainfont: Arial
+mainfont: Georgia
 sansfont: Arial
 fontsize: 16pt
 ---
@@ -23,7 +23,7 @@ df <- df %>%
   group_by(org) %>%
   mutate(
     totalrequested=sum(amount),
-    org=str_wrap(org,20)
+    org=str_wrap(org,40)
   )
 
 style <- function(p,dist=200,dollars=T) {
@@ -37,7 +37,9 @@ style <- function(p,dist=200,dollars=T) {
       axis.ticks.y=element_blank(),
       axis.line.x=element_blank(),
       axis.ticks.x=element_blank(),
-      panel.grid.major.x=element_line(color="gray80")
+      panel.grid.major.x=element_line(color="gray80"),
+      plot.margin=unit(c(0,0,0,0), "pt"),
+      text = element_text(family = "Georgia")
     )
   
   if (dollars) {
@@ -58,11 +60,11 @@ In Fall 2024, HSG Finance Committee met `r nrow(hours)` times for a total of `r 
 
 There were two rounds of allocations:
 
-* Main allocations: \$15,000
-* Special allocations: \$5,000
+* Main allocations: \$16,090
+* Special allocations: \$2,500
 
 HSG funded `r sum(summarize(group_by(df,org),n=mean(nevents
-))["n"])` events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$20,000.
+))["n"])` events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$18,590.
 
 Special allocations were released due to the HSG Executive Board decision to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000 annually. 
 
@@ -70,36 +72,43 @@ Special allocations were released due to the HSG Executive Board decision to rep
 
 The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),amount)["amount"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),amount)["amount"],na.rm=T)`.
 
-```{r}
+```{r, fig.height = 6}
 p <- df %>%
   group_by(org) %>%
   summarize(total=mean(totalreceived)) %>%
-  ggplot(aes(org,total,fill=org)) +
-  geom_bar(stat="identity",show.legend=F) +
-  labs(title="Total Amount Received by Organization, Fall 2024")
+  ggplot(aes(org,total)) +
+  geom_bar(stat="identity",show.legend=F,fill="#800000") +
+  labs(
+    title="Allocations by Organization, Fall 2024",
+    subtitle="Dotted line represents mean amount allocated"
+  ) +
+  geom_hline(
+    yintercept=mean(df$totalreceived),
+    linetype="dotted",
+    size=.8
+  )
 
 style(p)
 ```
 
-
-```{r}
+```{r, fig.height = 6}
 p <- df %>%
   group_by(org) %>%
   summarize(total=mean(nevents)) %>%
-  ggplot(aes(org,total,fill=org)) +
-  geom_bar(stat="identity",show.legend=F) +
+  ggplot(aes(org,total)) +
+  geom_bar(stat="identity",show.legend=F,fill="#800000") +
   labs(title="Number of Events Held by Organization, Fall 2024")
 
 style(p,dollars=F) +
   scale_y_continuous(breaks=seq(0,20,2))
 ```
 
-```{r}
+```{r, fig.height = 6}
 p <- df %>%
   group_by(org) %>%
   summarize(rollover=mean(totalrollover)) %>%
-  ggplot(aes(org,rollover,fill=org)) +
-  geom_bar(stat="identity",show.legend=F) +
+  ggplot(aes(org,rollover)) +
+  geom_bar(stat="identity",show.legend=F,fill="#800000") +
   labs(title="Total Rollover/External Funds by Organization, Fall 2024")
   
 style(p,2000)
@@ -107,19 +116,19 @@ style(p,2000)
 
 ## Allocations by Event Type
 
-We allocated funds on an organizational level, not on an item-by-item basis. The following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the final amount awarded to Asian Policy Forum, \$1,420.
+We allocated funds on an organizational level, not on an item-by-item basis. The following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the final amount awarded to Asian Policy Forum, \$1,420. I also assumed that each organization would use at least 20% of their rollover (existing) funds this quarter.
 
 Notation:
 
-* *Service events**: e.g., volunteering
-* *Promotion**: e.g., graphic design and recruitment activities.
+* **Community engagement**: e.g., volunteering and off-campus events
+* **Promotion**: e.g., graphic design and recruitment activities.
 
 ```{r}
 p <- df %>%
   group_by(org,category) %>%
   summarize(
-    # scale the amount requested by 
-    adjusted=sum(amount)/mean(totalrequested)*mean(totalreceived)
+    # scale the amount requested by total received + 20% of total rollover
+    adjusted=sum(amount)/mean(totalrequested)*(max(totalreceived)+.2*max(totalrollover))
   ) %>%
   group_by(category) %>%
   summarize(adjusted=round(sum(adjusted))) %>%
@@ -127,22 +136,22 @@ p <- df %>%
   mutate(
     category=fct_reorder(str_to_sentence(category), adjusted)
   ) %>%
-  ggplot(aes(category,adjusted,fill=category)) +
-  geom_bar(stat="identity",show.legend=F) +
+  ggplot(aes(category,adjusted)) +
+  geom_bar(stat="identity",show.legend=F,fill="#800000") +
   labs(title="Allocations by Event Type, Fall 2024",
        subtitle="Estimated from amount requested per category")
 
-style(p)
+style(p,dist=1000)
 ```
 
 ## Allocations by Item Type
 
 Notation:
 
-* *Services**: e.g.,  bartending, event rental, and food delivery
+* **Services**: e.g.,  bartending, event rental, transportation, event tickets, and food delivery
 * *Gifts**: e.g.,  speaker honorariums, promotional merchandise, and raffle prizes
-* *Reusable supplies**: e.g., board games and decorations
-* *Non-reusable supplies**: e.g., utensils and firewood
+* **Reusable supplies**: e.g., board games and decorations
+* **Non-reusable supplies**: e.g., utensils and firewood
 
 ```{r}
 p <- df %>%
@@ -157,25 +166,25 @@ p <- df %>%
   mutate(
     type=fct_reorder(str_to_sentence(type), adjusted)
   ) %>%
-  ggplot(aes(type,adjusted,fill=type)) +
-  geom_bar(stat="identity",show.legend=F) +
+  ggplot(aes(type,adjusted)) +
+  geom_bar(stat="identity",show.legend=F,fill="#800000") +
   labs(title="Allocations by Item Type, Fall 2024",
        subtitle="Estimated from amount requested per item type")
 
-style(p,dist=500)
+style(p,dist=1000)
 ```
 
 ## Survey
 
-We need your voice to determine what types of events we, as the Harris student body, want to fund next quarter. Please fill the following 1-minute form to let us know your opinion.
+**We need your voice** to determine what types of events we, as the Harris student body, want to fund next quarter. Please fill the following 1-minute form to let us know your opinion.
 
 ## Future improvements
 
 Improvements for next quarter: (use slides)
 
-* *Expedite funding timelines**
+* **Expedite funding timelines**
   * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. Next quarter, HSOs can expect to receive funding by Week 1.
-* *Increase funding transparency**
+* **Increase funding transparency**
   * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new [budgeting template]() and new [funding criteria]() to address these issues.
   
 Sincerely,

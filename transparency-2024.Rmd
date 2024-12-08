@@ -21,16 +21,15 @@ hours = read.csv("hours.csv")
 
 df <- df %>%
   group_by(org) %>%
-  mutate(totalrequested=sum(amount)) 
+  mutate(
+    totalrequested=sum(amount),
+    org=str_wrap(org,20)
+  )
 
-style <- function(p,dist=200) {
+style <- function(p,dist=200,dollars=T) {
   p <- p  +
     xlab("") +
     ylab("") +
-    scale_y_continuous(
-      breaks = seq(0,10000,by=dist),
-      labels = scales::dollar_format()
-    ) +
     coord_flip() +
     theme_classic() +
     theme(
@@ -40,6 +39,14 @@ style <- function(p,dist=200) {
       axis.ticks.x=element_blank(),
       panel.grid.major.x=element_line(color="gray80")
     )
+  
+  if (dollars) {
+    p <- p +
+    scale_y_continuous(
+      breaks = seq(0,10000,by=dist),
+      labels = scales::dollar_format()
+    )
+  }
 
   return(p)
 }
@@ -67,12 +74,24 @@ The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),a
 p <- df %>%
   group_by(org) %>%
   summarize(total=mean(totalreceived)) %>%
-  mutate(org=str_wrap(org,20)) %>%
   ggplot(aes(org,total,fill=org)) +
   geom_bar(stat="identity",show.legend=F) +
   labs(title="Total Amount Received by Organization, Fall 2024")
 
 style(p)
+```
+
+
+```{r}
+p <- df %>%
+  group_by(org) %>%
+  summarize(total=mean(nevents)) %>%
+  ggplot(aes(org,total,fill=org)) +
+  geom_bar(stat="identity",show.legend=F) +
+  labs(title="Number of Events Held by Organization, Fall 2024")
+
+style(p,dollars=F) +
+  scale_y_continuous(breaks=seq(0,20,2))
 ```
 
 ```{r}
@@ -88,7 +107,12 @@ style(p,2000)
 
 ## Allocations by Event Type
 
-Service events included volunteering.
+We allocated funds on an organizational level, not on an item-by-item basis. The following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the final amount awarded to Asian Policy Forum, \$1,420.
+
+Notation:
+
+* *Service events**: e.g., volunteering
+* *Promotion**: e.g., graphic design and recruitment activities.
 
 ```{r}
 p <- df %>%
@@ -113,7 +137,12 @@ style(p)
 
 ## Allocations by Item Type
 
-Services included bartending. Gifts included speaker honorariums, promotional merchandise, and raffle prizes. Equipment included reusable supplies, such as board games.
+Notation:
+
+* *Services**: e.g.,  bartending, event rental, and food delivery
+* *Gifts**: e.g.,  speaker honorariums, promotional merchandise, and raffle prizes
+* *Reusable supplies**: e.g., board games and decorations
+* *Non-reusable supplies**: e.g., utensils and firewood
 
 ```{r}
 p <- df %>%
@@ -133,7 +162,7 @@ p <- df %>%
   labs(title="Allocations by Item Type, Fall 2024",
        subtitle="Estimated from amount requested per item type")
 
-style(p)
+style(p,dist=500)
 ```
 
 ## Survey
@@ -144,9 +173,9 @@ We need your voice to determine what types of events we, as the Harris student b
 
 Improvements for next quarter: (use slides)
 
-* Expedite funding timelines
+* *Expedite funding timelines**
   * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. Next quarter, HSOs can expect to receive funding by Week 1.
-* Increase funding transparency
+* *Increase funding transparency**
   * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new [budgeting template]() and new [funding criteria]() to address these issues.
   
 Sincerely,

@@ -51,7 +51,7 @@ style <- function(p,dist=200,dollars=T) {
   if (dollars) {
     p <- p +
     scale_y_continuous(
-      breaks = seq(0,10000,by=dist),
+      breaks = seq(0,50000,by=dist),
       labels = scales::dollar_format()
     )
   }
@@ -173,7 +173,7 @@ p <- df %>%
   group_by(org,type) %>%
   summarize(
     # scale the amount requested by 
-    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*mean(totalreceived,na.rm=T)
+    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*(max(totalreceived,na.rm=T)+.2*max(totalrollover,na.rm=T))
   ) %>%
   group_by(type) %>%
   summarize(adjusted=round(sum(adjusted,na.rm=T))) %>%
@@ -186,7 +186,7 @@ p <- df %>%
   labs(title="    Planned Spending by Item Type, Fall 2024",
        subtitle="     Estimated from amount requested per item type")
 
-style(p,dist=1000)
+style(p,dist=2000)
 ```
 
 ## Future improvements

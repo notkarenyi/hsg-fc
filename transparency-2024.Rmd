@@ -76,6 +76,8 @@ Breakdowns by event type, item type, and organization are included in this trans
 
 \* *The HSG Executive Board voted to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000. This release of funds allowed the Finance Committee to hold special allocations in mid-quarter.* 
 
+\newpage 
+
 ## Allocations by Organization
 
 The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)`.
@@ -122,9 +124,9 @@ p <- df %>%
 style(p,2000)
 ```
 
-## Allocations by Event Type
+## Planned Spending by Event Type
 
-We allocated funds on an organizational level, not on an item-by-item basis. The following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the final amount awarded to Asian Policy Forum, \$1,420. I also assumed that each organization would use at least 20% of their rollover (existing) funds this quarter.
+We allocated funds on an organizational level, not on an item-by-item basis. The following analyses are estimates based on the proportion of funding requests dedicated to each category. Actual spending has not yet been calculated. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the final amount awarded to Asian Policy Forum, \$1,420, to estimate the amount that would have been spent on cultural events. I also assumed that each organization would use at least 20% of their rollover (existing) funds this quarter.
 
 Notation:
 
@@ -149,13 +151,13 @@ p <- df %>%
   ) %>%
   ggplot(aes(category,adjusted)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    Allocations by Event Type, Fall 2024",
+  labs(title="    Planned Spending by Event Type, Fall 2024",
        subtitle="     Estimated from amount requested per category")
 
 style(p,dist=1000)
 ```
 
-## Allocations by Item Type
+## Planned Spending by Item Type
 
 See previous section for a description of how these items were calculated.
 
@@ -181,7 +183,7 @@ p <- df %>%
   ) %>%
   ggplot(aes(type,adjusted)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    Allocations by Item Type, Fall 2024",
+  labs(title="    Planned Spending by Item Type, Fall 2024",
        subtitle="     Estimated from amount requested per item type")
 
 style(p,dist=1000)
@@ -206,14 +208,14 @@ Sincerely,
 
 Tony Jiang, Finance Committee Chair
 
-Karen Yi, Finance Committee Member
+Karen Yi, Second-Year Finance Committee Member
 
-Andrea Kimpson, Finance Committee Member
+Andrea Kimpson, Second-Year Finance Committee Member
 
-Shivani Patel, Finance Committee Member
+Shivani Patel, Second-Year Finance Committee Member
 
-Faris Alrakhis, Finance Committee Member
+Faris Alrakhis, First-Year Finance Committee Member
 
-Moe Alsharif, Finance Committee Member
+Moe Alsharif, First-Year Finance Committee Member
 
-Tiffany Tu, Finance Committee Member
+Tiffany Tu, First-Year Finance Committee Member

@@ -308,5 +308,10 @@ Unum,debate,services,1200,380,787,4
 Unum,workshop,food,78,380,787,4
 Unum,workshop,beverages,21,380,787,4
 Unum,workshop,non-reusable supplies,32,380,787,4
-Urban Policy Student Association,,,,100,554,2
-Women in Public Policy,,,,560,620,5
+Urban Policy Student Association,promotion,,50,100,554,2
+Urban Policy Student Association,community engagement,,50,100,554,2
+Women in Public Policy,social,,112,560,620,5
+Women in Public Policy,community engagement,,112,560,620,5
+Women in Public Policy,speaker,,112,560,620,5
+Women in Public Policy,social,,112,560,620,5
+Women in Public Policy,promotion,,112,560,620,5

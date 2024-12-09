@@ -1,4 +1,6 @@
 ---
+header-includes:
+  \usepackage[breaklinks]{hyperref}
 output:
   pdf_document: 
     latex_engine: xelatex
@@ -70,6 +72,8 @@ There were two rounds of allocations:
 HSG funded `r sum(summarize(group_by(df,org),n=mean(nevents
 ))["n"])` planned events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$18,590.
 
+Breakdowns by event type, item type, and organization are included in this transparency report. Please use the survey at the end of this report to send us comments, suggestions, or questions about this report or HSG Finance Committee activities in general.
+
 \* *The HSG Executive Board voted to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000. This release of funds allowed the Finance Committee to hold special allocations in mid-quarter.* 
 
 ## Allocations by Organization
@@ -83,8 +87,8 @@ p <- df %>%
   ggplot(aes(org,total)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
   labs(
-    title="    Allocations by Organization, Fall 2024",
-    subtitle="     Dotted line represents average allocation"
+    title="   Allocations by Organization, Fall 2024",
+    subtitle="   Dotted line represents average allocation"
   ) +
   geom_hline(
     yintercept=mean(summarize(group_by(df,org),m=mean(totalreceived,na.rm=T))[["m"]],na.rm=T),
@@ -101,7 +105,7 @@ p <- df %>%
   summarize(total=mean(nevents)) %>%
   ggplot(aes(org,total)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    Number of Events Planned\n    by Organization, Fall 2024")
+  labs(title="   Number of Events Planned\n   by Organization, Fall 2024")
 
 style(p,dollars=F) +
   scale_y_continuous(breaks=seq(0,20,2))
@@ -113,7 +117,7 @@ p <- df %>%
   summarize(rollover=mean(totalrollover)) %>%
   ggplot(aes(org,rollover)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    Total Rollover/External Funds by\n    Organization, Fall 2024")
+  labs(title="   Total Rollover/External Funds by\n   Organization, Fall 2024")
   
 style(p,2000)
 ```
@@ -125,7 +129,7 @@ We allocated funds on an organizational level, not on an item-by-item basis. The
 Notation:
 
 * **Social**: e.g., retreats, happy hours, mixers, study hours, and alumni events
-* **Speaker**: e.g., presentations, lunch & learns, and panels, usually about policy topics
+* **Speaker**: e.g., presentations, lunch \& learns, and panels, usually about policy topics
 * **Community engagement**: e.g., volunteering and off-campus events
 * **Promotion**: e.g., graphic design, and recruitment activities
 * **Workshop**: e.g., career fairs and writing workshops
@@ -145,8 +149,8 @@ p <- df %>%
   ) %>%
   ggplot(aes(category,adjusted)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="   Allocations by Event Type, Fall 2024",
-       subtitle="    Estimated from amount requested per category")
+  labs(title="    Allocations by Event Type, Fall 2024",
+       subtitle="     Estimated from amount requested per category")
 
 style(p,dist=1000)
 ```
@@ -177,15 +181,11 @@ p <- df %>%
   ) %>%
   ggplot(aes(type,adjusted)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="   Allocations by Item Type, Fall 2024",
-       subtitle="    Estimated from amount requested per item type")
+  labs(title="    Allocations by Item Type, Fall 2024",
+       subtitle="     Estimated from amount requested per item type")
 
 style(p,dist=1000)
 ```
-
-## Survey
-
-**We need your voice** to determine what types of events we, as the Harris student body, want to fund next quarter. Please fill the following <span style="text-decoration:underline">[1-minute form](https://forms.gle/Jq5z4rwTVAKWb9re8)</span> to let us know your opinion.
 
 ## Future improvements
 
@@ -194,9 +194,13 @@ Improvements for next quarter:
 * **Expedite funding timelines**
   * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. Next quarter, HSOs can expect to receive funding by Week 1.
 * **Increase funding transparency**
-  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new <span style="text-decoration:underline">[budgeting template](https://docs.google.com/spreadsheets/d/1frBcdAxVfhK3QXdHX1ozkQUmYlt2pTsr/edit?rtpof=true&gid=1695333964#gid=1695333964)</span> and new <span style="text-decoration:underline">[funding criteria](https://docs.google.com/spreadsheets/d/1uyt3Tjdp7T0ieYMFBzvp8Yh_i8PVPX5L/edit?gid=1230391486#gid=1230391486)</span> to address these issues.
+  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new \href{https://tinyurl.com/4yx98367}{\underline{budgeting template}} and new \href{https://tinyurl.com/2bejj7pf}{\underline{funding criteria}} to address these issues.
 
-\vspace{12pt}
+## Survey
+
+**We need your voice** to determine what types of events we, as the Harris student body, want to fund next quarter. Please fill the following \href{https://forms.gle/Jq5z4rwTVAKWb9re8}{\underline{1-minute form}} to let us know your opinion.
+
+\vspace{30pt}
 
 Sincerely,
 

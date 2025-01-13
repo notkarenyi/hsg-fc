@@ -33,7 +33,7 @@ df <- df %>%
     org=factor(org,levels=rev(unique(org)),ordered=T)
   )
 
-style <- function(p,dist=200,dollars=T) {
+barstyle <- function(p,dist=200,dollars=T) {
   p <- p  +
     xlab("") +
     ylab("") +
@@ -52,6 +52,36 @@ style <- function(p,dist=200,dollars=T) {
     p <- p +
     scale_y_continuous(
       breaks = seq(0,50000,by=dist),
+      labels = scales::dollar_format()
+    )
+  }
+
+  return(p)
+}
+
+
+pointstyle <- function(p,dist=200,dollars=T) {
+  p <- p  +
+    theme_classic(base_family = "serif") +
+    theme(
+      axis.line.y=element_blank(),
+      axis.ticks.y=element_blank(),
+      axis.line.x=element_blank(),
+      axis.ticks.x=element_blank(),
+      panel.grid.major.x=element_line(color="gray80"),
+      panel.grid.major.y=element_line(color="gray80"),
+      plot.margin=unit(c(10,10,10,10), "pt"),
+      aspect.ratio=1
+    )
+  
+  if (dollars) {
+    p <- p +
+    scale_x_continuous(
+      breaks = seq(0,50000,by=dist),
+      labels = scales::dollar_format()
+    ) +
+    scale_y_continuous(
+      breaks = seq(0,50000,by=200),
       labels = scales::dollar_format()
     )
   }
@@ -105,7 +135,7 @@ p <- df %>%
     size=.6
   )
 
-style(p)
+barstyle(p)
 ```
 
 ```{r, fig.height = 6}
@@ -132,7 +162,7 @@ p <- df %>%
     size=.6
   )
 
-style(p,dist=2000)
+barstyle(p,dist=1000)
 ```
 
 ```{r, fig.height = 6}
@@ -152,7 +182,7 @@ p <- df %>%
     subtitle="   Points represent number of events"
   )
 
-style(p,dollars=F) +
+barstyle(p,dollars=F) +
   scale_y_continuous(breaks=seq(0,20,2))
 ```
 
@@ -221,7 +251,7 @@ p <- df %>%
   labs(title="    HSG Funds Spending by Event Type, Fall 2024",
        subtitle="     Estimated from amount requested per category")
 
-style(p,dist=1000)
+barstyle(p,dist=1000)
 ```
 
 ## Planned Spending by Item Type
@@ -253,7 +283,7 @@ p <- df %>%
   labs(title="    HSG Funds Spending by Item Type, Fall 2024",
        subtitle="     Estimated from amount requested per item type")
 
-style(p,dist=2000)
+barstyle(p,dist=2000)
 ```
 
 ## Future improvements

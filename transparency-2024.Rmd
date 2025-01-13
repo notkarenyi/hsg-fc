@@ -235,12 +235,12 @@ style(p,dist=2000)
 
 ## Future improvements
 
-Improvements for next quarter:
+Improvements for winter quarter:
 
 * **Expedite funding timelines**
-  * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. Next quarter, HSOs can expect to receive funding by Week 1.
+  * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. This quarter, HSGs finished funding decisions by week 1. Unfortunately, due to turnover within the Student Engagement staff teams, we were not able to allocate funds within week 1 as originally planned.
 * **Increase funding transparency**
-  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new \href{https://tinyurl.com/4yx98367}{\underline{budgeting template}} and new \href{https://tinyurl.com/2bejj7pf}{\underline{funding criteria}} to address these issues.
+  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new \href{https://tinyurl.com/4yx98367}{\underline{budgeting template}} and new \href{https://tinyurl.com/2bejj7pf}{\underline{funding criteria}} to address these issues. Funding committee members now use a rubric-standardized process to evaluate funding items. Standard deviation on winter allocations decreased by $127 compared to fall allocations. 
 
 ## Survey
 

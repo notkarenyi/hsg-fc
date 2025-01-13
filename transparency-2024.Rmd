@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = F, warning = F,message = F)
 library(tidyverse)
 ```
 
-# HSG Finance Committee Transparency Report Fall 2024
+# Harris Student Government Finance Committee Transparency Report Fall 2024
 
 ```{r}
 df = read.csv("2024.csv")
@@ -92,7 +92,7 @@ pointstyle <- function(p,dist=200,dollars=T) {
 
 ## Summary
 
-The overall budget for Fall 2024 was \$18,590, which were allocation in two rounds:
+The overall budget for Fall 2024 was \$18,590, which were allocated in two rounds:
 
 * Main allocations: \$16,090
 * Special allocations*: \$2,500
@@ -201,7 +201,7 @@ p <- df %>%
     fill="#800000"
   ) +
   labs(
-    title="   Planned vs. Actual Number of Events Held\n   by HSO, Fall 2024",
+    title="   Planned vs. Actual Number of Events Held\n   by Organization, Fall 2024",
     caption="   Note: Gold=Planned, Maroon=Actual. IDPA and TAP did not report how many events they held in Fall"
   )
 
@@ -226,7 +226,7 @@ p <- df %>%
 pointstyle(p,dollars=F)
 ```
 
-## Planned Spending by Event Type
+## Spending by Event Type
 
 ```{r}
 # if we don't know how much they spent, assume received plus some rollover
@@ -277,7 +277,7 @@ p <- df %>%
 barstyle(p,dist=1000)
 ```
 
-## Planned Spending by Item Type
+## Spending by Item Type
 
 See previous section for a description of how these items were calculated.
 

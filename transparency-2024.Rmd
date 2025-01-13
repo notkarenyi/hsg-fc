@@ -168,12 +168,24 @@ Notation:
 * **Promotion**: e.g., graphic design, and recruitment activities
 * **Workshop**: e.g., career fairs and writing workshops
 
+```{r}
+# recalculate total requested for only those events held
+df <- df %>%
+  filter(actual!=0) %>%
+  group_by(org) %>%
+  mutate(totalrequested=sum(amount,na.rm=T))
+
+# cap actual spent by amount we granted
+df <- mutate(df,actualhsg=min(totalreceived,actual))
+```
+
 ```{r, fig.height = 3}
 p <- df %>%
   group_by(org,category) %>%
   summarize(
-    # scale the amount requested by total received + 20% of total rollover
-    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*(max(totalreceived,na.rm=T)+.2*max(totalrollover,na.rm=T))
+    # we are missing detailed information for actual spending, so impute:
+    # scale the amount requested by actual spending
+    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*mean(actualhsg,na.rm=T)
   ) %>%
   group_by(category) %>%
   summarize(adjusted=round(sum(adjusted,na.rm=T))) %>%
@@ -183,7 +195,7 @@ p <- df %>%
   ) %>%
   ggplot(aes(category,adjusted)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    Planned Spending by Event Type, Fall 2024",
+  labs(title="    HSG Funds Spending by Event Type, Fall 2024",
        subtitle="     Estimated from amount requested per category")
 
 style(p,dist=1000)
@@ -205,7 +217,7 @@ p <- df %>%
   group_by(org,type) %>%
   summarize(
     # scale the amount requested by 
-    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*(max(totalreceived,na.rm=T)+.2*max(totalrollover,na.rm=T))
+    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*mean(actualhsg,na.rm=T)
   ) %>%
   group_by(type) %>%
   summarize(adjusted=round(sum(adjusted,na.rm=T))) %>%
@@ -215,7 +227,7 @@ p <- df %>%
   ) %>%
   ggplot(aes(type,adjusted)) +
   geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    Planned Spending by Item Type, Fall 2024",
+  labs(title="    HSG Funds Spending by Item Type, Fall 2024",
        subtitle="     Estimated from amount requested per item type")
 
 style(p,dist=2000)

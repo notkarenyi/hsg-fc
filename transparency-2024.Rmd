@@ -138,9 +138,17 @@ p <- df %>%
 barstyle(p)
 ```
 
+
+```{r, fig.height = 6, include=F}
 p <- df %>%
   group_by(org) %>%
+  summarize(leftover=mean(totalreceived,na.rm=T) + mean(externalreceived,na.rm=T) + mean(totalrollover,na.rm=T) - mean(actual,na.rm=T)) %>%
+  ggplot(aes(org,leftover)) +
+  geom_bar(stat="identity",show.legend=F,fill="#800000") +
   labs(
+    title="   New Rollover by Organization, Fall 2024",
+    subtitle="   Dotted line represents average allocation",
+    caption=""
   ) +
   geom_hline(
     yintercept=mean(summarize(group_by(df,org),m=mean(totalreceived,na.rm=T))[["m"]],na.rm=T),

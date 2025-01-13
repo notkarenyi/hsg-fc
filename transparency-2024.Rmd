@@ -159,12 +159,9 @@ p <- df %>%
 barstyle(p,dist=1000)
 ```
 
-```{r, fig.height = 6}
-nevents <- df %>%
 ```{r, fig.height = 5}
 rollover <- df %>%
   group_by(org) %>%
-  summarize(total=mean(nevents)) 
   summarize(rollover=mean(totalrollover+externalreceived),
             received=mean(totalreceived))
 

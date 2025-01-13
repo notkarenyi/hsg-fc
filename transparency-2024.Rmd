@@ -177,16 +177,26 @@ p <- rollover %>%
 pointstyle(p,dist=2000)
 ```
 
+```{r, fig.height = 7}
 p <- df %>%
   group_by(org) %>%
-  summarize(total=mean(totalreceived)) %>%
+  summarize(total=mean(eventsactual),
+            planned=mean(events.planned)) %>%
+  filter(!is.na(total)) %>%
   ggplot() +
-  geom_bar(aes(org,total/100),stat="identity",show.legend=F,fill="#800000") +
-  geom_segment(aes(x = org, xend = org, y = 0, yend = nevents$total)) +
-  geom_point(aes(org,nevents$total)) +
+  geom_bar(
+    aes(org,planned,fill=Category),
+    stat="identity",
+    fill="#C16622"
+  ) +
+  geom_bar(
+    aes(org,total,fill=Category),
+    stat="identity",
+    fill="#800000"
+  ) +
   labs(
-    title="   Allocations (in $100s) Compared to\n  Number of Events Planned by Organization,\n  Fall 2024",
-    subtitle="   Points represent number of events"
+    title="   Planned vs. Actual Number of Events Held\n   by HSO, Fall 2024",
+    caption="   Note: Gold=Planned, Maroon=Actual. IDPA and TAP did not report how many events they held in Fall"
   )
 
 barstyle(p,dollars=F) +

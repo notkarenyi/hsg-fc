@@ -62,19 +62,26 @@ style <- function(p,dist=200,dollars=T) {
 
 ## Summary
 
-In Fall 2024, HSG Finance Committee met `r nrow(hours)` times for a total of `r sum(hours$minutes)` minutes.
-
-There were two rounds of allocations:
+The overall budget for Fall 2024 was \$18,590, which were allocation in two rounds:
 
 * Main allocations: \$16,090
 * Special allocations*: \$2,500
 
-HSG funded `r sum(summarize(group_by(df,org),n=mean(nevents
-))["n"])` planned events across `r nrow(summarize(group_by(df,org),n=n()))` HSOs. HSOs requested a total of \$`r floor(sum(df$amount,na.rm=T)/1000)`,000; the overall budget for Fall 2024 was \$18,590.
+In Fall 2024, HSG Finance Committee met `r nrow(hours)` times for a total of `r sum(hours$minutes)` minutes. HSG funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported `r sum(summarize(group_by(df,org),n=mean(attendactual))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-fall quarter reviews. 
 
 Breakdowns by event type, item type, and organization are included in this transparency report. Please use the survey at the end of this report to send us comments, suggestions, or questions about this report or HSG Finance Committee activities in general.
 
-\* *The HSG Executive Board voted to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000. This release of funds allowed the Finance Committee to hold special allocations in mid-quarter.* 
+Funding criteria used in this round included:
+
+* Collaboration with other HSOs or non-Harris organizations
+* Speaker events and career events (prioritize events that are open to the broader Harris community)
+* Diversity and inclusion (inviting speakers of color, speakers who are disabled or are women)
+* How much non-HSG funding each HSO has access to (including rollover from previous quarters, non-Harris grants, or non-Harris RSO funding)
+* Detailed, itemized documentation with regards to planned expenses and justification for why unusual expenses are necessary
+
+As we note in a later section, additional criteria and more quantified criteria have been added for winter quarter.
+
+^[*The HSG Executive Board voted to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000. This release of funds allowed the Finance Committee to hold special allocations in mid-quarter.] 
 
 \newpage 
 

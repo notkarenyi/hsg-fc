@@ -138,23 +138,9 @@ p <- df %>%
 barstyle(p)
 ```
 
-```{r, fig.height = 6}
-rollover <- df %>%
-  group_by(org) %>%
-  summarize(rollover=mean(totalrollover))
-  
-style(p,2000)
 p <- df %>%
   group_by(org) %>%
-  summarize(total=mean(totalreceived)) %>%
-  ggplot() +
-  geom_bar(aes(org,total),
-           stat="identity",show.legend=F,fill="#800000") +
-  geom_segment(aes(x = org, xend = org, y = 0, yend = rollover$rollover)) +
-  geom_point(aes(org,rollover$rollover)) +
   labs(
-    title="   Allocations Compared to Rollover/\n   External Funding by Organization,\n   Fall 2024",
-    subtitle="   Points represent rollover/external amount"
   ) +
   geom_hline(
     yintercept=mean(summarize(group_by(df,org),m=mean(totalreceived,na.rm=T))[["m"]],na.rm=T),
@@ -167,8 +153,29 @@ barstyle(p,dist=1000)
 
 ```{r, fig.height = 6}
 nevents <- df %>%
+```{r, fig.height = 5}
+rollover <- df %>%
   group_by(org) %>%
   summarize(total=mean(nevents)) 
+  summarize(rollover=mean(totalrollover+externalreceived),
+            received=mean(totalreceived))
+
+p <- rollover %>%
+  ggplot(aes(rollover,received)) +
+  geom_point(color="#800000") +
+  labs(
+    title="   Allocations Compared to Rollover +\n   External Funding by Organization, Fall 2024"
+    # subtitle="   Points represent rollover/external amount"
+  ) +
+  xlab("Rollover + external funding") +
+  ylab("Received") 
+  # geom_smooth(method="lm")
+
+# not significant
+# lm(received~rollover, rollover) %>% summary()
+
+pointstyle(p,dist=2000)
+```
 
 p <- df %>%
   group_by(org) %>%

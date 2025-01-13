@@ -158,7 +158,13 @@ style(p,dollars=F) +
 
 ## Planned Spending by Event Type
 
-We allocated funds on an organizational level, not on an item-by-item basis. The following analyses are estimates based on the proportion of funding requests dedicated to each category. Actual spending has not yet been calculated. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the final amount awarded to Asian Policy Forum, \$1,420, to estimate the amount that would have been spent on cultural events. I also assumed that each organization would use at least 20% of their rollover (existing) funds this quarter.
+```{r}
+# if we don't know how much they spent, assume received plus some rollover
+df[is.na(df$actual),"actual"] <- df[is.na(df$actual),"totalreceived"] + df[is.na(df$actual),"externalreceived"] + round(df[is.na(df$actual),"totalrollover"] * .2)
+```
+
+
+We allocated funds on an organizational level, not on an item-by-item basis. While we collected total actual spending for fall quarter per HSO, the following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the total amount awarded, \$1,420, to estimate the amount that would have been spent on cultural events. In this analysis, we only considered funds allocated by HSG, not external grants or funds.
 
 Notation:
 

@@ -156,6 +156,23 @@ style(p,dollars=F) +
   scale_y_continuous(breaks=seq(0,20,2))
 ```
 
+\newpage 
+
+```{r,include=F}
+# is receiving a low amount of funding correlated with hosting less events than planned?
+df$devents <- df$events.planned-df$eventsactual
+lm(totalreceived~devents,df) %>% summary()
+
+p <- df %>%
+  ggplot(aes(totalreceived,devents)) +
+  geom_point(color="#800000") +
+  xlab("Allocation") +
+  ylab("Number of events canceled") +
+  labs(title="Low allocation not associated with number of canceled events")
+
+pointstyle(p,dollars=F)
+```
+
 ## Planned Spending by Event Type
 
 ```{r}

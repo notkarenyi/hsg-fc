@@ -309,6 +309,13 @@ p <- df %>%
 barstyle(p,dist=2000)
 ```
 
+```{r,include=F}
+uniques <- distinct(df,actual,externalreceived,totalreceived,totalrollover,eventsactual,events.planned,attendactual,totalrequested)
+
+lm(totalreceived~events.planned+totalrollover+externalreceived,uniques) %>% summary()
+```
+
+
 ## Future improvements
 
 Improvements for winter quarter:

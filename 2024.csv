@@ -94,15 +94,15 @@ Chicago Policy Review,workshop,beverages,54,690,0,740,2370,2,6,81
 "Data, Ethics, & Policy Conference",speaker,non-reusable supplies,250,,5000,180,1370,4,4,
 "Data, Ethics, & Policy Conference",speaker,printing,250,,5000,180,1370,4,4,
 "Data, Ethics, & Policy Conference",speaker,reusable supplies,50,,5000,180,1370,4,4,
-European Policy Forum,debate,food,180,,0,330,0,,3,
-European Policy Forum,debate,beverages,20,,0,330,0,,3,
-European Policy Forum,debate,printing,50,,0,330,0,,3,
-European Policy Forum,film screening,beverages,70,,0,330,0,,3,
-European Policy Forum,film screening,food,108,,0,330,0,,3,
-European Policy Forum,film screening,printing,50,,0,330,0,,3,
-European Policy Forum,speaker,food,220,,0,330,0,,3,
-European Policy Forum,speaker,beverages,20,,0,330,0,,3,
-European Policy Forum,speaker,printing,50,,0,330,0,,3,
+European Policy Forum,debate,food,180,,0,330,0,4,3,
+European Policy Forum,debate,beverages,20,,0,330,0,4,3,
+European Policy Forum,debate,printing,50,,0,330,0,4,3,
+European Policy Forum,film screening,beverages,70,,0,330,0,4,3,
+European Policy Forum,film screening,food,108,,0,330,0,4,3,
+European Policy Forum,film screening,printing,50,,0,330,0,4,3,
+European Policy Forum,speaker,food,220,,0,330,0,4,3,
+European Policy Forum,speaker,beverages,20,,0,330,0,4,3,
+European Policy Forum,speaker,printing,50,,0,330,0,4,3,
 Education Policy Student Assocation,social,food,66,700,0,680,100,5,5,88
 Education Policy Student Assocation,social,beverages,83,700,0,680,100,5,5,88
 Education Policy Student Assocation,social,non-reusable supplies,5,700,0,680,100,5,5,88
@@ -165,17 +165,17 @@ Harris Impact Investing,speaker,beverages,203,,0,570,519,,3,
 Harris Impact Investing,workshop,food,552,,0,570,519,,3,
 Harris Impact Investing,promotion,printing,56,,0,570,519,,3,
 International Development Policy Association,speaker,food,170,550,0,1020,1780,4,9,142
-International Development Policy Association,social,food,180,0,0,1020,1780,,9,142
-International Development Policy Association,social,beverages,180,0,0,1020,1780,,9,142
-International Development Policy Association,social,printing,25,0,0,1020,1780,,9,142
-International Development Policy Association,speaker,food,500,550,0,1020,1780,,9,142
-International Development Policy Association,speaker,food,500,0,0,1020,1780,,9,142
-International Development Policy Association,speaker,food,840,0,0,1020,1780,,9,142
-International Development Policy Association,speaker,food,738,550,0,1020,1780,,9,142
-International Development Policy Association,speaker,services,50,550,0,1020,1780,,9,142
-International Development Policy Association,workshop,food,340,550,0,1020,1780,,9,142
-International Development Policy Association,workshop,food,340,0,0,1020,1780,,9,142
-International Development Policy Association,film screening,food,500,0,0,1020,1780,,9,142
+International Development Policy Association,social,food,180,0,0,1020,1780,4,9,142
+International Development Policy Association,social,beverages,180,0,0,1020,1780,4,9,142
+International Development Policy Association,social,printing,25,0,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,500,550,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,500,0,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,840,0,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,738,550,0,1020,1780,4,9,142
+International Development Policy Association,speaker,services,50,550,0,1020,1780,4,9,142
+International Development Policy Association,workshop,food,340,550,0,1020,1780,4,9,142
+International Development Policy Association,workshop,food,340,0,0,1020,1780,4,9,142
+International Development Policy Association,film screening,food,500,0,0,1020,1780,4,9,142
 Latin America Matters,social,food,120,4290,3560,760,3140,5,6,210
 Latin America Matters,promotion,gift,60,0,3560,760,3140,5,6,210
 Latin America Matters,speaker,food,250,4290,3560,760,3140,5,6,210
@@ -274,11 +274,11 @@ South Asian Students' Policy  Association,social,food,160,3520,3700,800,890,2,4,
 South Asian Students' Policy  Association,social,beverages,28,3520,3700,800,890,2,4,255
 South Asian Students' Policy  Association,social,services,5,3520,3700,800,890,2,4,255
 South Side Civic,community engagement,food,7340,,5000,770,6680,5,5,
-South Side Civic,community engagement,beverages,500,,5000,770,6680,,5,
-South Side Civic,community engagement,services,300,,5000,770,6680,,5,
-South Side Civic,community engagement,printing,250,,5000,770,6680,,5,
-South Side Civic,community engagement,gift,1500,,5000,770,6680,,5,
-South Side Civic,community engagement,reusable supplies,150,,5000,770,6680,,5,
+South Side Civic,community engagement,beverages,500,,5000,770,6680,5,5,
+South Side Civic,community engagement,services,300,,5000,770,6680,5,5,
+South Side Civic,community engagement,printing,250,,5000,770,6680,5,5,
+South Side Civic,community engagement,gift,1500,,5000,770,6680,5,5,
+South Side Civic,community engagement,reusable supplies,150,,5000,770,6680,5,5,
 The African Perspective,promotion,reusable supplies,240,340,0,640,0,,6,
 The African Perspective,social,food,50,340,0,640,0,,6,
 The African Perspective,social,beverages,50,340,0,640,0,,6,

@@ -9,29 +9,28 @@ mainfont: Georgia
 sansfont: Arial
 fontsize: 16pt
 urlcolor: blue
+title: "Harris Student Government Finance Committee Transparency Report"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
 library(tidyverse)
+quarter <- params$quarter
 ```
 
-# Harris Student Government Finance Committee Transparency Report Fall 2024
+# Harris Student Government Finance Committee Transparency Report `r quarter`
 
-```{r}
-quarter <- "Fall 2024"
+```{r data}
 source("utils.R")
-df <- setup(data_path = "2024.csv")
+df <- setup(quarter)
+hours <- read.csv("hours.csv")
 ```
 
 ## Summary
 
-The overall budget for Fall 2024 was \$18,590, which were allocated in two rounds:
+The overall budget for `r quarter` was \$18,590.
 
-* Main allocations: \$16,090
-* Special allocations*: \$2,500
-
-In Fall 2024, HSG Finance Committee met `r nrow(hours)` times for a total of `r sum(hours$minutes)` minutes. HSG funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported `r sum(summarize(group_by(df,org),n=mean(attendactual))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-fall quarter reviews. 
+In `r quarter`, HSG Finance Committee met `r nrow(hours)` times for a total of `r sum(hours$minutes)` minutes. HSG funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported `r sum(summarize(group_by(df,org),n=mean(attendactual))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-fall quarter reviews. 
 
 Breakdowns by event type, item type, and organization are included in this transparency report. Please use the survey at the end of this report to send us comments, suggestions, or questions about this report or HSG Finance Committee activities in general.
 
@@ -44,8 +43,6 @@ Funding criteria used in this round included:
 * Detailed, itemized documentation with regards to planned expenses and justification for why unusual expenses are necessary
 
 As we note in a later section, additional criteria and more quantified criteria have been added for winter quarter.
-
-^[*The HSG Executive Board voted to replace the annual spring Harris Gala with a less costly celebration. Historically, the Harris Gala cost over \$30,000. This release of funds allowed the Finance Committee to hold special allocations in mid-quarter.] 
 
 \newpage 
 
@@ -126,34 +123,24 @@ uniques <- distinct(df, actual, externalreceived, totalreceived, totalrollover, 
 lm(totalreceived ~ events.planned + totalrollover + externalreceived, uniques) %>% summary()
 ```
 
-
 ## Future improvements
 
-Improvement goals for winter quarter:
-
-* **Expedite funding timelines**
-  * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. This quarter, HSGs finished funding decisions by week 1. Unfortunately, due to turnover within the Student Engagement staff teams, we were not able to allocate funds within week 1 as originally planned.
-* **Increase funding transparency**
-  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new \href{https://tinyurl.com/4yx98367}{\underline{budgeting template}} and new \href{https://docs.google.com/spreadsheets/d/1hAO4El9QERUdx8u9yyNmK4RZuDeH7MHo/edit?usp=sharing&ouid=105056093794884384969&rtpof=true&sd=true}{\underline{funding criteria}} to address these issues. Funding committee members now use a rubric-standardized process to evaluate funding items. Standard deviation on winter allocations decreased by $127 compared to fall allocations. 
-
-## Survey
-
-**We need your voice** to determine what types of events we, as the Harris student body, want to fund next quarter. Please fill the following \href{https://forms.gle/Jq5z4rwTVAKWb9re8}{\underline{1-minute form}} to let us know your opinion.
+Improvement goals for next quarter:
 
 \vspace{30pt}
 
 Sincerely,
 
-Tony Jiang, Finance Committee Chair
+FIRST LAST, Finance Committee Chair
 
-Karen Yi, Second-Year Finance Committee Member
+FIRST LAST, Second-Year Finance Committee Member
 
-Andrea Kimpson, Second-Year Finance Committee Member
+FIRST LAST, Second-Year Finance Committee Member
 
-Shivani Patel, Second-Year Finance Committee Member
+FIRST LAST, Second-Year Finance Committee Member
 
-Faris Alrakhis, First-Year Finance Committee Member
+FIRST LAST, First-Year Finance Committee Member
 
-Moe Alsharif, First-Year Finance Committee Member
+FIRST LAST, First-Year Finance Committee Member
 
-Tiffany Tu, First-Year Finance Committee Member
+FIRST LAST, First-Year Finance Committee Member

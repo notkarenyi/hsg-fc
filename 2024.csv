@@ -88,12 +88,12 @@ Chicago Policy Review,workshop,food,150,0,0,740,2370,2,6,81
 Chicago Policy Review,workshop,beverages,54,0,0,740,2370,2,6,81
 Chicago Policy Review,workshop,food,150,690,0,740,2370,2,6,81
 Chicago Policy Review,workshop,beverages,54,690,0,740,2370,2,6,81
-"Data, Ethics, & Policy Conference",speaker,gift,2000,,5000,180,1370,4,4,
-"Data, Ethics, & Policy Conference",speaker,food,700,,5000,180,1370,4,4,
-"Data, Ethics, & Policy Conference",speaker,beverages,250,,5000,180,1370,4,4,
-"Data, Ethics, & Policy Conference",speaker,non-reusable supplies,250,,5000,180,1370,4,4,
-"Data, Ethics, & Policy Conference",speaker,printing,250,,5000,180,1370,4,4,
-"Data, Ethics, & Policy Conference",speaker,reusable supplies,50,,5000,180,1370,4,4,
+"Data, Ethics, & Policy Conference",speaker,gift,2000,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,food,700,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,beverages,250,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,non-reusable supplies,250,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,printing,250,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,reusable supplies,50,,5000,180,1370,4,4,160
 European Policy Forum,debate,food,180,,0,330,0,4,3,
 European Policy Forum,debate,beverages,20,,0,330,0,4,3,
 European Policy Forum,debate,printing,50,,0,330,0,4,3,
@@ -273,12 +273,12 @@ South Asian Students' Policy  Association,speaker,non-reusable supplies,25,0,370
 South Asian Students' Policy  Association,social,food,160,3520,3700,800,890,2,4,255
 South Asian Students' Policy  Association,social,beverages,28,3520,3700,800,890,2,4,255
 South Asian Students' Policy  Association,social,services,5,3520,3700,800,890,2,4,255
-South Side Civic,community engagement,food,7340,,5000,770,6680,5,5,
-South Side Civic,community engagement,beverages,500,,5000,770,6680,5,5,
-South Side Civic,community engagement,services,300,,5000,770,6680,5,5,
-South Side Civic,community engagement,printing,250,,5000,770,6680,5,5,
-South Side Civic,community engagement,gift,1500,,5000,770,6680,5,5,
-South Side Civic,community engagement,reusable supplies,150,,5000,770,6680,5,5,
+South Side Civic,community engagement,food,7340,,5000,770,6680,5,5,60
+South Side Civic,community engagement,beverages,500,,5000,770,6680,5,5,60
+South Side Civic,community engagement,services,300,,5000,770,6680,5,5,60
+South Side Civic,community engagement,printing,250,,5000,770,6680,5,5,60
+South Side Civic,community engagement,gift,1500,,5000,770,6680,5,5,60
+South Side Civic,community engagement,reusable supplies,150,,5000,770,6680,5,5,60
 The African Perspective,promotion,reusable supplies,240,340,0,640,0,,6,
 The African Perspective,social,food,50,340,0,640,0,,6,
 The African Perspective,social,beverages,50,340,0,640,0,,6,

@@ -104,9 +104,9 @@ Breakdowns by event type, item type, and organization are included in this trans
 Funding criteria used in this round included:
 
 * Collaboration with other HSOs or non-Harris organizations
-* Speaker events and career events (prioritize events that are open to the broader Harris community)
+* Speaker events and career events (prioritize events that are open to the broader Harris community), see page 5
 * Diversity and inclusion (inviting speakers of color, speakers who are disabled or are women)
-* How much non-HSG funding each HSO has access to (including rollover from previous quarters, non-Harris grants, or non-Harris RSO funding)
+* How much non-HSG funding each HSO has access to (including rollover from previous quarters, non-Harris grants, or non-Harris RSO funding), see page 3
 * Detailed, itemized documentation with regards to planned expenses and justification for why unusual expenses are necessary
 
 As we note in a later section, additional criteria and more quantified criteria have been added for winter quarter.
@@ -160,6 +160,12 @@ p <- df %>%
 barstyle(p,dist=1000)
 ```
 
+\newpage 
+
+## Funding Criteria: Existing and External Funds 
+
+Organizations with large amounts of unexplained rollover received limited funding.
+
 ```{r, fig.height = 5}
 rollover <- df %>%
   group_by(org) %>%
@@ -182,6 +188,13 @@ p <- rollover %>%
 
 pointstyle(p,dist=2000)
 ```
+\newpage 
+
+## Funding Outcomes: Number of Events
+
+The trend revealed here is to expect HSOs to generally held less events than planned, likely due to a limited amount of funding overall (scarce resources). 
+
+The general distribution of events remains the same when comparing planned versus held events: the HSOs who planned the most events held the most events, and those who planned the least events held the least events.
 
 ```{r, fig.height = 7}
 p <- df %>%
@@ -318,12 +331,12 @@ lm(totalreceived~events.planned+totalrollover+externalreceived,uniques) %>% summ
 
 ## Future improvements
 
-Improvements for winter quarter:
+Improvement goals for winter quarter:
 
 * **Expedite funding timelines**
   * HSOs reported unusually slow funding timelines, due to institutional knowledge loss from last year's government. This quarter, HSGs finished funding decisions by week 1. Unfortunately, due to turnover within the Student Engagement staff teams, we were not able to allocate funds within week 1 as originally planned.
 * **Increase funding transparency**
-  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new \href{https://tinyurl.com/4yx98367}{\underline{budgeting template}} and new \href{https://tinyurl.com/2bejj7pf}{\underline{funding criteria}} to address these issues. Funding committee members now use a rubric-standardized process to evaluate funding items. Standard deviation on winter allocations decreased by $127 compared to fall allocations. 
+  * HSOs reported being unclear on what criteria were being used to fund activities. For the Winter 2025 cycle, we released a new \href{https://tinyurl.com/4yx98367}{\underline{budgeting template}} and new \href{https://docs.google.com/spreadsheets/d/1hAO4El9QERUdx8u9yyNmK4RZuDeH7MHo/edit?usp=sharing&ouid=105056093794884384969&rtpof=true&sd=true}{\underline{funding criteria}} to address these issues. Funding committee members now use a rubric-standardized process to evaluate funding items. Standard deviation on winter allocations decreased by $127 compared to fall allocations. 
 
 ## Survey
 

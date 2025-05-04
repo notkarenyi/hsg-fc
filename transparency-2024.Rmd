@@ -12,82 +12,16 @@ urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, warning = F,message = F)
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
 library(tidyverse)
 ```
 
 # Harris Student Government Finance Committee Transparency Report Fall 2024
 
 ```{r}
-df = read.csv("2024.csv")
-hours = read.csv("hours.csv")
-
-df <- df %>%
-  group_by(org) %>%
-  mutate(
-    totalrequested=sum(amount),
-    org=str_wrap(org,60)
-  ) %>%
-  ungroup() %>%
-  mutate(
-    org=factor(org,levels=rev(unique(org)),ordered=T)
-  )
-
-barstyle <- function(p,dist=200,dollars=T) {
-  p <- p  +
-    xlab("") +
-    ylab("") +
-    coord_flip() +
-    theme_classic(base_family = "serif") +
-    theme(
-      axis.line.y=element_blank(),
-      axis.ticks.y=element_blank(),
-      axis.line.x=element_blank(),
-      axis.ticks.x=element_blank(),
-      panel.grid.major.x=element_line(color="gray80"),
-      plot.margin=unit(c(10,10,10,10), "pt")
-    )
-  
-  if (dollars) {
-    p <- p +
-    scale_y_continuous(
-      breaks = seq(0,50000,by=dist),
-      labels = scales::dollar_format()
-    )
-  }
-
-  return(p)
-}
-
-
-pointstyle <- function(p,dist=200,dollars=T) {
-  p <- p  +
-    theme_classic(base_family = "serif") +
-    theme(
-      axis.line.y=element_blank(),
-      axis.ticks.y=element_blank(),
-      axis.line.x=element_blank(),
-      axis.ticks.x=element_blank(),
-      panel.grid.major.x=element_line(color="gray80"),
-      panel.grid.major.y=element_line(color="gray80"),
-      plot.margin=unit(c(10,10,10,10), "pt"),
-      aspect.ratio=1
-    )
-  
-  if (dollars) {
-    p <- p +
-    scale_x_continuous(
-      breaks = seq(0,50000,by=dist),
-      labels = scales::dollar_format()
-    ) +
-    scale_y_continuous(
-      breaks = seq(0,50000,by=200),
-      labels = scales::dollar_format()
-    )
-  }
-
-  return(p)
-}
+quarter <- "Fall 2024"
+source("utils.R")
+df <- setup(data_path = "2024.csv")
 ```
 
 ## Summary
@@ -120,44 +54,12 @@ As we note in a later section, additional criteria and more quantified criteria 
 The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)`.
 
 ```{r, fig.height = 6.5}
-p <- df %>%
-  group_by(org) %>%
-  summarize(total=mean(totalreceived)) %>%
-  ggplot(aes(org,total)) +
-  geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(
-    title="   Allocations by Organization, Fall 2024",
-    subtitle="   Dotted line represents average allocation",
-    caption="Note: BePP did not submit a budget request"
-  ) +
-  geom_hline(
-    yintercept=mean(summarize(group_by(df,org),m=mean(totalreceived,na.rm=T))[["m"]],na.rm=T),
-    linetype="dotted",
-    size=.6
-  )
-
-barstyle(p)
+allocations_by_org(quarter, caption = "Note: BePP did not submit a budget request")
 ```
 
 
 ```{r, fig.height = 6, include=F}
-p <- df %>%
-  group_by(org) %>%
-  summarize(leftover=mean(totalreceived,na.rm=T) + mean(externalreceived,na.rm=T) + mean(totalrollover,na.rm=T) - mean(actual,na.rm=T)) %>%
-  ggplot(aes(org,leftover)) +
-  geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(
-    title="   New Rollover by Organization, Fall 2024",
-    subtitle="   Dotted line represents average allocation",
-    caption=""
-  ) +
-  geom_hline(
-    yintercept=mean(summarize(group_by(df,org),m=mean(totalreceived,na.rm=T))[["m"]],na.rm=T),
-    linetype="dotted",
-    size=.6
-  )
-
-barstyle(p,dist=1000)
+rollover_by_org(quarter)
 ```
 
 \newpage 
@@ -167,26 +69,7 @@ barstyle(p,dist=1000)
 Organizations with large amounts of unexplained rollover received limited funding.
 
 ```{r, fig.height = 5}
-rollover <- df %>%
-  group_by(org) %>%
-  summarize(rollover=mean(totalrollover+externalreceived),
-            received=mean(totalreceived))
-
-p <- rollover %>%
-  ggplot(aes(rollover,received)) +
-  geom_point(color="#800000") +
-  labs(
-    title="   Allocations Compared to Rollover +\n   External Funding by Organization, Fall 2024"
-    # subtitle="   Points represent rollover/external amount"
-  ) +
-  xlab("Rollover + external funding") +
-  ylab("Received") 
-  # geom_smooth(method="lm")
-
-# not significant
-# lm(received~rollover, rollover) %>% summary()
-
-pointstyle(p,dist=2000)
+compare_rollover_allocation(quarter)
 ```
 \newpage 
 
@@ -197,55 +80,16 @@ The trend revealed here is to expect HSOs to generally held less events than pla
 The general distribution of events remains the same when comparing planned versus held events: the HSOs who planned the most events held the most events, and those who planned the least events held the least events.
 
 ```{r, fig.height = 7}
-p <- df %>%
-  group_by(org) %>%
-  summarize(total=mean(eventsactual),
-            planned=mean(events.planned)) %>%
-  filter(!is.na(total)) %>%
-  ggplot() +
-  geom_bar(
-    aes(org,planned,fill=Category),
-    stat="identity",
-    fill="#C16622"
-  ) +
-  geom_bar(
-    aes(org,total,fill=Category),
-    stat="identity",
-    fill="#800000"
-  ) +
-  labs(
-    title="   Planned vs. Actual Number of Events Held\n   by Organization, Fall 2024",
-    caption="   Note: Gold=Planned, Maroon=Actual. IDPA and TAP did not report how many events they held in Fall"
-  )
-
-barstyle(p,dollars=F) +
-  scale_y_continuous(breaks=seq(0,20,2))
+planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual. IDPA and TAP did not report how many events they held in Fall")
 ```
 
 \newpage 
 
 ```{r,include=F}
-# is receiving a low amount of funding correlated with hosting less events than planned?
-df$devents <- df$events.planned-df$eventsactual
-lm(totalreceived~devents,df) %>% summary()
-
-p <- df %>%
-  ggplot(aes(totalreceived,devents)) +
-  geom_point(color="#800000") +
-  xlab("Allocation") +
-  ylab("Number of events canceled") +
-  labs(title="Low allocation not associated with number of canceled events")
-
-pointstyle(p,dollars=F)
+compare_allocation_events(caption = "Low allocation not associated with number of canceled events")
 ```
 
 ## Spending by Event Type
-
-```{r}
-# if we don't know how much they spent, assume received plus some rollover
-df[is.na(df$actual),"actual"] <- df[is.na(df$actual),"totalreceived"] + df[is.na(df$actual),"externalreceived"] + round(df[is.na(df$actual),"totalrollover"] * .2)
-```
-
 
 We allocated funds on an organizational level, not on an item-by-item basis. While we collected total actual spending for fall quarter per HSO, the following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We scaled this proportion by the total amount awarded, \$1,420, to estimate the amount that would have been spent on cultural events. In this analysis, we only considered funds allocated by HSG, not external grants or funds.
 
@@ -257,37 +101,8 @@ Notation:
 * **Promotion**: e.g., graphic design, and recruitment activities
 * **Workshop**: e.g., career fairs and writing workshops
 
-```{r}
-# recalculate total requested for only those events held
-df <- df %>%
-  filter(actual!=0) %>%
-  group_by(org) %>%
-  mutate(totalrequested=sum(amount,na.rm=T))
-
-# cap actual spent by amount we granted
-df <- mutate(df,actualhsg=min(totalreceived,actual))
-```
-
 ```{r, fig.height = 3}
-p <- df %>%
-  group_by(org,category) %>%
-  summarize(
-    # we are missing detailed information for actual spending, so impute:
-    # scale the amount requested by actual spending
-    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*mean(actualhsg,na.rm=T)
-  ) %>%
-  group_by(category) %>%
-  summarize(adjusted=round(sum(adjusted,na.rm=T))) %>%
-  filter(!is.na(adjusted),category!="") %>%
-  mutate(
-    category=fct_reorder(str_to_sentence(category), adjusted)
-  ) %>%
-  ggplot(aes(category,adjusted)) +
-  geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    HSG Funds Spending by Event Type, Fall 2024",
-       subtitle="     Estimated from amount requested per category")
-
-barstyle(p,dist=1000)
+spending_by_event_type(quarter)
 ```
 
 ## Spending by Item Type
@@ -302,30 +117,13 @@ Notation:
 * **Non-reusable supplies**: e.g., utensils and firewood
 
 ```{r, fig.height = 3}
-p <- df %>%
-  group_by(org,type) %>%
-  summarize(
-    # scale the amount requested by 
-    adjusted=sum(amount,na.rm=T)/mean(totalrequested,na.rm=T)*mean(actualhsg,na.rm=T)
-  ) %>%
-  group_by(type) %>%
-  summarize(adjusted=round(sum(adjusted,na.rm=T))) %>%
-  filter(!is.na(adjusted),type!="") %>%
-  mutate(
-    type=fct_reorder(str_to_sentence(type), adjusted)
-  ) %>%
-  ggplot(aes(type,adjusted)) +
-  geom_bar(stat="identity",show.legend=F,fill="#800000") +
-  labs(title="    HSG Funds Spending by Item Type, Fall 2024",
-       subtitle="     Estimated from amount requested per item type")
-
-barstyle(p,dist=2000)
+spending_by_item_type(quarter)
 ```
 
 ```{r,include=F}
-uniques <- distinct(df,actual,externalreceived,totalreceived,totalrollover,eventsactual,events.planned,attendactual,totalrequested)
+uniques <- distinct(df, actual, externalreceived, totalreceived, totalrollover, eventsactual, events.planned, attendactual, totalrequested)
 
-lm(totalreceived~events.planned+totalrollover+externalreceived,uniques) %>% summary()
+lm(totalreceived ~ events.planned + totalrollover + externalreceived, uniques) %>% summary()
 ```
 
 

@@ -1,10 +1,9 @@
 # setup -------------------------------------------------------------------
 
-setup <- function(data_path) {
+setup <- function(quarter) {
   #' Read and clean data
-
-  df <- read.csv("2024.csv")
-  hours <- read.csv("hours.csv")
+  
+  df <- read.csv(paste0(quarter,".csv"))
 
   df <- df %>%
     group_by(org) %>%

@@ -8,10 +8,10 @@ remove_punc <- function(x) {
 }
 
 process_attendees <- function(x) {
-  x <- map(x,~str_split(.,'-')[[1]])
-  x <- lapply(x,remove_punc)
-  x <- lapply(x,as.numeric)
-  x <- lapply(x,mean)
+  x <- map(x, ~ str_split(., "-")[[1]])
+  x <- lapply(x, gsub, "+", "")
+  x <- lapply(x, as.numeric)
+  x <- lapply(x, mean)
   x <- unlist(x)
   return(x)
 }

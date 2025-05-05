@@ -181,3 +181,12 @@ for (file in files[1:length(files)]) {
 }
 
 write.csv(data, paste0(quarter, ".csv"))
+names(data) <- tolower(names(data))
+
+# pivot by item
+data <- data %>%
+  pivot_longer(
+    cols = c("refreshments", "supplies", "equipment", "services", "miscellaneous"),
+    names_to = "type"
+  )
+

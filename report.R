@@ -2,9 +2,38 @@
 
 setup <- function(quarter) {
   #' Read and clean data
-
-  df <- read.csv(paste0(quarter, ".csv"))
-
+  
+  actual <- read.csv(paste0(current_quarter, ".csv"))
+  # standardize org names
+  actual <- update_names(actual)
+  
+  # add totals requested and planned from last quarter
+  planned <- read.csv(paste0(report_quarter, ".csv")) %>%
+    update_names()
+  
+  planned <- planned %>%
+    select(-actual, -attendactual, -eventsactual)
+  actual <- actual %>%
+    group_by(org) %>%
+    summarize(
+      actual = mean(actual),
+      attendactual = mean(attendactual),
+      eventsactual = mean(eventsactual)
+    )
+  
+  df <- left_join(planned, actual)
+  
+  # add totals allocated for last quarter
+  allocated <- read_excel(paste0(report_quarter, " Allocations.xlsx")) %>%
+    remove_empty('rows')
+  names(allocated)[1] <- 'org'
+  allocated <- update_names(allocated)
+  
+  df <- left_join(df, allocated)
+  df$totalreceived <- df$`Total Allocated`
+  names(df) <- tolower(names(df))
+  
+  # create totalrequested
   df <- df %>%
     group_by(org) %>%
     mutate(

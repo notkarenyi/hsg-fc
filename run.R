@@ -52,35 +52,6 @@ if (!file.exists(paste0(current_quarter, ".csv"))) {
   source("clean_data.R")
 }
 
-# standardize org names
-actual <- read.csv(paste0(current_quarter, ".csv"))
-actual <- update_names(actual)
-
-# add totals requested and planned from last quarter
-planned <- read.csv(paste0(report_quarter, ".csv")) %>%
-  update_names()
-
-planned <- planned %>%
-  select(-actual, -attendactual, -eventsactual)
-actual <- actual %>%
-  group_by(org) %>%
-  summarize(
-    actual = mean(actual),
-    attendactual = mean(attendactual),
-    eventsactual = mean(eventsactual)
-  )
-
-df <- left_join(planned, actual)
-
-# add totals allocated for last quarter
-allocated <- read_excel(paste0(report_quarter, " Allocations.xlsx")) %>%
-  remove_empty('rows')
-names(allocated)[1] <- 'org'
-allocated <- update_names(allocated)
-
-df <- left_joined(df, allocated)
-names(df) <- tolower(names(df))
-
 # run reports -------------------------------------------------------------
 
 for (format in c("pdf", "html")) {

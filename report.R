@@ -170,7 +170,7 @@ planned_events <- function(quarter, caption = "") {
     group_by(org) %>%
     summarize(
       total = mean(eventsactual),
-      planned = mean(events.planned)
+      planned = mean(eventsplanned)
     ) %>%
     filter(!is.na(total)) %>%
     ggplot() +

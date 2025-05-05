@@ -3,33 +3,46 @@ library(readxl)
 library(readr)
 library(janitor)
 
+# define functions --------------------------------------------------------
+
 remove_punc <- function(x) {
   return(gsub("[[:punct:] ]+", " ", x))
 }
 
 process_attendees <- function(x) {
-  x <- map(x, ~ str_split(., "-")[[1]])
-  x <- lapply(x, str_replace, "\\+", "")
+  #' Attendees are often reported as strings like "50+" or "30-40"
+  #' Transform to integer
+
+  x <- map(x, ~ str_split(., "-")[[1]]) # split into a list of numbers if range
+  x <- lapply(x, str_replace, "\\+", "") # remove +
   x <- lapply(x, as.numeric)
-  x <- lapply(x, mean)
+  x <- lapply(x, mean) # average max and min if a range was reported
   x <- unlist(x)
   return(x)
 }
 
-extract_event <- function(details, start_row) {
+extract_event <- function(details, i) {
+  #' From the Details tab of the finance application,
+  #' detect and extract each event into its own row
+  #' @param i Which event are we extracting?
+
+  # Details about event are between "EXPENSE #X" and "Expenses Breakdown"
   description <- details[event_starts[i]:(event_middle[i] - 1), ]
-  names(description) <- c('column','v2','v3')
+  names(description) <- c("column", "v2", "v3")
+
+  # Standardize row names to later transpose and combine
   description <- description %>%
-    remove_empty(c("rows", "cols")) %>% 
-    mutate(column=str_replace(column,regex(".*attendees"),"ExpectedAttendees")) %>% 
-    mutate(column=str_replace(column,regex(".*UChicago.*"),"CollabRSO")) %>% 
-    mutate(column=str_replace(column,regex("Collabo.*"),"CollabHSO")) %>% 
-    mutate(column=str_replace(column,regex(".*speaker.*"),"Speaker"))
-  
+    remove_empty(c("rows", "cols")) %>%
+    mutate(column = str_replace(column, regex(".*attendees"), "ExpectedAttendees")) %>%
+    mutate(column = str_replace(column, regex(".*UChicago.*"), "CollabRSO")) %>%
+    mutate(column = str_replace(column, regex("Collabo.*"), "CollabHSO")) %>%
+    mutate(column = str_replace(column, regex(".*speaker.*"), "Speaker"))
+
   description <- description %>%
-    t() %>%
+    t() %>% # transpose
     data.frame() %>%
-    row_to_names(row_number = 1)
+    row_to_names(row_number = 1) # turn first row into col names
+
   names(description) <- names(description) %>%
     remove_punc() %>%
     tolower() %>%
@@ -38,36 +51,44 @@ extract_event <- function(details, start_row) {
   description$expectedattendees <- description$expectedattendees %>%
     process_attendees()
 
+  # Itemized expenses are between "Expenses Breakdown" and "TOTAL EXPENSE #X"
   expenses <- details[event_middle[i] + 1:(event_ends[i] - event_middle[i]), 1:3]
 
   expenses <- expenses %>%
     remove_empty(c("rows", "cols")) %>%
-    row_to_names(row_number = 1)
+    row_to_names(row_number = 1) # turn first row into col names
   names(expenses) <- c("Category", "Details", "Amount")
+
+  # Remove unused categories
   expenses <- expenses %>%
-    mutate(Details=na_if(str_trim(expenses$Details), "")) %>%
+    mutate(Details = na_if(str_trim(expenses$Details), "")) %>%
     distinct()
-  expenses$Amount <- as.numeric(expenses$Amount)
-  expenses <- expenses %>% 
-    mutate(Category=str_replace(Category,regex("Miscellaneous.*"),"Miscellaneous")) %>% 
-    mutate(Category=str_replace(Category,regex("Supplies.*"),"Supplies")) %>% 
-    mutate(Category=str_replace(Category,regex("Equipment.*"),"Equipment")) %>% 
-    mutate(Category=str_replace(Category,regex("Refreshments.*"),"Refreshments")) %>% 
-    mutate(Category=str_replace(Category,regex("Contractual.*"),"Services")) %>% 
-    mutate(Category=str_replace(Category,regex("TOTAL.*|Total.*"),"EventTotal")) %>% 
-    mutate(Category=str_replace(Category,regex("EXPENSE .*"),"EXPENSE"))
-  expenses <- expenses[!is.na(expenses[,3]),]
+  expenses <- expenses[!is.na(expenses[, 3]), ]
+
+  # Standardize row names to later transpose and combine
+  expenses <- expenses %>%
+    mutate(Category = str_replace(Category, regex("Miscellaneous.*"), "Miscellaneous")) %>%
+    mutate(Category = str_replace(Category, regex("Supplies.*"), "Supplies")) %>%
+    mutate(Category = str_replace(Category, regex("Equipment.*"), "Equipment")) %>%
+    mutate(Category = str_replace(Category, regex("Refreshments.*"), "Refreshments")) %>%
+    mutate(Category = str_replace(Category, regex("Contractual.*"), "Services")) %>%
+    mutate(Category = str_replace(Category, regex("TOTAL.*|Total.*"), "EventTotal")) %>%
+    mutate(Category = str_replace(Category, regex("EXPENSE .*"), "EXPENSE"))
+
+  # Group items in the same category
   expenses <- expenses %>%
     select(-Details) %>%
     group_by(Category) %>%
-    summarize(Amount=sum(Amount)) %>%
-    t() %>%
+    mutate(Amount = as.numeric(Amount)) %>%
+    summarize(Amount = sum(Amount)) %>%
+    t() %>% # transpose
     data.frame() %>%
-    row_to_names(row_number = 1)
-  
+    row_to_names(row_number = 1) # turn first row into col names
+
   expenses <- expenses %>%
     mutate(across(everything(), as.numeric))
-  
+
+  # Combine description and expenses into one table and return
   result <- cbind(description, expenses)
   row.names(result) <- NULL
 
@@ -79,15 +100,19 @@ extract_event <- function(details, start_row) {
 # run ---------------------------------------------------------------------
 
 data <- list()
-files <- list.files("data")
+files <- list.files("data") # get all files in data/ folder
+
 for (file in files[1:length(files)]) {
-# for (file in files[25:length(files)]) {
-    print(paste0("Parsing ", file))
+  # for (file in files[25:length(files)]) {
+  print(paste0("Parsing ", file))
+
+  # existing orgs have a Retrospective tab for last quarter expenses
   if (length(excel_sheets(paste0("data/", file))) == 4) {
     retrospective <- read_excel(paste0("data/", file), sheet = 2, skip = 4)
     budget <- read_excel(paste0("data/", file), sheet = 3)
     details <- read_excel(paste0("data/", file), sheet = 4)
   } else {
+    # new orgs may not have a Retrospective tab for last quarter expenses
     retrospective <- data.frame(
       "Budgeted" = NA,
       "Actual" = NA,
@@ -102,18 +127,25 @@ for (file in files[1:length(files)]) {
 
   # details2 <- details %>% t()
   details <- details[!is.na(details[, 1]), ]
+
+  # events start at Expense Name and end at TOTAL EXPENSE
   event_starts <- which(str_detect(unlist(details[, 1]), "^Expense Name"))
+  # skip example expense if any
   if (any(str_detect(unlist(details[, 1]), "^EXAMPLE"))) {
     event_starts <- event_starts[2:length(event_starts)]
   }
   event_middle <- which(str_detect(unlist(details[, 1]), "^Expenses Breakdown"))
+  # match number of event middle to number of event starts
   event_middle <- event_middle[((length(event_middle) - length(event_starts)) + 1):(length(event_middle))]
   event_ends <- which(str_detect(unlist(details[, 1]), "^TOTAL EXPENSE"))
+  # match number of event ends to number of event starts
   event_ends <- event_ends[((length(event_ends) - length(event_starts)) + 1):(length(event_ends))]
-  if (length(event_ends)<length(event_starts)) {
-    event_ends <- c(event_ends,length(details))
+  if (length(event_ends) < length(event_starts)) {
+    event_ends <- c(event_ends, length(details))
   }
 
+  # for each event start detected, extract the corresponding event
+  # combine all events into one table
   df <- data.frame()
   for (i in 1:length(event_starts)) {
     df <- bind_rows(df, extract_event(details, i))
@@ -122,6 +154,8 @@ for (file in files[1:length(files)]) {
   # parse retrospective page ------------------------------------------------
   print("Parsing retrospective")
 
+  # people do not accurately report amount budgeted
+  # so we will get this data from last quarter's applications
   # df$budgeted <- sum(retrospective$Budgeted)
   df$actual <- sum(retrospective$Actual)
   df$attendees <- retrospective$`Attendees (if applicable)` %>%
@@ -140,8 +174,9 @@ for (file in files[1:length(files)]) {
     sum(na.rm = T)
   df$totalexternal <- rollover + external
 
+  # combine data for all orgs------------------------------------------------
   print(names(df))
   data <- bind_rows(data, df)
 }
 
-write.csv(data,paste0(quarter,'.csv'))
+write.csv(data, paste0(quarter, ".csv"))

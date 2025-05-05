@@ -2,8 +2,8 @@
 
 setup <- function(quarter) {
   #' Read and clean data
-  
-  df <- read.csv(paste0(quarter,".csv"))
+
+  df <- read.csv(paste0(quarter, ".csv"))
 
   df <- df %>%
     group_by(org) %>%

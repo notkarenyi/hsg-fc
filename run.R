@@ -62,7 +62,7 @@ for (format in c("pdf", "html")) {
 
   rmarkdown::render(
     paste0(report_quarter, ".Rmd"),
-    params = list(report_quarter),
+    params = list('quarter'=report_quarter),
     output_file = fp,
     output_format = paste0(format, "_document")
   )

@@ -72,7 +72,7 @@ extract_event <- function(details, i) {
     mutate(Category = str_replace(Category, regex("Equipment.*"), "Equipment")) %>%
     mutate(Category = str_replace(Category, regex("Refreshments.*"), "Refreshments")) %>%
     mutate(Category = str_replace(Category, regex("Contractual.*"), "Services")) %>%
-    mutate(Category = str_replace(Category, regex("TOTAL.*|Total.*"), "EventTotal")) %>%
+    mutate(Category = str_replace(Category, regex("TOTAL.*|Total.*"), "Amount")) %>%
     mutate(Category = str_replace(Category, regex("EXPENSE .*"), "EXPENSE"))
 
   # Group items in the same category
@@ -150,6 +150,7 @@ for (file in files[1:length(files)]) {
   for (i in 1:length(event_starts)) {
     df <- bind_rows(df, extract_event(details, i))
   }
+  df$eventsplanned <- length(event_starts)
 
   # parse retrospective page ------------------------------------------------
   print("Parsing retrospective")
@@ -158,10 +159,10 @@ for (file in files[1:length(files)]) {
   # so we will get this data from last quarter's applications
   # df$budgeted <- sum(retrospective$Budgeted)
   df$actual <- sum(retrospective$Actual)
-  df$attendees <- retrospective$`Attendees (if applicable)` %>%
+  df$attendactual <- retrospective$`Attendees (if applicable)` %>%
     process_attendees() %>%
     sum()
-  df$events <- nrow(retrospective)
+  df$eventsactual <- nrow(retrospective)
 
   # parse budget page -------------------------------------------------------
   print("Parsing budget")
@@ -172,7 +173,7 @@ for (file in files[1:length(files)]) {
     map(parse_number) %>%
     unlist() %>%
     sum(na.rm = T)
-  df$totalexternal <- rollover + external
+  df$totalrollover <- rollover + external
 
   # combine data for all orgs------------------------------------------------
   print(names(df))

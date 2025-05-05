@@ -17,7 +17,7 @@ process_attendees <- function(x) {
 }
 
 extract_event <- function(start_row, end_row = NULL) {
-  description <- details[event_starts[i]+2:((event_middle[i]-1)-(event_starts[i]+2)),] %>%
+  description <- details[event_starts[i] + 1:((event_middle[i] - 1) - (event_starts[i] + 2)), ] %>%
     t() %>%
     data.frame() %>% 
     row_to_names(row_number=1)
@@ -60,10 +60,15 @@ for (file in list.files('data')) {
   print('Parsing detailed expenses')
 
   # details2 <- details %>% t()
-  details <- details[!is.na(details[,1]),]
-  event_starts <- which(str_detect(unlist(details[,1]), "^EXPENSE"))
-  event_middle <- which(str_detect(unlist(details[,1]), "^Expenses Breakdown"))
-  event_ends <- which(str_detect(unlist(details[,1]), "^TOTAL EXPENSE"))
+  details <- details[!is.na(details[, 1]), ]
+  event_starts <- which(str_detect(unlist(details[, 1]), "^Expense Name"))
+  event_middle <- which(str_detect(unlist(details[, 1]), "^Expenses Breakdown"))
+  event_middle <- event_middle[((length(event_middle) - length(event_starts)) + 1):(length(event_middle))]
+  event_ends <- which(str_detect(unlist(details[, 1]), "^TOTAL EXPENSE"))
+  event_ends <- event_ends[((length(event_ends) - length(event_starts)) + 1):(length(event_ends))]
+  if (length(event_ends)<length(event_starts)) {
+    event_ends <- c(event_ends,length(details))
+  }
 
   df <- data.frame()
   for (i in length(event_starts)) {

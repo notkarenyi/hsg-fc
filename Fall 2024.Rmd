@@ -21,7 +21,7 @@ quarter <- "Fall 2024"
 # Harris Student Government Finance Committee Transparency Report `r quarter`
 
 ```{r data}
-source("utils.R")
+source("report.R")
 df <- setup(quarter)
 hours <- read.csv("hours.csv")
 ```

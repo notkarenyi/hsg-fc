@@ -170,14 +170,14 @@ for (file in files[1:length(files)]) {
 
   df$org <- names(budget)[4]
   rollover <- budget[[9, 3]] %>% parse_number()
-  external <- budget[10:15, 3] %>%
+  df$externalreceived <- budget[10:15, 3] %>%
     map(parse_number) %>%
     unlist() %>%
     sum(na.rm = T)
-  df$totalrollover <- rollover + external
+  df$totalrollover <- rollover + df$externalreceived
 
   # combine data for all orgs------------------------------------------------
-  print(names(df))
+  # print(names(df))
   print(nrow(df))
   data <- bind_rows(data, df)
 }

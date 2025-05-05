@@ -1,229 +1,321 @@
-"","org","expense name","description","expectedattendees","event off campus","collabhso","collabrso","speaker","eventtotal","refreshments","services","supplies","prev_actual","prev_attendees","prev_events","totalexternal","miscellaneous","equipment","date"
-"1","Latin American Matters (LAM)","LAM Forum","13th Annual Latin American Matters (LAM) Forum - Shaping the Future: Climate Resilience, Energy Transition in Latin America
-April 17, 2025
-
-The 13th edition of the Annual Latin American Matters (LAM) Forum will take place on April 17, 2025, under the timely and urgent theme ""Shaping the Future: Climate Resilience, Energy Transition in Latin America."" This year’s forum will bring together students, scholars, policymakers, and practitioners to discuss the region’s evolving response to climate change and its shift toward renewable energy. Through panels, keynote talks, and open discussions, the forum aims to explore innovative policy solutions, regional cooperation, and sustainable development strategies that can drive meaningful change across Latin America.",70,"FALSE","FALSE","EPIC and GC","The forum will feature at least twelve speakers, primarily from Latin America, including women and members of underrepresented groups",700,400,250,50,1350,100,1,9700.35,NA,NA,NA
-"2","Anticaste Policy Students Forum","Caste and Labor Intersectionality: Gender, Religion, and Economic Marginalization","Join us for a panel discussion hosted by the Anti-Caste Policy Students Forum (ACPF) in collaboration with the South Asian Students and Policy Association (SASPA) at the Harris School of Public Policy, University of Chicago, on March 25th. This event will explore the intersection of caste, labor, and socio-economic structures, with a focus on gender and religious minorities. Featuring Prof. Ayra Idrias Patras (Pakistan) and Dr. Ansari(India), the panel will shed light on caste-based labor exploitation, democratic deepening, and anti-caste movements across South Asia and beyond.",45,"FALSE","1.0","FALSE","TRUE",650,450,150,40,NA,NA,20,-26,10,NA,NA
-"3","Anticaste Policy Students Forum","Understanding Caste-Based Labor Economy: India and the Diaspora","The caste system continues to shape labor markets and economic hierarchies, not only in India but also within South Asian diaspora communities worldwide. Join the Anti-Caste Policy Students Forum (ACPF) at the Harris School of Public Policy for an in-depth discussion on how caste operates as an enduring structure of labor exploitation, intersecting with gender, religion, and class. This event will also examine how caste-based labor discrimination manifests in global contexts, including the United States, where increasing awareness has led to policy debates around caste protections in workplaces and institutions. By analyzing both Indian and diasporic perspectives, the discussion aims to unpack caste as a transnational policy issue embedded within broader systems of inequality.",45,"FALSE","FALSE","FALSE","TRUE",740,540,150,40,NA,NA,20,-26,10,NA,NA
-"4","Anticaste Policy Students Forum","Race, Caste, Inequities, and Tech: Power, Access, and the Chaotic Terrain of Policy","This event explores how structural inequities shaped by race and caste continue to influence access, empowerment, and mobility in today’s world. Through the lens of technology and policymaking, we critically examine how marginalized communities navigate and challenge systems of exclusion, while also grappling with technology’s chaotic and dual role. Tech can serve as a powerful tool for empowerment—but it can equally reinforce existing inequities through algorithmic bias, digital divides, and exclusionary design. Together, we will unpack how intersecting identities impact opportunities, how technology both disrupts and perpetuates inequities, and how more inclusive, accountable policymaking can shape a future centered on justice and meaningful social change        
-
-In collaboration  with Asian Policy Forum",45,"FALSE","YES","FALSE","TRUE",650,450,NA,40,NA,NA,20,-26,10,150,NA
-"5","Anticaste Policy Students Forum","Screen of Movie Origin (2023) : Caste, Cinema, and Social Justice","The Anti-Caste Policy Students Forum (ACPF) is proud to co-host this screening of *ORIGIN (2023), a powerful exploration of caste and systemic oppression across global contexts. This event aligns with ACPF’s mission to critically engage with caste in public policy and governance. Through the film and discussion, we aim to highlight the intersections of caste, race, and social justice in policymaking. We invite students and faculty to reflect on historical injustices and contemporary policy responses. Join us in fostering a dialogue on dismantling caste hierarchies through informed policy action.
-The event is collaboration with Asian Policy Forum.",45,"FALSE","YES","TRUE","TRUE",1000,450,500,40,NA,NA,20,-26,10,NA,NA
-"6","ALAS","National Mexican Museum of Art/Pilsen Outing","Joint with LAM. This outing to Pilsen aims to encourage students to explore beyond campus, starting with a visit to the National Museum of Mexican Art, followed by a stroll along 18th Street, and concluding with a picnic.",25,"TRUE","TRUE","FALSE","FALSE",500,500,NA,NA,NA,NA,20,82,NA,NA,NA
-"7","ALAS","Chicago Food Justice/Policy","Celebrate Earth Day with an event focused on Chicago's food policy and justice initiatives. This gathering will highlight sustainable practices, address food insecurity, and explore the intersection of environmental and social justice.",25,"FALSE","FALSE","FALSE","TRUE",500,500,NA,NA,NA,NA,20,82,NA,NA,NA
-"8","ALAS","Latine Graduation Celebration","Joint with LAM, UCMA, CLAS, OLAS. The inaugural Latine Graduation Celebration will honor the accomplishments of Latine graduates, celebrating their cultural identity and academic success. This event seeks to create a supportive and inclusive environment, marking an important milestone for our diverse community.",100,"FALSE","TRUE","TRUE","FALSE",800,500,300,NA,NA,NA,20,82,NA,NA,NA
-"9","Asian Policy Forum","Restoring American Supply Chains: A Conversation with Thomas Day","Join us for an engaging discussion with Thomas Day, a leading expert on American supply chain resilience and national security. As geopolitical tensions with China intensify—marked by escalating tariffs, trade disputes, and a renewed emphasis on domestic manufacturing—the importance of securing and revitalizing American supply chains has never been more critical. Thomas will delve into the national security implications of foreign supply chain dependencies and discuss strategies for restoring American manufacturing capabilities. This conversation is particularly relevant for those interested in global trade, economic security, and industrial policy.",70,"FALSE","Yes, in partnership with the Rural American Caucus, given the topic's direct relevance to rural communities and their economies.
-","FALSE","YES (Not woman, POC, and People with Disability)
-",910,880,NA,30,NA,NA,20,3310,NA,NA,NA
-"10","Asian Policy Forum","U.S. Decoupling Energy from China: A Policy Conversation with Samir Mayekar","As the U.S. faces growing calls to reduce its reliance on Chinese-controlled energy technologies—ranging from solar panels to critical minerals and battery components—this event asks a fundamental question: Should the U.S. pursue energy decoupling? Join Samir Mayekar, former Deputy Mayor of Chicago and a leader at the intersection of public policy and private infrastructure, as he offers a top-down analysis of the risks, tradeoffs, and unintended consequences of energy decoupling. With global climate goals, domestic industrial policy, and national security all on the line, Mayekar will unpack what a strategic energy future might look like—and whether decoupling is part of it.",40,"FALSE","TRUE - Harris Energy and Environmental Association","FALSE","TRUE (Samir Mayekar: Woman and POC)",910,880,NA,30,NA,NA,20,3310,NA,NA,NA
-"11","Asian Policy Forum","Speaker Series Event in Forum: Cyber Attacks and AI","A series of speakers will take place throughout the Spring quarter, with three events at the Keller Center Forum. We are currently in communication with prospective speakers and hope to have five of them participate across three events. It will be in the format of Q&A followed by a reception.",100,"FALSE","TRUE (European Policy Forum)","FALSE","TRUE (POC)",700,700,0,0,NA,NA,20,3310,0,0,NA
-"12","Black Action in Public Policy Studies (BAPPS)","General Body Meeting","BAPPS hosts general body meetings to maintain connection with its membership and to ensure that information is being shared about upcoming programming. This quarter, because of budget restrictions, we are only aiming to host one General Body Meeting that will be dedicated to elections and Board transition for the 2025-2026 academic year. This general body meeting will be Town Hall style as individuals can learn about the issues important to different individuals running for Board positions and discuss the activities and shared goals for the upcoming year. We will provide snacks for this meeting.",30,"FASLE","FALSE","FALSE","FALSE",105,105,NA,NA,NA,NA,20,16138.22,NA,NA,NA
-"13","Black Action in Public Policy Studies (BAPPS)","Social Event","In response to its membership, BAPPS will be hosting more social events this quarter designed to strengthen and reinvigorate our community. This will bolster the camraderie between graduating students and matriculating students while forming lasting relationships. We also endeavor to support community events and initiatives that are reflective of our diasporic population. As such, our first social event will be an outing to a theater show. The shows we are choosing from are playing at small theaters that feature Black stories. We would like to cover the costs of tickets for 30 students to attend. Our social event last quarter, an Ice Skating Day, had 25 attendees and we expect to gain at leats 5 more this quarter given reduced scheduling conflicts across the first and second year cohorts.",30,"TRUE","FALSE","FALSE","FALSE",450,NA,NA,NA,NA,NA,20,16138.22,450,NA,NA
-"14","Black Action in Public Policy Studies (BAPPS)","Black Policy Review  (BPR) Policy Talk","The Black Policy Review will launch its second annual publication in May. To support this launch, we intend to host a policy talk centered around the theme of the publication and on a few select pieces in the publication. We will bring in professionals who will share their experiences in the policy world related to the theme. Additinoally, we will have conversations between the authors of BPR pieces and these professionals to highlight the cross-cutting themes of the publications and the applicability of scholarly writing to the everyday experienes of policy professionals. This event will be open to the BAPPS community, our partner organizations in the undergraduate community (2 other student publications), the broader Harris community, and our vast alumni network. We will provide light refreshments and alcoholic beverages at this event. Unfortunately, BAPPS was denied any support from the RSO Catering Fund this quarter (money ran out before our applications were reviewed), so we will be financing this event entirely from our budget.",20,"TRUE","FALSE","FALSE","TRUE",200,200,NA,NA,NA,NA,20,16138.22,NA,NA,NA
-"15","Black Action in Public Policy Studies (BAPPS)","Afro World Policy Conference","The Afro World Policy Conference (AWPC) is a first of its kind policy conference focused on Black issues across the diaspora. This Conference will pull together experts, practicioners, and students to discuss topics ranging from global conflict, misogynoir, gun violence, and democratic transition. AWPC will be one-day, ticketed, and held in the Keller Center. This conference is open to all BAPPS members, alumni, the broader Harris community, and the larger University community. We have secured support for this conference from various departments on campus. There will be numerous speakers, about 50, and our request is to support speaker honorariums of $100 for 10 speakers. In total, the event costs $21,775 and we have secured $12,500 in grant support for the event. We intend to sell tickets but are charging low prices to ensure that students have equitable access.",120,"FALSE","FALSE","FALSE","TRUE",2000,NA,2000,NA,NA,NA,20,16138.22,NA,NA,NA
-"16","Black Action in Public Policy Studies (BAPPS)","Black Policy Review (BPR) Launch Party","The Black Policy Review will launch its second annual publication in May. To support this, we will be hosting a launch party in late May. This event will feature remarks from our Editor in Chief, the President of BAPPS, and our community partners. We intend to invite alumni, professionals in our network (including members of the National Association of Black Journalists), and the broader Harris community to participate in celebrating our publication. We will serve heavy appetizers and alcoholic beverages at this event. We are still determining if the event will be held off campus - this decision is based on our budget. BAPPS was unfortunately unable to secure any support from the RSO Catering Fund, meaning that financing for this event will occur entirely through our own budget.",80,"TRUE","FALSE","FALSE","TRUE",1084,384,700,NA,NA,NA,20,16138.22,NA,NA,NA
-"17","Black Action in Public Policy Studies (BAPPS)","Identity Policy Series","We will host a community-focused dialogue on the Construction of Black Identity as part of Black History Month Programming. This event will bring in experts from the University community on race and diasporic studies who will present on the construction and presentation of Black identities from a global perspective. Ultimately, this event is to be a conversation for BAPPS members and allies about Blackness and how the construction of this racial identity impacts policy. We will provide dinner to participants. Given the subject matter, we would like to provide cultural foods. Ideally, we would ilke to partner with the Student Engagement and Belonging team to host this event which could result in financial support, however, their support is not guaranteed. Ideally, this event will also be in partnership with The African Perspective (TAP). We were unable to host this event last quarter due to scheduling conflicts with our panelists, but we will be hosting it this quarter.",50,"TRUE","FALSE","FALSE","FALSE",615,615,NA,NA,NA,NA,20,16138.22,NA,NA,NA
-"18","Black Action in Public Policy Studies (BAPPS)","Black Policy Review (BPR) Publication","The Black Policy Review is a student-run publication housed in BAPPS that aims to uplift Black voices and Black stories. Our publication exists to center Black people in policy discussions and conversations. We will feature over 20 articles, including photojournalism submissions, that cover a variety of topics internationally and domestically. Our submissions include policy analyses, op-eds, and research analyses. Our authors undergo a rigorous editorial process that begins at the start of April. Our team of designers then completes the final version of the publications. We utilize a local organization, Chicago Printworks, to produce the actual publication. The following pricing information is based on a direct quote provided by the business.",NA,"TRUE","FALSE","FALSE","FALSE",824,NA,NA,824,NA,NA,20,16138.22,NA,NA,NA
-"19","Black Action in Public Policy Studies (BAPPS)","Graduation Celebration","We intend to host a second-year graduting student dinner at a Black owned restaurant to celebrate and honor our members. This will be a time for students to receive graduation stoles, share memories from the past two years, and come together as a community prior to matriculation. This event will be open to all second year BAPPS members from all degree programs at Harris. The following pricing is based on quotes recieved from various restauants for a 2 hour dinner. On average, based on the quotes we have recieved, we are expecting to spend $60 per person but are actively working to secure donations from potential restaurants to reduce this cost. Please find some of the quotes below. In the event that BAPPS is able to secure funding for this dinner, this money will be used to purchase stoles. In the past, ODI purchased stoles but now that the office is combined with student engagement, it is unclear what will be available to us. Last year, stoles were $700 and purchased from a local Black vendor.",30,"TRUE","FALSE","FALSE","FALSE",1800,1800,NA,NA,NA,NA,20,16138.22,NA,NA,NA
-"20","Black Action in Public Policy Studies (BAPPS)","End of Year Celebration","We intend to host a final end of year celebration that includes our entire community, BAPPS members and the larger pool of Harris students. We will host a small party with very light snacks and champagne to celebrate the end of the academic year.",30,"TRUE","FALSE","FALSE","FALSE",88,88,NA,NA,NA,NA,20,16138.22,NA,NA,NA
-"21","Behavioral Economics in Public Policy","Behavioral Science Mini Challenge","One afternoon event, respond to prompt and have 4 hours to respond to a prompt. Team can be formed on the spot, 2 slide pitch deck and quick verbal presentation. We will be having 3 judges, experts in their field to determine the top 3 contestants",45,"FALSE","FALSE","FALSE","FALSE",410,250,NA,10,NA,NA,15,350,150,NA,NA
-"22","Behavioral Economics in Public Policy","BS in Academia panel","A panel on behavioral science in academia and a chance to speak with some prominent UChicago faculty members about their experience and research in the field which will provide a networking opportunity for students interested in the field.",22.5,"FALSE","FALSE","TRUE","FALSE",95,90,NA,5,NA,NA,15,350,NA,NA,NA
-"23","Behavioral Economics in Public Policy",NA,NA,NA,NA,NA,"With Booth school and undergrad division",NA,95,90,NA,5,NA,NA,15,350,NA,NA,NA
-"24","Behavioral Economics in Public Policy","Networking panel/ Speaker session","Industry experts with Booth school and undergrad division",20,"FALSE","FALSE","TRUE","FALSE",70,65,NA,5,NA,NA,15,350,NA,NA,NA
-"25","Behavioral Economics in Public Policy",NA,NA,NA,NA,NA,"with Booth school and undergrad division",NA,70,65,NA,5,NA,NA,15,350,NA,NA,NA
-"26","Crime & Justice Policy Association","Planting Justice Series 1: Environmental Rights and Land Sovereignty","This event will focus on environmental justice and land rights, with a case study on Colombia. Attendees will engage in hands-on activities like making potted plants while discussing the intersection of environmental conservation, land sovereignty, and community empowerment. Speakers will highlight the role of African descendant communities and grassroots movements in advocating for land rights and environmental protection.
-
-CJPA aims to partner with LVEJO’s - Their mission and accomplishments align perfectly with the event’s focus on environmental justice, land rights, and community empowerment. Their history of grassroots activism, food sovereignty initiatives, and environmental remediation provides a rich foundation for meaningful discussions and activities tied to the event's goals.
-
-Activities included in the event -  this will  be a two part series event on two consecuitve fridays in April
-
-Event 1 - Hands-On Activity: Making Potted Plants - LVEJO’s Semillas de Justicia Community Garden is a prime example of reclaiming contaminated land and transforming it into a thriving green space.Representatives from LVEJO will lead the potted plant activity, sharing their expertise in sustainable gardening techniques while discussing how urban agriculture can empower communities to reclaim land and promote food sovereignty.This activity could highlight how ancestral farming practices are preserved and passed on through such initiatives.
-
-Event 2 -  Land Justice & Global Connections - LVEJO’s work in addressing environmental racism in Little Village mirrors struggles faced by descendant communities in Colombia. Both involve fighting for land rights, resisting industrial exploitation, and advocating for community-led solutions. In a lecture / workshop LVEJO will provide a comparative perspective, showcasing how local efforts in Chicago connect to global movements for land sovereignty and environmental justice. Speakers are TBD but we are in talks with Juliana Pino (Deputy Director) or Kim Wasserman (Executive Director) to discuss how community-led efforts can reclaim land, protect health, and create sustainable futures.
-",NA,"TRUE","FALSE","FALSE","YES - WOMEN",400,300,NA,NA,NA,NA,7,1952,100,NA,NA
-"27","Crime & Justice Policy Association","Planting Justice Series 2: Environmental Rights and Land Sovereignty","This event will focus on environmental justice and land rights, with a case study on Colombia. Attendees will engage in hands-on activities like making potted plants while discussing the intersection of environmental conservation, land sovereignty, and community empowerment. Speakers will highlight the role of African descendant communities and grassroots movements in advocating for land rights and environmental protection.
-
-CJPA aims to partner with LVEJO’s - Their mission and accomplishments align perfectly with the event’s focus on environmental justice, land rights, and community empowerment. Their history of grassroots activism, food sovereignty initiatives, and environmental remediation provides a rich foundation for meaningful discussions and activities tied to the event's goals.
-
-Activities included in the event -  this will  be a two part series event on two consecuitve fridays in April
-
-Event 1 - Hands-On Activity: Making Potted Plants - LVEJO’s Semillas de Justicia Community Garden is a prime example of reclaiming contaminated land and transforming it into a thriving green space.Representatives from LVEJO will lead the potted plant activity, sharing their expertise in sustainable gardening techniques while discussing how urban agriculture can empower communities to reclaim land and promote food sovereignty.This activity could highlight how ancestral farming practices are preserved and passed on through such initiatives.
-
-Event 2 -  Land Justice & Global Connections - LVEJO’s work in addressing environmental racism in Little Village mirrors struggles faced by descendant communities in Colombia. Both involve fighting for land rights, resisting industrial exploitation, and advocating for community-led solutions. In a lecture / workshop LVEJO will provide a comparative perspective, showcasing how local efforts in Chicago connect to global movements for land sovereignty and environmental justice. Speakers are TBD but we are in talks with Juliana Pino (Deputy Director) or Kim Wasserman (Executive Director) to discuss how community-led efforts can reclaim land, protect health, and create sustainable futures.
-",NA,"TRUE","FALSE","FALSE","YES - WOMEN",450,450,NA,NA,NA,NA,7,1952,NA,NA,NA
-"28","Crime & Justice Policy Association","Global Drug Policy: Perspectives for Reform","This event will focus on drug policy reform in Chicago, connecting local harm reduction efforts with global approaches. Discussions will explore the environmental and social impacts of punitive drug policies, alternative strategies like harm reduction, and science-based solutions to substance use challenges. Attendees will engage in workshops, panel discussions, and interactive dialogues to understand how Chicago can lead in adopting progressive drug policies.
-
-Partner Organization: Chicago Recovery Alliance (CRA)
-
-The Chicago Recovery Alliance is a pioneering harm reduction organization that provides services such as naloxone distribution, syringe exchange, and fentanyl testing. They operate mobile outreach units across Chicago neighborhoods, focusing on reducing drug-related harm and building community trust. CRA emphasizes public health approaches over punitive measures to address substance use challenges.
-
-CRA will lead a workshop on harm reduction practices, such as naloxone training and safer drug use strategies. Bring awareness on their mobile outreach model as an example of effective community-based interventions. CRA representatives,  Executive Director John Werning (TBD), will share insights on how harm reduction policies have saved lives in Chicago and discuss the challenges of implementing these programs in underserved areas.",30,"FALSE","FALSE","FALSE","YES",450,450,NA,NA,NA,NA,7,1952,NA,NA,NA
-"29","Crime & Justice Policy Association","Circles of Peace: Restorative Justice in Action","Centered around restorative justice practices, this event will feature peace circles as a tool for community healing and social change. Attendees will participate in interactive workshops led by local restorative justice practitioners from Chicago’s South Side. Discussions will address systemic issues such as the school-to-prison pipeline and explore how restorative practices can build stronger, more equitable communities.
-
-Partner Organization: Precious Blood Ministry of Reconciliation (PBMR) - based in Chicago’s Back of the Yards neighborhood and is dedicated to fostering healing and repairing relationships through restorative justice practices. Their initiatives include peace circles, community-building efforts, and addressing harm caused by violence and systemic inequities. PBMR emphasizes Indigenous teachings and proactive strategies to create a culture of connectivity where all community members thrive.
-
-Workshop Facilitators: PBMR will lead peace circle workshops, teaching attendees how to use circles for conflict resolution, grief processing, and collective decision-making. They will share their experience in using peace circles to address harm and build stronger community bonds. Representatives from PBMR will join discussions on how restorative justice practices address systemic issues like the school-to-prison pipeline and foster equity in underserved communities. PBMR will also have a booth showcasing their programs, such as Just Peace, and provide resources for attendees interested in implementing restorative practices in their own communities.
-
-Speaker: Emmanuel Andre (Co-Founder of Circles & Ciphers) to discuss the transformative power of peace circles in Chicago’s neighborhoods",NA,"FALSE","FALSE","FALSE","YES - POC",480,480,NA,NA,NA,NA,7,1952,NA,NA,NA
-"30","Chicago Policy Review","Email/Newsletter CRM","As a publication, our relationship with our readers is paramount to our success. We are hoping to scope out a new software to be billed annually in the start of each calendar year that will be interactive and effective for our readership base, alumni, and current staff to engage with. We have been locked out of the Harris provided CRM and it has resulted in lost readership and donations to our print publication.",NA,"NA","NA","NA","NA",300,NA,NA,NA,NA,NA,20,2320.45,300,NA,NA
-"31","Chicago Policy Review","CPR Annual Print Publication","Curated from a year of in-depth research, rigorous debate, and nuanced writing, the annual Chicago Policy Print Edition encapsulates the very best of our staff's published work. Each article, handpicked for its relevance and impact, reflects the commitment of our scholars, researchers, and writers. This collection is not just a testament to academic rigor; it's a mirror to the ever-evolving political landscape, capturing the most pressing policy challenges and innovative solutions of our time. With its blend of analytical insights and accessible prose, the Print Edition is an essential read for policy enthusiasts, practitioners, and casual readers alike. It is also used as a recruitement tool for prospective students and as a compilation of Harris student impact more broadly. 
-
-NOTE: Although this initiative occurs in the spring quarter, it is our single largest organizational expense. As such, we aim to engage in budgeting best practices and ask for a portion of HSG funding each quarter to allocate towards this expense.",NA,"NA",NA,"Writing Workshop",NA,1500,NA,NA,300,NA,NA,20,2320.45,NA,1200,NA
-"32","Chicago Policy Review","Print Publication Networking Launch Event","We will be celebrating our accomplishments from this past academic year which has culminated in an incredible print edition showcasing a selection of our best published work. Mingle with Chicago Policy Review staff, UChicago faculty and leadership, UChicago alumni, and community partners. The occasion will be marked with a cocktail reception and remarks from our Editor-in-Chief, Director of Print Publications, Harris leadership, and a keynote speaker that is significant to CPR's legacy, values, or vision. This event will aim to connect students to tangible job opportunities and networking within the field of policy communication. 
-
-NOTE: Although this event takes place in the spring quarter, it is one of our largest organizational expenses aside from the print edition itself. As such, we aim to engage in budgeting best practices and ask for a portion of HSG funding each quarter to allocate towards this expense.",150,"Yes",NA,"Writing Workshop","Yes, TBD on demographic status-  our short list is all women.",2250,500,750,500,NA,NA,20,2320.45,500,NA,NA
-"33","Chicago Policy Review","Graduation Regalia","Black and maroon cords for graduating seniors",NA,"No","NA","NA","NA",250,250,NA,NA,NA,NA,20,2320.45,NA,NA,NA
-"34","Data, Ethics and Policy","Data, Ethics and Policy Conference 2024--Governance in a Digital World","This conference brings together thought leaders from academia, industry, government, and community organizations to address complex ethical questions arising from the use of the expanding methods of Data Science and Artificial Intelligence, and how it affects governance around the world.",NA,"FALSE","FALSE","Mansueto Institute,Toyota Tech Institute, MSCAPP,Grad Council","Yes, we have 9 speakers in total, 5 of them are women, 5 are POC",6620.65,3595.71,1415.53,613.54,NA,NA,20,12045,995.87,NA,NA
-"35","Data, Ethics and Policy","Welcoming New Board Members","Current memebers welcome the new board memebrs and share visions for the coming year's conference planning",NA,"FALSE","FALSE","FALSE","FALSE",335,335,NA,NA,NA,NA,20,12045,NA,NA,NA
-"36","Data, Ethics and Policy","Data, Ethics and Policy Panel Talk","We plan to invite 3 speakers in government, acedimia and industry to have a panel discussion about responsible AI",NA,"FALSE","FALSE","FALSE","Yes",600,600,NA,NA,NA,NA,20,12045,NA,NA,NA
-"37","Education Policy Student Association","Writing Workshop - Lunch Event","Hosting an event with the Harris Writing Center to help students focus on writing-heavy components of work in education policy. Event headline willl likely center on grant writing initiatives.",40,"FALSE","FALSE","FALSE","FALSE",176,176,0,0,NA,NA,20,182.26,0,0,NA
-"38","Education Policy Student Association","Yes, But Why - Lunch Event","Yes, But Why event with OutPolitik dicussing the impact of the Trump Administration's Education initiatives' effect on the LGBTQ community",40,"FALSE","TRUE","FALSE","FALSE",176,176,0,0,NA,NA,20,182.26,NA,0,NA
-"39","Education Policy Student Association","Case-study Event with Start Early - Lunch Event","90-minute session offered in case format. Participants will be given a case, work in teams to craft their approach, and then be given feedback from Raising Illinois team members. The goal of this project is to provide participants with the type of strategic problem to solve that that they will face in interviews and ‘on the job’ in positions of strategic leadership.",40,"FALSE","FALSE","FALSE","TRUE - Simone Santiago: woman, POC, Director of the Prenatal to Three Coalition at Start Early, Harris alumnus",176,176,0,0,NA,NA,20,182.26,0,0,NA
-"40","Education Policy Student Association","Raise Your Glass","This is the end of the year celebration for a great year of EPSA. Students will have the opportunity to network with Harris faculty and other EPSA members, learning about their future careers in education, reflecting on this past year's programming, and looking ahead to next year's events. The event will have a full dinner, drinks, and a bartender.",35,"FALSE","FALSE","FALSE","FALSE",650,575,75,0,NA,NA,20,182.26,0,0,NA
-"41","Harris Community Action","Food Banking Event","Food banking event with a local nonprofit on South Side",30,"TRUE","FALSE","FALSE","FALSE",400,100,NA,NA,NA,NA,17,13821.67,300,NA,NA
-"42","Harris Community Action","EOY Event","Final year celebration event for HCA fellows. Partners are invited and all fellows, as well as nonprofit partners connected to UCSC who could become potential new partners",70,"FALSE","FALSE","UCSC","TRUE (TBD on speaker but will be a current/former nonprofit or grassroots advocacy leader of color)",3095,1100,500,110,NA,NA,17,13821.67,1385,0,NA
-"43","Harris Consulting Club",NA,NA,NA,"FALSE","FALSE","FALSE","FALSE",0,NA,NA,NA,NA,NA,20,979.35,NA,NA,NA
-"44","Harris Consulting Club","Meet and Greet","A networking event providing students the opportunity to connect with Harris alumni working in consulting. Alumni will share career insights and tips for navigating the consulting recruitment process.",25,"FALSE","FALSE","FALSE","FALSE",70,65,NA,5,NA,NA,20,979.35,NA,NA,NA
-"45","Harris Consulting Club","Cross Club Event Model Building","Encouraging Personal Narrative Discussions Based on Past Experiences",50,"FALSE","FALSE","FALSE","FALSE",380,340,NA,10,NA,NA,20,979.35,30,NA,NA
-"46","Harris Consulting Club","A conversation regarding specific future sector outlooks","A session to disseminate all that we learnt from the discussion with the CDO but also scheduling a few conversations with them regarding other types of consulting as well and having a larger session with the general body relaying future outlooks, expected employment trends to look out for etc. and best practices for each of these industries.",20,"FALSE","FALSE","FALSE","FALSE",70,65,NA,5,NA,NA,20,979.35,NA,NA,NA
-"47","Harris Consulting Club","Preparing for Behavioural Interviews","A session to go over tips for behavioral interviews, methods to prepare etc. in the same way we are doing for mocks.",20,"FALSE","FALSE","FALSE","FALSE",70,65,NA,5,NA,NA,20,979.35,NA,NA,NA
-"48","Harris Consulting Club","Canva Pro","The Canva Pro subscription is a critical tool for ensuring high-quality, professional visuals that will enhance the visibility, branding, and overall success of the consulting and career bootcamp, as well as future events and initiatives led by the Gargoyle Consulting Club and Archer Career.",NA,"FALSE","FALSE","FALSE","FALSE",15,NA,NA,NA,NA,NA,20,979.35,NA,15,NA
-"49","Harris Consulting Club","Ascent Program","The Ascent Program, led by Gargoyle Consulting Club in partnership with Archer Career, is a six-week, high-impact bootcamp designed to prepare you for a successful career in consulting. Featuring expert coaching from Dr. Pam Schilling, this program provides hands-on training, networking opportunities, and essential career development strategies to help you stand out in the competitive consulting landscape.
-
-Ready to break into consulting? Whether you're exploring the field or preparing to apply, Ascent is designed to accelerate your journey. This 6-week program hosted by Gargoyle Consulting Club offers expert-led training, case interview prep, resume optimization, and a chance to connect with like-minded peers.",40,"FALSE","FALSE","TRUE","TRUE",1000,NA,1000,NA,NA,NA,20,979.35,NA,NA,NA
-"50","Harris Energy and Environmental Association","Lunch and learn - info session on cleaner fuels","This event will provide an overview of emerging cleaner fuel technologies, their role in reducing carbon emissions, and the policy landscape shaping their adoption. Participants will gain insights from experts on the challenges and opportunities in transitioning to sustainable fuel alternatives.",50,"FALSE","FALSE","Undergraduate School of Public Policy","TRUE, Woman & POC",120,120,NA,NA,NA,NA,20,NA,NA,NA,NA
-"51","Harris Energy and Environmental Association","Lunch and learn - Energy Modelling","This session will feature expert speakers covering areas such as carbon accounting, power market modeling, and other critical technical concepts shaping the future of energy policy and sustainability. The session aims to equip attendees with a deeper understanding of analytical frameworks and methodologies used in the energy sector.",40,"FALSE","Yes, Harris Finance Group","FALSE","TRUE, POC",329,329,NA,NA,NA,NA,20,NA,NA,NA,NA
-"52","Harris Energy and Environmental Association","Field Trip to Bronzeville","Field trip to the Bronzeville Microgrid in collaboration with ComEd will offer participants a firsthand look at one of the nation's first neighborhood-scale microgrids. Attendees will learn about the microgrid’s design, integration of renewable energy sources, grid resilience benefits, and its role in advancing energy equity and sustainability in urban communities. The trip aims to bridge classroom learning with real-world energy infrastructure and innovation.",30,"TRUE","We are looking to collaborate with UPSA but will finalize once the arrangements with ComEd are made","FALSE","FALSE",750,NA,NA,NA,NA,NA,20,NA,750,NA,NA
-"53","Harris Energy and Environmental Association","LAM x HEEA Event","This session will explore the evolving energy landscape in the region, examining key market trends, investment opportunities, and policy challenges in the transition to cleaner energy sources. Through expert insights and regional case studies, the event aims to highlight the unique dynamics shaping Latin America’s path toward a sustainable energy future.",NA,"FALSE","Yes, LAM & IDPA","FALSE","Yes, POC",600,NA,600,NA,NA,NA,20,NA,NA,NA,NA
-"54","Harris Finance Group","Personal Finance Session 1(Budgeting and basics of personal finance)","Session 1: Budgeting and basics of personal finance
--Importance of financial planning
--Tracking expenses (apps, excel etc.)
--Creating a budget",30,"FALSE","FALSE","FALSE","TRUE, WOMAN",205,200,NA,5,NA,NA,1,75,NA,NA,NA
-"55","Harris Finance Group","Speaker Session on Global Financial Markets","A joint session with Booth Investment Club will be held. Professor Raghuram Rajan will speak on the current trends in global financial markets.",47.5,"FALSE","FALSE","FALSE","TRUE (POC)",280,270,NA,10,NA,NA,1,75,NA,NA,NA
-"56","Harris Finance Group","Basic Financial Modelling Course (1 session)","This will be a session course on Saturday mornings
-A tentative course outline is written below:
--What is financial modelling and its common uses (valuation, budgeting, scenario analysis)
--Model Structure i.e. Inputs(assumptions), calculations and outputs. Why dynamic models.
--Financial Statements (P&L and BS only, not CF) including loan amortization table.
--Valuation Techniques (DCF and multiples)
--Scenario & Sensitivity Analysis (Differing assumptions, goal seek)
--A short case-study (which would be voluntary for students to submit a week after the session)
-",22.5,"FALSE","Collaboration with HEEA","FALSE","TRUE (POC)",175,175,NA,NA,NA,NA,1,75,NA,NA,NA
-"57","Harris Finance Group","Networking sessions with alumnis working in the financial industry","An evening event where alumni from different financial firms would be invited, providing students with a unique opportunity to network and gain insights from professionals working at the firms where our alumni have built their careers.",20,"FALSE","FALSE","FALSE","FALSE",323,323,NA,NA,NA,NA,1,75,NA,NA,NA
-"58","Harris Students for Palestine","Researchthon","We organized a succesful researchthon last quarter. There was interest among partcipants in doing a followup event. Therefore, this quarter, we will be hosting a follow up event focused on sharing findings from the previous researchthon publically.",20,"FALSE","FALSE","FALSE","FALSE",205,200,NA,5,257,20,1,0,NA,NA,NA
-"59","Harris Students for Palestine","Capacity Building Training","This internal training is designed to equip participants with the skills to critically engage with social issues and translate intellectual insights into meaningful social impact. Through interactive discussions and case studies, we will explore key frameworks for analyzing systemic challenges and develop strategies for advocacy, policy influence, and community engagement. Topics covered include: The role of intellectual inquiry in social change; bridging research and action; communicating complex issues to diverse audiences; ethical considerations in social impact work",20,"FALSE","FALSE","TRUE","TRUE",65,55,NA,10,257,20,1,0,NA,NA,NA
-"60","Harris Students for Palestine","Panel Discussion - Broken Peace: What's next?","This panel discussion will examine the political, humanitarian, and strategic consequences of post-ceasefire failures, exploring why such agreements unravel and what that means for the future of conflict resolution. Bringing together leading experts, including John Mearsheimer American political scientist, Rashid Khalidi a Palestinian-American historian of the Middle East, and Maliha Chisti an expert in peacebuilding, security and development - this discussion will provide historical context, political analysis, and insights into the lived realities on the ground and what to expect.",30,"FALSE","FALSE","FALSE","POC and Woman",849,300,539,10,257,20,1,0,0,0,NA
-"61","Harris Students for Palestine","Book discussion","We will invite a Palestinian author/poet to discuss their book at Harris with the goal of platforming Palestinian voices",30,"FALSE","FALSE","FALSE","FALSE",635,300,0,5,257,20,1,0,330,0,NA
-"62","Harris Students for Palestine","Speaker Event - Public Policy: A Critical Perspective","Bring researchers who have gone against the grain of traditional public policy research to discuss alternate perspectives and methodologies. Event will be conducted in collaboration with Anti-Caste Policy Forum",NA,"FALSE","FALSE","FALSE","FALSE",305,300,0,5,257,20,1,0,0,0,NA
-"63","Harris Innovation & Venture Ecosystem (HIVE)","The Founders' Playground- HIVE Launch Event","A high-energy, interactive gathering where students interested in entrepreneurship, innovation, and venture building connect through engaging exercises. We’ll use creative brainstorming activities to uncover their interests, identify needed resources, and shape future HIVE programming.",27.5,"FALSE","FALSE","FALSE","FALSE",250,100,50,50,NA,0,1,NA,50,NA,NA
-"64","Harris Innovation & Venture Ecosystem (HIVE)","The Unicorn Factory: Funny Business Idea Challenge","A Shark Tank-style event where participants pitch their most hilariously creative business ideas. Whether it’s “Rent-A-Relative” for life advice, “Wine & Whine” coworking therapy, or “Emotional Support Chickens” for stressful meetings—we want to hear it. The challenge fosters out-of-the-box thinking and entrepreneurial confidence.",NA,"FALSE","FALSE","FALSE","FALSE",350,100,50,20,NA,0,1,NA,180,NA,NA
-"65","Harris Innovation & Venture Ecosystem (HIVE)","Venture Bootcamp: First Principles & Risk Assessment","A workshop on how to think like a founder—using first principles thinking, assessing risk, and leveraging frameworks used in business and venture capital.",NA,"FALSE","FALSE","FALSE","FALSE",200,75,NA,50,NA,0,1,NA,75,NA,NA
-"66","Health Nexus Initiative(HNI)","Health Nexus Initiative (HNI) Kick-Off Mixer","The Health Nexus Initiative (HNI) Kick-Off Mixer is designed to introduce the newly recognized Health Nexus Initiative to the Harris community. The event will create awareness about HNI's mission to explore and advance global health policy, emphasizing interdisciplinary collaboration across climate change, technology, education, livelihoods, and more.
-
-Students will have the opportunity to meet our Executive Board, understand HNI’s vision and programming plans for the year, and learn about ways to get involved. The event will foster meaningful dialogue, spark innovative ideas, and facilitate networking among Harris students interested in health policy and interdisciplinary approaches.
-
-We invite all participants to come prepared with their ideas, curiosity, and questions. Light snacks and beverages will be served to encourage relaxed and engaging conversations.
-
-Objectives of the Event:
-
-Introduce the Harris community to the HNI mission and leadership.
-
-Encourage student participation and involvement in upcoming HNI activities.
-
-Foster networking and collaboration among students passionate about health policy and related fields.",35,"FALSE","FALSE","FALSE","FALSE",440,400,0,30,0,0,0,NA,10,0,NA
-"67","Health Nexus Initiative(HNI)"," "," ",NA," "," "," "," ",440,400,0,30,0,0,0,NA,10,0,NA
-"68","Health Nexus Initiative(HNI)","Navigating Uncertainty: Global Health Careers in a Shifting Policy Landscape","The global health job market has been profoundly affected by recent geopolitical shifts, funding realignments, and evolving governance structures. From the U.S. withdrawal from the World Health Organization (WHO) to the shutdown of critical USAID programs under the Trump Administration, these changes have disrupted traditional career pathways and reshaped opportunities in global health policy, research, and implementation.
-
-This panel discussion aims to help students navigate the uncertainties of global health careers in this evolving landscape. Featuring experts from global health organizations, policymakers, and academic leaders, the conversation will explore how funding streams, international collaborations, and policy priorities have shifted and what this means for students looking to build impactful careers in global health.
-
-The in-person panel will feature two experts, one from the University of Chicago and another from a global health research/philanthropic organisation (possibly from RTI International or MacArthur Foundation). Panelists will discuss the challenges posed by shifting U.S. global health policies, the future of multilateral collaborations, and the emergence of new funding and employment opportunities in non-traditional spaces, including philanthropic organizations, think tanks, and regional health initiatives. The discussion will also provide practical insights on how students can position themselves for success in this uncertain environment—whether by building cross-sectoral expertise, exploring alternative funding mechanisms, or leveraging policy and research skills in new ways.
-
-",35,"FALSE","FALSE","FALSE","TRUE",610,560,0,50,0,0,0,NA,NA,0,NA
-"69","International Development Policy Association","End of Year/Introduction to New Board","This social aims to foster networking opportunities among the Harris ID Community, including faculty and students. We will also celebrate our achievements and partnerships, introduce the new board, and share our exciting plans for 2025-2026.",50,"FALSE","FALSE","FALSE","FALSE",425,400,NA,NA,NA,185,4,NA,NA,25,NA
-"70","International Development Policy Association","Faculty Lunch 1: Prof Eduardo Montero","In the 2023-24 academic year, IDPA hosted five faculty lunches with Harris professors in the international development space. These events were extremely well attended and students mentioned they were highly useful opportunities in gaining a deeper understanding of applied academic research, networking with professors, and gaining exposure to emergent issues in the field. While these were targeted to intimate audiences of 25 last year in order to maximize networking potential, spots were filled rapidly within a few days of marketing. Given the consistent positive feedback and desire for continued access to smaller audiences with professors, we wish to make this a bi-quarterly event with an increased capacity (30 students) in order to strengthen student-faculty relationships. As evidenced by the attendance in the Fall 2024 and Winter 2025 quarter, these events are highly anticipated.",30,"FALSE","FALSE","FALSE","FALSE",500,500,NA,NA,NA,185,4,NA,NA,NA,NA
-"71","International Development Policy Association","Faculty Lunch 2: Prof Maria Angelica Bautista","In the 2023-24 academic year, IDPA hosted five faculty lunches with Harris professors in the international development space. These events were extremely well attended and students mentioned they were highly useful opportunities in gaining a deeper understanding of applied academic research, networking with professors, and gaining exposure to emergent issues in the field. While these were targeted to intimate audiences of 25 last year in order to maximize networking potential, spots were filled rapidly within a few days of marketing. Given the consistent positive feedback and desire for continued access to smaller audiences with professors, we wish to make this a bi-quarterly event with an increased capacity (30 students) in order to strengthen student-faculty relationships. As evidenced by the attendance in the Fall 2024 and Winter 2025 quarter, these events are highly anticipated.",30,"FALSE","FALSE","FALSE","FALSE",500,500,NA,NA,NA,185,4,NA,NA,NA,NA
-"72","International Development Policy Association","LAM Forum: Climate Resilience and Energy Transition in Latin America and the Caribbean","Latin American Matters (LAM) is organizing the 13th edition of the LAM Policy Forum. This year's theme is ""Climate Resilience and Energy Transition in Latin America and the Caribbean."" The event is scheduled for Friday, April 11th, at The Keller Center from 9 am to 5 pm. Joint partnership with LAM, IDPA, HEEA, and ALAS",100,"FALSE","FALSE","FALSE","FALSE",250,NA,NA,NA,NA,185,4,NA,250,NA,NA
-"73","International Development Policy Association","Graduate Student Mixer: Women in Textiles","This immersive experience will highlight the weaving styles of the Gullah-Geechee, Chimayo, Andean, and Burmese communities. We’ll also explore women’s role in textile production and highlight Chicago’s small, minority-owned businesses. Visit us from 4-6 pm on April 9th for weaving workshops, cultural cuisine, and lots of fun! This event is co-sponsored by the Smart Museum of Art (@smartmuseum), International Development Policy Association (@harrisidpa), and Rural America Caucus (@rac_harris).",65,"FALSE","FALSE","FALSE","FALSE",375,300,NA,25,NA,185,4,NA,50,NA,NA
-"74","International Development Policy Association","Finance in Development Workshop","With support from our IDPA Faculty advisor Professor Rebecca Wolfe, we plan on putting together a series of workshops on areas in International Development which we feel are imperative in the day-to-today work of anyone with a career in the development sphere. The first of this workshop series focuses on how to manage public and government budgets in the context of development projects, and would be a 45 minute workshop followed by time for extensive q&a.",20,"FALSE","FALSE","FALSE","FALSE",340,340,NA,NA,NA,185,4,NA,NA,NA,NA
-"75","MASH","MASH All Hands Meeting","This will be a meeting for all MASH members to discuss leadership positions for the next year as well as networking and internship opportunities for the summer. Will be open to Veteran Student Association and Office of Military Affiliated Communities (OMAC) members",25,"Yes","NO","Yes","NO",100,100,0,0,NA,NA,20,1324,0,0,NA
-"76","MASH","Memorial Day Veteran Suicide-Prevention Ruckmarch","MASH will provide a team to participipate in the annual Memorial Day Suicide Prevention Ruckmarch on Memorial Day 2025. This will be MASH's third time participating. Event details here https://www.raceentry.com/chicago-veterans-ruck-march/race-information. This is an annual 17 mile ruckmarch that raises money to support veteran suicide prevention efforts. Contributions to this event will support registration for participants and transportation to and from the event, all fundraising to support the event goals will be done by individual participants.",15,"Yes","No","No","No",400,0,300,0,NA,NA,20,1324,100,0,NA
-"77","MASH","Memorial Day End of the Year Cookout","Annual event to celebrate Memorial Day and the end of the academic year for MASH, the Uchicago veteran community, and Harris students writ large. This will be the third annual event. Will be co-sponsored with the Office of Military Affiliated Communities (OMAC) and the Veteran Student Association (VSA)",60,"Yes","No","Yes","No",1115,645,400,70,NA,NA,20,1324,0,0,NA
-"78","Minorities in Public Policy Studies (MiPPS)","Boothies Mixer","MiPPS will be hosting its annual Boothies Mixer alongside Student Organizations at the Booth School. For purposes of networking with students at other professional schools, MiPPS is partnering with minority organizations to expose current policy students to adjacent-policy studies. We are in charge of the beverages for this event.",45,"FALSE","FALSE","Yes (Booth Student Organization)","FALSE",490,300,160,30,NA,NA,17,1100,0,0,NA
-"79","Minorities in Public Policy Studies (MiPPS)","MiPPS Brunch (Gala)","MiPPS will be hosting our 24th annual Alumni (Gala) Brunch . This year we are reimagining the gala as a brunch to celebrate and connect the different Heritages that make up our rich diverse community at Harris",100,"TRUE","FALSE","Harris SEB, Alumni Relations","FALSE",6760,3000,3460,300,NA,NA,17,1100,0,0,NA
-"80","Minorities in Public Policy Studies (MiPPS)","Alumni Chats","""MiPPS will be holding our After Hours Alumni Coffee Chats networking event, designed to foster meaningful connections between current students and Harris/UChicago alumni in an elegant yet casual atmosphere. We anticipate hosting 40-50 attendees in the Keller Center's 4th Floor Sky Suite in April with the space accommodating both formal networking and casual conversation areas, as well as a beverage and refreshments station. This signature event advances our mission of supporting underrepresented students by providing direct access to accomplished alumni mentors while building upon the professional development groundwork laid in our recent LinkedIn workshop.""",30,"FALSE","FALSE","FALSE","FALSE",680,490,160,30,NA,NA,17,1100,0,0,NA
-"81","Minorities in Public Policy Studies (MiPPS)","Transition Ceremony","Transition Ceremony for the transition and training of current and new executive board of MiPPS.",18,"Yes","FALSE","FALSE","FALSE",350,350,0,0,NA,NA,17,1100,0,0,NA
-"82","OUTPolitik","OUTPolitik/WiPP Spring Quarter Drag Show","We are planning to attend a drag show (or brunch) at one of the drag bars in Chicago. This event is intended to not only be a social event for members of OUTPolitik but also an opportunity for students to experience an important part of LGBTQ culture: drag performance. Additionally, we will be supporting the local drag scene of Chicago, which has many LGBTQ and especially gender-nonconforming members. We hope to build community, learn about gender expression, support the local LGBTQ art scene, and have fun!
-
-At LIPS Chicago, which is where we went for the Winter Quarter event, the food and show was about $55-$60 per person after tip. This included food as well as the entertainment.",15,"Yes","yes","FALSE","FALSE",550,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"83","OUTPolitik","End of Year Bonfire","Every year OUTPolitik hosts a bonfire at Promontory Point at the end of the year as a casual way for graduating Queer students & allies to connect with the Organization and each other. We will have light food and non-alcoholic refreshments. Food will include pizza from a nearby restaurant at an average price of $25/pie. We plan to order 10 pizzas, and will also tip on top of this, bringing the pizza subtotal to $250 and the total with tax, tip and delivery to around $330. We will also purchase 3 cases of sodas at $8/case for $24. Lastly, we will have supplies for smores, which will cost about $20.",40,"Only slightly (Promontory Point)","FALSE","FALSE","FALSE",374,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"84","OUTPolitik","Yes, But Why: Trump's 100 Days","This is an event co-hosted w/ EPSA that looks back on the first 100 pays of President Trump's Education policy, w/ special emphasis on its impact on LGBT+ students",30,"FALSE","Yes","FALSE","FALSE",150,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"85","OUTPolitik","Volunteering day with Center on Cottage Grove","Organized a Community Service Day in partnership with local LGBTQ+ nonprofits, providing students with opportunities to engage with the community, understand local needs, and contribute meaningfully through service and advocacy.",15,"TRUE","FALSE","FALSE","FALSE",260,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"86","OUTPolitik","Alumni Happy Hour","Invite OUTPolitik alumni to connect with current students, fostering networking opportunities and providing career guidance to support professional development.",30,"FALSE","FALSE","Yes, Harris Alumni","FALSE",400,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"87","OUTPolitik","Advocacy 101: Collab with ACLU","We're hosting an event where we are inviting a speaker from ACLU to help understand the advocacy space for queer communities in the US especially in light of the current political climate",20,"FALSE","FALSE","FALSE","TRUE, none of the listed groups but they are queer",180,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"88","OUTPolitik","Wikipedia Game Night - Collab with Booth/BFI OUT Group","We are planning on hosting a social event with a new queer affinity group at BFI. While the group will be the main host of the event, other queer affinity groups across campus will also contribute and attend. We plan to have a Wikipedia game night, where we attempt to get from one wiki page to another. This will give us an opportunity to intermix teams with other affinity groups and mingle with a structured activity. While the BFI group is in talks with other queer affinity groups across campus, it is not finalized yet which groups will be cohosts of the event.",NA,"FALSE","FALSE","Yes","FALSE",200,NA,NA,NA,NA,NA,20,2733.08,NA,NA,NA
-"89","Public Finance Association","Higher Education Borrowing Panel","Hosted by CMF & PFA, this panel will explore student loan financing, policy implications, and market trends. Panelists: Julia Harris (Managing Director, Siebert Williams Shank & Co.), Jennie Bennett (AVP for Finance, University of Chicago), Vicky Stavropoulos (Senior Analyst, S&P Global Ratings). Includes a networking reception with light bites and beverages.",45,"No","Yes","No","Yes, four women",400,400,NA,NA,472,40,1,593,NA,NA,NA
-"90","Public Finance Association","Film Screening & Panel: ""Gradually, then Suddenly""","Screening of Gradually, Then Suddenly, a documentary on Detroit’s bankruptcy, based on Nathan Bomey’s book. Tom Kozlik (Hilltop) will help set up the screening and panel discussion on Detroit’s financial recovery. Potential panelists include Harris alums like Christina Shaw. Possible weekend evening event.",45,"No","Yes","No","Yes, women",500,200,300,NA,472,40,1,593,NA,NA,NA
-"91","Public Finance Association","Dana Levenson Talk on Pension Funds","Speaker event featuring Dana Levenson, discussing pension fund management, investment strategies, and financial sustainability.",45,"No","No","No","Yes, one spearker (man)",300,300,NA,NA,472,40,1,593,NA,NA,NA
-"92","Public Finance Association","General Body Meeting & Executive Board Applications Launch","Open meeting for PFA members to discuss upcoming events and initiatives. The application forms for the new PFA executive board will officially open during this meeting.",45,"No","No","No","No",400,400,NA,NA,472,40,1,593,NA,NA,NA
-"93","Public Finance Association","Success in Public Finance: A Guide with Omar Daghestani","Speaker event featuring Omar Daghestani, providing insights on securing internships and full time roles in public finance.",30,"No","No","No","Yes, one speaker (man)",300,300,NA,NA,472,40,1,593,NA,NA,NA
-"94","Public Finance Association","Joint Event with Rural American Caucus on Rural Public Financing","Collaboration event with the Rural American Caucus exploring public finance issues specific to rural communities, including funding challenges, policy implications, and infrastructure investment.",40,"No","Yes, Rural American Caucus","No","Yes, TBD",400,400,NA,NA,472,40,1,593,NA,NA,NA
-"95","Public Finance Association","Public Finance & Transportation Planning Event (w/ YPT & Harris Alumni), collab with UPSA","Organized in collaboration with Young Professionals in Transportation (YPT). Speaker: Daryl McNabb from R.M. Chin, discussing aviation finance and planning. Potential Harris alumni panel on capital budgeting and capital planning. Event format to include a presentation followed by a networking session. Collaboration with Urban Policy Student Association.",50,"No","No","Yes, in collaboration with Young Professionals in Transportation (YPT)","Yes, Daryl McNabb from R.M. Chin. Potential Harris alumni panel",500,500,NA,NA,472,40,1,593,NA,NA,NA
-"96","PMPSA (Public Management and Policy Student Association)","Bridging the Gap: Women, Family, and Workplace Diversity (Guest Speaker Session)","Postponed session from last quarter. We plan to invite a professor specializing in labor economics to gain insights on creating environments where diverse individuals can fully realize their potential in both work/life. We are planning to invite Professor Asai from Harris, who specializes in the effects of family leave and child care policies on labor.",40,"FALSE","FALSE","FALSE","TRUE
-(Professor Asai; woman)",780,710,NA,70,NA,NA,3,947,NA,NA,NA
-"97","PMPSA (Public Management and Policy Student Association)","Public Finance & Transportation Session: Outlook and Challenges  (Guest Speaker Session)","This event will bring together Harris students and industry experts to discuss the challenges and opportunities in public finance and transportation, fostering dialogue and professional connections. We plan to invite a guest speaker, given his experience in aviation finance and planning, and also explore collaboration with other local organizations to enhance discussions on financing transportation and infrastructure. Additionally, if possible, we will seek guidance from Professor Marlowe to ensure effective planning and execution. This event aims to promote further interests in the transportation-focused field at Harris students while providing them with valuable networking opportunities.",40,"FALSE","FALSE","FALSE","Yes
-(speakers TBD)",780,710,NA,70,NA,NA,3,947,NA,NA,NA
-"98","PMPSA (Public Management and Policy Student Association)","Board Member Handover Meeting","We will hold a meeting to officially hand over responsibilities to the next board members in preparation for the operation of PMPSA in the upcoming academic year.　We will conduct the approval process for the nominated next board members and provide an explanation of their responsibilities.",15,"FALSE","FALSE","FALSE","FALSE",280,240,NA,40,NA,NA,3,947,NA,NA,NA
-"99","Rural America Caucus","Women, Textiles, & Development",NA,NA,NA,NA,NA,NA,180.83,NA,NA,NA,0,0,28,290,NA,NA,NA
-"100","Rural America Caucus","Indigenous Rights and Sovereignty",NA,NA,NA,NA,NA,NA,355.76,355.76,NA,NA,0,0,28,290,NA,NA,"Mid May, 2025"
-"101","Rural America Caucus","Farm Field Trip with HEEA",NA,NA,NA,NA,NA,NA,300,NA,300,NA,0,0,28,290,NA,NA,"Mid May, 2025"
-"102","Rural America Caucus","Rural Public Financing with PFA",NA,NA,NA,NA,NA,NA,150,50,NA,NA,0,0,28,290,NA,NA,"TBD"
-"103","Rural America Caucus","Discussion with Congressman Tom McClintock",NA,NA,NA,NA,NA,NA,273.55,273.55,NA,NA,0,0,28,290,NA,NA,"Late April, 2025"
-"104","South Asian Student Policy Association","Eid Milan Party","For the First time in Uchicago Campus history, SASPA is organizing an event to celebrate muslim Eid in South Asian style, inviting Muslims and other community members to celebrate inclusivity and tolerance",70,"FALSE","FALSE","FALSE","FALSE",600,500,NA,100,345.88,NA,1,2504,NA,NA,NA
-"105","South Asian Student Policy Association","Pakistan Foreign Minister Visit","Pakistan's Former Climate/Foreign minister is visiting Keller to talk about ""Climate Reselience in Hard Times""",50,"FALSE","FALSE","FALSE","FALSE",430,400,NA,30,345.88,NA,1,2504,NA,NA,NA
-"106","The African Perspective","Policy Roundtable: Africa’s Role in Global Sustainability","This engaging panel discussion will bring together African entrepreneurs, American scholars, and students who have worked in Africa to share their insights on Africa’s contributions to renewable energy and sustainable development. In collaboration with Booth Africa, the event seeks to secure credible speakers to ensure a high-quality and impactful discussion. The roundtable will explore how Africa is shaping the global sustainability agenda while fostering collaboration between academia, policy, and industry. With diverse speakers and an open Q&A session, attendees will gain practical knowledge about innovative approaches and policy frameworks, build meaningful connections for future partnerships, and take away actionable ideas to support Africa’s leadership in sustainability. This event aims to spark impactful conversations, promote diversity, and position the Harris School and UChicago as a key player in global discussions on Africa’s development and engagement.",50,"No","No","Yes","Yes. There'll be a woman or two. There'll be several entrepreneurs from Africa",1850,900,300,500,NA,NA,18,23154.97,150,NA,NA
-"107","The African Perspective","Conflict Resolution Workshop: Lessons from Africa","This interactive workshop brings together experienced practitioners who are deeply engaged in conflict resolution and peacebuilding efforts across war-torn regions of Africa, including Sudan, Kenya, and Somalia. The purpose of the event is to shed light on African-led approaches to resolving conflict, rebuilding trust, and fostering sustainable peace in communities affected by violence, displacement, and political instability.
-
-Participants will learn from real-life experiences and fieldwork insights shared by frontline peacebuilders. Through dynamic discussions, case study explorations, and hands-on activities, the workshop will explore traditional and innovative African methods of mediation, community reconciliation, and post-conflict healing.
-
-This is not a lecture-style event—attendees will be encouraged to engage directly with the speakers, share their perspectives, and collaboratively analyze challenges and solutions. The goal is to foster a deeper understanding of context-driven conflict resolution strategies that can inform both local and global peacebuilding practices.",70,"No","No","EASA","Yes. There'll be a four women. There'll be practitioners from Africa.",2525,1050,400,475,NA,NA,18,23154.97,350,250,NA
-"108","The African Perspective","Africa Day Celebration at UChicago","Organized by The African Perspective in collaboration with the East African Students Association (EASA)
-
-Join us for a vibrant campus-wide celebration of Africa’s rich cultures, innovative spirit, and global contributions. The Africa Day Celebration will feature a dynamic cultural parade showcasing traditional attire, music, and dance from across the continent. A keynote speaker—an esteemed thought leader in African innovation and global development—will anchor the event with powerful reflections on Africa's past, present, and future.
-
-Interactive exhibitions will spotlight African-led innovations in technology, sustainability, and the arts, highlighting the ingenuity and resilience that define the continent. This is more than a celebration—it's an educational experience that brings the UChicago community together to honor Africa’s diversity and amplify African voices on campus.
-
-By collaborating with EASA, we aim to create an inclusive, high-impact event that fosters cross-cultural understanding and deepens appreciation for Africa’s contributions to the world. With your support, we can make Africa Day a flagship celebration of unity, identity, and forward-thinking excellence at the University of Chicago.",100,"No","No","EASA","Yes. There'll be 7 woman vendors . There'll be African, Asian, American, and European students",5600,3000,1100,900,NA,NA,18,23154.97,600,NA,NA
-"109","The African Perspective","Trip to the Swahili Institute at Chicago","This experiential learning trip to the Swahili Institute in Chicago is designed to deepen students' understanding of African languages and their role in shaping cultural identity and cross-cultural communication. With a focus on Swahili—a language spoken by over 100 million people across East and Central Africa—this visit will provide participants with a unique opportunity to engage with Africa’s linguistic heritage through interactive sessions led by language experts and cultural educators.
-
-The purpose of this trip is to create space for dialogue around the importance of language in fostering mutual understanding, dismantling stereotypes, and promoting global citizenship. Participants will take part in guided activities that include Swahili language immersion, discussions on African oral traditions, and the role of language in unifying diverse communities.
-
-This initiative supports the University of Chicago’s broader commitment to diversity, equity, and global engagement. With funding, we will be able to provide transportation, materials for interactive learning, and refreshments, ensuring full accessibility to all interested students. The experience will enrich academic and cultural exploration on campus and strengthen ties between students and Chicago’s African diaspora institutions.",80,"No","IDPA","Booth Africa","Yes. There'll be a woman or two. There'll be African, Asian, European, and American students",3750,1200,2000,450,NA,NA,18,23154.97,100,NA,NA
-"110","The African Perspective","The New Scramble for Africa","The New Scramble for Africa: Charting a Way Forward is a flagship event designed to examine Africa’s evolving role in global politics and economics amidst increasing international competition for its resources and influence. Featuring a keynote address by renowned scholar James Robinson, the event will include dynamic panel discussions with faculty, students, and practitioners on critical topics such as governance strategies, resource exploitation, sustainable development, and Africa’s positioning in global engagements. The discussions will explore how Africa can balance foreign interests with national development priorities, foster equitable partnerships, and ensure that African voices shape the continent’s future.
-
-In collaboration with ACSA (African and Caribbean Students Association), East African Students Association (EASA), and Booth Africa, we will promote the event and leverage shared resources to ensure broad engagement and participation. Attendees will gain a deeper understanding of the historical and current dimensions of international engagement with Africa and leave with actionable strategies to support sustainable and equitable development. The event will also create opportunities for building cross-disciplinary partnerships between academic institutions, policy organizations, and industry players, while showcasing diverse perspectives through the inclusion of African scholars, practitioners, and students.
-
-By fostering critical dialogue on Africa’s global positioning and governance challenges, this event aims to inspire actionable solutions that prioritize Africa’s growth and empowerment. It will be a cornerstone of impactful discourse at the Harris School and UChicago at large, promoting a deeper understanding of Africa’s priorities and aspirations in a rapidly shifting global landscape.",150,"No","IDPA","EASA, BSA","Yes. There'll be a woman or two. There'll be POC, too",7900,4000,250,750,NA,NA,18,23154.97,600,2300,NA
-"111","The African Perspective","Movie Screening","The Movie Screening event offers a unique opportunity to experience the power of African cinema while engaging in meaningful discussions about identity, history, development, and cultural exchange. The event will feature a carefully selected African film that highlights the richness and complexity of African stories, followed by a moderated discussion led by knowledgeable faculty and students. This dialogue will encourage attendees to reflect on the film’s cultural, historical, and social significance, exploring how its narrative connects to broader themes of African resilience, identity, and global engagement.
-
-For Harris School students, this event provides a distinct benefit by offering an immersive lens into African socio-political and cultural dynamics. It complements their academic studies by illustrating how storytelling can influence policy, shape societal norms, and drive conversations about development and equity. Through this event, Harris students will gain insights into the intersection of culture and public policy, fostering a deeper understanding of how narratives can inform and inspire effective policymaking.
-
-Participants will leave with an enriched perspective on African cinema’s ability to address pressing themes, inspire change, and bridge cultural divides, while building meaningful connections within a diverse and engaged community. This event is not just a celebration of African storytelling but also an essential platform for critical learning and dialogue.",40,"No","No","No","No",1400,600,500,200,NA,NA,18,23154.97,100,NA,NA
-"112","UC3P","Squarespace Subscription","This is to pay for our website, uc3p.org, that we host through Squarespace",NA,"FALSE","FALSE","FALSE","FALSE",275,NA,NA,NA,NA,NA,17,2919.19,275,NA,NA
-"113","UC3P","Equipment Purchase","This is to replace some broken equipment in the media room",NA,"FALSE","FALSE","FALSE","FALSE",259.97,NA,NA,NA,NA,NA,17,2919.19,NA,259.97,NA
-"114","UC3P","Pub Night/Networking Social","This is our quarterly social event with alumni and the podcast teams to help them build their networks (we weren't able to host this last quarter)",30,"FALSE","FALSE","FALSE","FALSE",150,150,NA,NA,NA,NA,17,2919.19,NA,NA,NA
-"115","Unum","Unum General Meeting","Unum general meetings are held for members interested in improving public speaking and debate skills. These would take the form of meetings hosted in Keller classrooms with pre-prepared informational and debate presentations. In our studies at Harris, we have found that many of our classmates are incredibly intelligent and thoughtful, but struggle with speaking out- whether due to language barriers, shyness, etc. Before we can address people's willingness to debate political and policy topics, we have to help people get comfortable speaking in general. We believe these events would go a long way towards setting out a framework for even the most novice or shy speakers to become more confident and become thought leaders in the Harris community.
-
-The initial public speaking training event in Winter Quarter was well received by those that did attend, but due to lower than expected turnout for our initial meeting, instead of scheduling a Part 2 to the original, we will try to revamp and rerun the original meeting so that more students can attend. We have revised our request down to account for this.",15,"FALSE","N/A","N/A","N/A",50,50,NA,0,NA,NA,17,2740,NA,0,NA
-"116","Unum","Debate at Cornell University","Unum members who have expressed interest and competence in debate (either through Unum or outside experience) participate in debates with peers at other policy schools/universities on subjects such as free speech, the Constitution, and other subjects relevant to politics and policy. Funding requests for these events cover transportation and lodging from Chicago to the host school. Unum has hosted these events in the past as interest and scheduling permit. This event would be held in person at Cornell University in Ithaca, NY. 
-
-Unum has had great success with these events in the past and has built positive relationships with peers at these schools that we would like to continue to maintain. Cornell counterparts have generously offered to cover local hosting costs, but we would like to request additional funds to enable as many members to attend as possible, and to remove any financial barriers.",NA,"TRUE","N/A","N/A","N/A",1100,100,NA,NA,NA,NA,17,2740,1000,NA,NA
-"117","Unum","Speaker event - Prof. Leila Brammer on Viewpoint Diversity","(NOTE: Due to scheduling conflicts, we weren't able to host this event during Winter Quarter as planned. We're leaving it here for transparency and because it is something we may still want to pursue, but we understand that funding may not be provided a second time. We also note that Rich Delewsky, who initially coordinated with us for initial planning, is no longer the Unum advisor, which may complicate matters. We are also revising attendance down to account for revised expectations.)
-Prof. Leila Brammer is a professor at the UChicago College who is director of the Parrhesia undergraduate program, providing students with the resources to have important conversations about vital topics in society and encouraging viewpoint diversity and civil debate. (See https://mag.uchicago.edu/law-policy-society/figure-speech) Prof. Brammer spoke at this year's Harris orientation, and the Office of Student Engagement and Belonging has expressed great interest in having her speak again. Given its mission, Unum reached out to partner with SEB and would be honored to host Prof. Brammer. We would be hosting two general meetings prior to this speaker to prepare students for Prof. Brammer's speech andw ill also be working with her to tailor the material to a public policy audience in particular. This event would go a long way towards providing an important venue for Harris students to debate important political and policy topics both at UChicago and beyond, and would help continue to support Office of Student Engagement and Belonging's mission and programming.",30,"FALSE","N/A","N/A","Yes - speaker is a woman",290,120,150,0,NA,NA,17,2740,NA,20,NA
-"118","Women in Public Policy","Mixer at Pub","This mixer will give a chance for the Harris WiPP community to come back together, socialize at the start of the quarter, and speak with the board members about expected programming for the coming quarters.",50,"FALSE","FALSE","FALSE","FALSE",150,150,NA,NA,0,0,0,NA,NA,NA,NA
-"119","Women in Public Policy","Salary Negotiation Event with CDO","Collaborating with WiPP, CDO will put on an event where they teach best practices for salary negotiation in interviews. This event will be particularly tailored to women and other gender-minorities who face discrimination in the workplace.",NA,"FALSE","FALSE","FALSE","FALSE",500,500,NA,NA,0,0,0,NA,NA,NA,NA
-"120","Women in Public Policy","Study Hall","WiPP will host a study hall during midterms week to as a way to de-stress with snacks and friends.",35,"FALSE","FALSE","FALSE","FALSE",75,55,NA,20,0,0,0,NA,NA,NA,NA
-"121","Women in Public Policy","Networking Mixer","WiPP will do networking mixer with Women in Business and Women’s Law Association. There wll be decoration, snacks, and treats for the members to take home",35,"FALSE","FALSE","FALSE","FALSE",90,50,NA,40,0,0,0,NA,NA,NA,NA
-"122","Women in Public Policy","Alumnae Networking Event with ARD","In collaboration with ARD, WiPP will orchestrate an alumnae networking event, reaching out to past Harris alumnae working in different policy areas. This will be an opportunity for professional development for the WiPP community.",50,"FALSE","FALSE","FALSE","FALSE",500,500,NA,NA,0,0,0,NA,NA,NA,NA
-"123","Women in Public Policy","Faculty Brunch","WiPP will organize an all women-identifying faculty brunch to honor the invaluable contributions of women in academia. The gathering will be dedicated to celebrating the knowledge, mentorship, and leadership of female faculty members at University of Chicago.",35,"FALSE","FALSE","FALSE","FALSE",400,400,NA,NA,0,0,0,NA,NA,NA,NA
-"124","Women in Public Policy","Merchandise","We want to get Harris WiPP merchandise for memebers to drum up more excitement and support for it in the future. Ths merchandise can roll over for distribution to the next year's membership as well.",NA,"FALSE","FALSE","FALSE","FALSE",50,NA,NA,NA,0,0,0,NA,50,NA,NA
+﻿org,category,type,amount,actual,externalreceived,totalreceived,totalrollover,eventsactual,eventsplanned,attendactual
+Association of Latinx Students for Social Justice,social,food,75,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,beverages,80,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,non-reusable supplies,25,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,cultural,food,150,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,cultural,beverages,80,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,cultural,reusable supplies,30,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,food,355,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,beverages,40,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,non-reusable supplies,25,270,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,speaker,food,650,0,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,speaker,beverages,30,0,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,speaker,non-reusable supplies,25,0,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,food,80,0,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,beverages,15,0,0,610,50,3,5,263
+Association of Latinx Students for Social Justice,social,non-reusable supplies,25,0,0,610,50,3,5,263
+Asian Policy Forum,promotion,food,120,0,1800,1420,1650,2,6,300
+Asian Policy Forum,promotion,printing,120,0,1800,1420,1650,2,6,300
+Asian Policy Forum,promotion,gift,500,0,1800,1420,1650,2,6,300
+Asian Policy Forum,social,food,1776,0,1800,1420,1650,2,6,300
+Asian Policy Forum,social,beverages,40,0,1800,1420,1650,2,6,300
+Asian Policy Forum,promotion,food,512,6460,1800,1420,1650,2,6,300
+Asian Policy Forum,promotion,services,300,6460,1800,1420,1650,2,6,300
+Asian Policy Forum,speaker,food,860,0,1800,1420,1650,2,6,300
+Asian Policy Forum,speaker,services,40,0,1800,1420,1650,2,6,300
+Asian Policy Forum,publication,printing,600,0,1800,1420,1650,2,6,300
+Asian Policy Forum,cultural,services,1800,6460,1800,1420,1650,2,6,300
+Asian Policy Forum,cultural,reusable supplies,330,6460,1800,1420,1650,2,6,300
+Asian Policy Forum,cultural,reusable supplies,50,6460,1800,1420,1650,2,6,300
+Asian Policy Forum,cultural,food,480,6460,1800,1420,1650,2,6,300
+Asian Policy Forum,cultural,services,340,6460,1800,1420,1650,2,6,300
+Black Action in Public Policy Studies,social,non-reusable supplies,100,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,food,360,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,promotion,services,120,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,promotion,gift,150,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,speaker,beverages,128,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,speaker,services,100,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,speaker,food,355,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,workshop,beverages,33,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,workshop,food,265,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,promotion,services,150,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,food,99,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,beverages,33,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,food,700,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,reusable supplies,50,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,non-reusable supplies,10,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,cultural,food,721,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,cultural,reusable supplies,100,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,cultural,gift,50,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,food,326,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,beverages,66,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,non-reusable supplies,30,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,community engagement,services,250,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,community engagement,food,153,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,community engagement,beverages,28,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,speaker,food,350,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,speaker,beverages,116,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,food,355,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,beverages,168,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,services,146,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,workshop,food,122,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,workshop,beverages,33,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,workshop,non-reusable supplies,30,0,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,beverages,44,2990,4790,1340,400,10,19,108
+Black Action in Public Policy Studies,social,food,55,2990,4790,1340,400,10,19,108
+Behavioral Science and Public Policy,social,,,330,0,0,530,2,,44
+Behavioral Science and Public Policy,speaker,,,330,0,0,530,2,,44
+Crime & Justice Policy Association,social,non-reusable supplies,105,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,social,food,280,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,social,beverages,45,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,social,non-reusable supplies,20,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,speaker,food,219,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,speaker,services,975,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,film screening,services,130,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,film screening,food,56,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,film screening,beverages,15,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,speaker,food,348,1030,0,660,250,4,4,56
+Crime & Justice Policy Association,speaker,beverages,15,1030,0,660,250,4,4,56
+Chicago Policy Review,social,services,1000,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,food,150,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,beverages,54,0,0,740,2370,2,6,81
+Chicago Policy Review,social,food,751,690,0,740,2370,2,6,81
+Chicago Policy Review,publication,printing,1000,0,0,740,2370,2,6,81
+Chicago Policy Review,promotion,food,100,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,food,150,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,beverages,54,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,food,150,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,beverages,54,0,0,740,2370,2,6,81
+Chicago Policy Review,workshop,food,150,690,0,740,2370,2,6,81
+Chicago Policy Review,workshop,beverages,54,690,0,740,2370,2,6,81
+"Data, Ethics, & Policy Conference",speaker,gift,2000,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,food,700,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,beverages,250,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,non-reusable supplies,250,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,printing,250,,5000,180,1370,4,4,160
+"Data, Ethics, & Policy Conference",speaker,reusable supplies,50,,5000,180,1370,4,4,160
+European Policy Forum,debate,food,180,,0,330,0,4,3,
+European Policy Forum,debate,beverages,20,,0,330,0,4,3,
+European Policy Forum,debate,printing,50,,0,330,0,4,3,
+European Policy Forum,film screening,beverages,70,,0,330,0,4,3,
+European Policy Forum,film screening,food,108,,0,330,0,4,3,
+European Policy Forum,film screening,printing,50,,0,330,0,4,3,
+European Policy Forum,speaker,food,220,,0,330,0,4,3,
+European Policy Forum,speaker,beverages,20,,0,330,0,4,3,
+European Policy Forum,speaker,printing,50,,0,330,0,4,3,
+Education Policy Student Assocation,social,food,66,700,0,680,100,5,5,88
+Education Policy Student Assocation,social,beverages,83,700,0,680,100,5,5,88
+Education Policy Student Assocation,social,non-reusable supplies,5,700,0,680,100,5,5,88
+Education Policy Student Assocation,social,beverages,44,700,0,680,100,5,5,88
+Education Policy Student Assocation,speaker,food,217,700,0,680,100,5,5,88
+Education Policy Student Assocation,speaker,beverages,18,700,0,680,100,5,5,88
+Education Policy Student Assocation,speaker,non-reusable supplies,7,700,0,680,100,5,5,88
+Education Policy Student Assocation,speaker,gift,60,700,0,680,100,5,5,88
+Education Policy Student Assocation,speaker,food,345,700,0,680,100,5,5,88
+Education Policy Student Assocation,speaker,services,150,700,0,680,100,5,5,88
+Education Policy Student Assocation,social,food,75,700,0,680,100,5,5,88
+Education Policy Student Assocation,social,beverages,35,700,0,680,100,5,5,88
+Education Policy Student Assocation,social,non-reusable supplies,9,700,0,680,100,5,5,88
+Harris Community Action,promotion,food,300,1515,0,140,8930,4,5,230
+Harris Community Action,promotion,beverages,20,1515,0,140,8930,4,5,230
+Harris Community Action,social,food,200,0,0,140,8930,4,5,230
+Harris Community Action,social,beverages,200,0,0,140,8930,4,5,230
+Harris Community Action,community engagement,services,1440,1515,0,140,8930,4,5,230
+Harris Community Action,community engagement,food,300,1515,0,140,8930,4,5,230
+Harris Community Action,community engagement,beverages,20,1515,0,140,8930,4,5,230
+Harris Community Action,community engagement,food,400,1515,0,140,8930,4,5,230
+Harris Community Action,community engagement,beverages,20,1515,0,140,8930,4,5,230
+Harris Consulting Club,social,beverages,50,380,0,1270,120,7,12,242
+Harris Consulting Club,social,food,300,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,200,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,150,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,150,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,150,0,0,1270,120,7,12,242
+Harris Consulting Club,social,food,140,0,0,1270,120,7,12,242
+Harris Consulting Club,social,beverages,210,0,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,400,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,beverages,90,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,30,380,0,1270,120,7,12,242
+Harris Consulting Club,social,food,140,0,0,1270,120,7,12,242
+Harris Consulting Club,social,beverages,210,0,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,560,380,0,1270,120,7,12,242
+Harris Consulting Club,workshop,beverages,160,380,0,1270,120,7,12,242
+Harris Consulting Club,speaker,food,50,0,0,1270,120,7,12,242
+Harris Consulting Club,social,printing,10,0,0,1270,120,7,12,242
+Harris Consulting Club,workshop,food,200,380,0,1270,120,7,12,242
+Harris Consulting Club,social,food,140,0,0,1270,120,7,12,242
+Harris Consulting Club,social,beverages,210,0,0,1270,120,7,12,242
+Harris Consulting Club,promotion,gift,150,0,0,1270,120,7,12,242
+Harris Consulting Club,social,services,50,0,0,1270,120,7,12,242
+Harris Consulting Club,workshop,non-reusable supplies,30,380,0,1270,120,7,12,242
+Harris Energy and Environmental Association,social,food,110,0,0,140,1864,3,4,77
+Harris Energy and Environmental Association,social,beverages,110,0,0,140,1864,3,4,77
+Harris Energy and Environmental Association,speaker,food,222,777,0,140,1864,3,4,77
+Harris Energy and Environmental Association,speaker,food,150,777,0,140,1864,3,4,77
+Harris Energy and Environmental Association,speaker,beverages,22,777,0,140,1864,3,4,77
+Harris Energy and Environmental Association,social,food,410,777,0,140,1864,3,4,77
+Harris Energy and Environmental Association,social,beverages,500,777,0,140,1864,3,4,77
+Harris Energy and Environmental Association,social,services,500,777,0,140,1864,3,4,77
+Harris Student Government,social,food,500,,0,500,1000,1,1,40
+Harris Impact Investing,social,food,92,,0,570,519,,3,
+Harris Impact Investing,social,beverages,156,,0,570,519,,3,
+Harris Impact Investing,social,non-reusable supplies,30,,0,570,519,,3,
+Harris Impact Investing,speaker,food,320,,0,570,519,,3,
+Harris Impact Investing,speaker,beverages,203,,0,570,519,,3,
+Harris Impact Investing,workshop,food,552,,0,570,519,,3,
+Harris Impact Investing,promotion,printing,56,,0,570,519,,3,
+International Development Policy Association,speaker,food,170,550,0,1020,1780,4,9,142
+International Development Policy Association,social,food,180,0,0,1020,1780,4,9,142
+International Development Policy Association,social,beverages,180,0,0,1020,1780,4,9,142
+International Development Policy Association,social,printing,25,0,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,500,550,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,500,0,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,840,0,0,1020,1780,4,9,142
+International Development Policy Association,speaker,food,738,550,0,1020,1780,4,9,142
+International Development Policy Association,speaker,services,50,550,0,1020,1780,4,9,142
+International Development Policy Association,workshop,food,340,550,0,1020,1780,4,9,142
+International Development Policy Association,workshop,food,340,0,0,1020,1780,4,9,142
+International Development Policy Association,film screening,food,500,0,0,1020,1780,4,9,142
+Latin America Matters,social,food,120,4290,3560,760,3140,5,6,210
+Latin America Matters,promotion,gift,60,0,3560,760,3140,5,6,210
+Latin America Matters,speaker,food,250,4290,3560,760,3140,5,6,210
+Latin America Matters,speaker,food,600,4290,3560,760,3140,5,6,210
+Latin America Matters,speaker,services,1090,4290,3560,760,3140,5,6,210
+Latin America Matters,cultural,,0,4290,3560,760,3140,5,6,210
+Latin America Matters,social,,0,4290,3560,760,3140,5,6,210
+Military-Affiliated Students and Veterans,social,food,220,500,0,150,4060,2,3,70
+Military-Affiliated Students and Veterans,social,beverages,220,500,0,150,4060,2,3,70
+Military-Affiliated Students and Veterans,workshop,services,150,0,0,150,4060,2,3,70
+Military-Affiliated Students and Veterans,social,food,265,500,0,150,4060,2,3,70
+Military-Affiliated Students and Veterans,social,beverages,190,500,0,150,4060,2,3,70
+Military-Affiliated Students and Veterans,social,non-reusable supplies,304,500,0,150,4060,2,3,70
+Minorities in Public Policy Studies,promotion,gift,210,1470,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,food,300,1470,0,1270,460,4,7,124
+Minorities in Public Policy Studies,community engagement,services,675,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,food,1800,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,services,550,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,beverages,300,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,reusable supplies,250,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,non-reusable supplies,100,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,community engagement,services,550,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,community engagement,food,600,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,food,900,1470,0,1270,460,4,7,124
+Minorities in Public Policy Studies,cultural,,200,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,cultural,,200,0,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,food,100,1470,0,1270,460,4,7,124
+Minorities in Public Policy Studies,social,beverages,100,1470,0,1270,460,4,7,124
+Minorities in Public Policy Studies,community engagement,non-reusable supplies,30,0,0,1270,460,4,7,124
+OutPolitik,social,food,72,900,0,1140,1340,6,12,217
+OutPolitik,social,beverages,88,900,0,1140,1340,6,12,217
+OutPolitik,social,non-reusable supplies,45,900,0,1140,1340,6,12,217
+OutPolitik,speaker,food,300,0,0,1140,1340,6,12,217
+OutPolitik,speaker,beverages,104,0,0,1140,1340,6,12,217
+OutPolitik,social,food,987,0,0,1140,1340,6,12,217
+OutPolitik,social,non-reusable supplies,7,0,0,1140,1340,6,12,217
+OutPolitik,social,food,15,0,0,1140,1340,6,12,217
+OutPolitik,social,beverages,72,0,0,1140,1340,6,12,217
+OutPolitik,workshop,food,190,900,0,1140,1340,6,12,217
+OutPolitik,community engagement,food,285,900,0,1140,1340,6,12,217
+OutPolitik,speaker,food,300,0,0,1140,1340,6,12,217
+OutPolitik,speaker,beverages,105,0,0,1140,1340,6,12,217
+OutPolitik,speaker,gift,250,0,0,1140,1340,6,12,217
+OutPolitik,social,food,309,900,0,1140,1340,6,12,217
+OutPolitik,social,beverages,5,900,0,1140,1340,6,12,217
+OutPolitik,community engagement,services,750,0,0,1140,1340,6,12,217
+OutPolitik,social,food,56,900,0,1140,1340,6,12,217
+OutPolitik,promotion,non-reusable supplies,135,900,0,1140,1340,6,12,217
+OutPolitik,social,food,160,0,0,1140,1340,6,12,217
+OutPolitik,social,non-reusable supplies,22,0,0,1140,1340,6,12,217
+OutPolitik,social,beverages,6,0,0,1140,1340,6,12,217
+Public Finance Association,workshop,food,527,940,20,820,20,5,5,158
+Public Finance Association,workshop,beverages,68,940,20,820,20,5,5,158
+Public Finance Association,workshop,non-reusable supplies,33,940,20,820,20,5,5,158
+Public Finance Association,social,food,216,940,20,820,20,5,5,158
+Public Finance Association,promotion,food,55,940,20,820,20,5,5,158
+Public Finance Association,promotion,gift,100,940,20,820,20,5,5,158
+Public Finance Association,promotion,non-reusable supplies,10,940,20,820,20,5,5,158
+Public Finance Association,speaker,food,716,940,20,820,20,5,5,158
+Public Finance Association,speaker,beverages,68,940,20,820,20,5,5,158
+Public Finance Association,speaker,non-reusable supplies,40,940,20,820,20,5,5,158
+Public Finance Association,speaker,food,292,940,20,820,20,5,5,158
+Public Finance Association,speaker,beverages,68,940,20,820,20,5,5,158
+Public Finance Association,speaker,non-reusable supplies,30,940,20,820,20,5,5,158
+Public Management and Policy Student Association,speaker,food,712,0,0,360,920,2,6,50
+Public Management and Policy Student Association,speaker,beverages,27,0,0,360,920,2,6,50
+Public Management and Policy Student Association,speaker,non-reusable supplies,50,0,0,360,920,2,6,50
+Public Management and Policy Student Association,promotion,food,115,610,0,360,920,2,6,50
+Public Management and Policy Student Association,social,food,240,0,0,360,920,2,6,50
+Public Management and Policy Student Association,social,beverages,27,0,0,360,920,2,6,50
+Public Management and Policy Student Association,social,non-reusable supplies,50,0,0,360,920,2,6,50
+Public Management and Policy Student Association,workshop,food,312,0,0,360,920,2,6,50
+Public Management and Policy Student Association,workshop,beverages,27,0,0,360,920,2,6,50
+Public Management and Policy Student Association,workshop,non-reusable supplies,50,0,0,360,920,2,6,50
+Public Management and Policy Student Association,workshop,food,554,610,0,360,920,2,6,50
+Public Management and Policy Student Association,workshop,beverages,27,610,0,360,920,2,6,50
+Public Management and Policy Student Association,workshop,services,50,610,0,360,920,2,6,50
+Rural America Caucus,promotion,food,193,160,0,1130,240,5,5,31
+Rural America Caucus,promotion,beverages,12,160,0,1130,240,5,5,31
+Rural America Caucus,workshop,food,41,160,0,1130,240,5,5,31
+Rural America Caucus,workshop,beverages,12,160,0,1130,240,5,5,31
+Rural America Caucus,community engagement,services,486,160,0,1130,240,5,5,31
+Rural America Caucus,speaker,services,1548,160,0,1130,240,5,5,31
+Rural America Caucus,speaker,food,400,160,0,1130,240,5,5,31
+Rural America Caucus,social,food,24,160,0,1130,240,5,5,31
+Rural America Caucus,social,beverages,18,160,0,1130,240,5,5,31
+South Asian Students' Policy  Association,cultural,food,3000,3520,3700,800,890,2,4,255
+South Asian Students' Policy  Association,cultural,services,575,3520,3700,800,890,2,4,255
+South Asian Students' Policy  Association,cultural,non-reusable supplies,225,3520,3700,800,890,2,4,255
+South Asian Students' Policy  Association,cultural,beverages,1200,3520,3700,800,890,2,4,255
+South Asian Students' Policy  Association,speaker,printing,5,0,3700,800,890,2,4,255
+South Asian Students' Policy  Association,speaker,food,305,0,3700,800,890,2,4,255
+South Asian Students' Policy  Association,speaker,beverages,28,0,3700,800,890,2,4,255
+South Asian Students' Policy  Association,speaker,non-reusable supplies,25,0,3700,800,890,2,4,255
+South Asian Students' Policy  Association,social,food,160,3520,3700,800,890,2,4,255
+South Asian Students' Policy  Association,social,beverages,28,3520,3700,800,890,2,4,255
+South Asian Students' Policy  Association,social,services,5,3520,3700,800,890,2,4,255
+South Side Civic,community engagement,food,7340,,5000,770,6680,5,5,60
+South Side Civic,community engagement,beverages,500,,5000,770,6680,5,5,60
+South Side Civic,community engagement,services,300,,5000,770,6680,5,5,60
+South Side Civic,community engagement,printing,250,,5000,770,6680,5,5,60
+South Side Civic,community engagement,gift,1500,,5000,770,6680,5,5,60
+South Side Civic,community engagement,reusable supplies,150,,5000,770,6680,5,5,60
+The African Perspective,promotion,reusable supplies,240,340,0,640,0,,6,
+The African Perspective,social,food,50,340,0,640,0,,6,
+The African Perspective,social,beverages,50,340,0,640,0,,6,
+The African Perspective,,services,320,340,0,640,0,,6,
+The African Perspective,social,food,460,340,0,640,0,,6,
+The African Perspective,social,beverages,60,340,0,640,0,,6,
+The African Perspective,social,non-reusable supplies,120,340,0,640,0,,6,
+The African Perspective,social,reusable supplies,110,340,0,640,0,,6,
+The African Perspective,social,printing,10,340,0,640,0,,6,
+The African Perspective,social,gift,30,340,0,640,0,,6,
+The African Perspective,speaker,food,50,340,0,640,0,,6,
+The African Perspective,speaker,printing,100,340,0,640,0,,6,
+The African Perspective,cultural,food,840,340,0,640,0,,6,
+The African Perspective,cultural,reusable supplies,270,340,0,640,0,,6,
+The African Perspective,cultural,gift,50,340,0,640,0,,6,
+The African Perspective,speaker,gift,400,340,0,640,0,,6,
+The African Perspective,speaker,food,200,340,0,640,0,,6,
+The African Perspective,speaker,beverages,200,340,0,640,0,,6,
+The African Perspective,speaker,services,100,340,0,640,0,,6,
+The African Perspective,speaker,printing,100,340,0,640,0,,6,
+The African Perspective,workshop,food,60,340,0,640,0,,6,
+The African Perspective,workshop,beverages,60,340,0,640,0,,6,
+The African Perspective,workshop,gift,100,340,0,640,0,,6,
+The African Perspective,social,beverages,240,340,0,640,0,,6,
+The African Perspective,social,food,180,340,0,640,0,,6,
+University of Chicago Public Policy Podcasts,social,beverages,165,220,0,110,5220,0,2,0
+University of Chicago Public Policy Podcasts,social,food,105,220,0,110,5220,0,2,0
+University of Chicago Public Policy Podcasts,social,food,300,220,0,110,5220,0,2,0
+University of Chicago Public Policy Podcasts,social,beverages,30,220,0,110,5220,0,2,0
+Unum,debate,services,1200,570,0,380,790,3,4,23
+Unum,workshop,food,78,570,0,380,790,3,4,23
+Unum,workshop,beverages,21,570,0,380,790,3,4,23
+Unum,workshop,non-reusable supplies,32,570,0,380,790,3,4,23
+Urban Policy Student Association,promotion,,50,0,0,100,550,1,2,10
+Urban Policy Student Association,community engagement,,50,130,0,100,550,1,2,10
+Women in Public Policy,social,,112,220,0,560,620,2,5,71
+Women in Public Policy,community engagement,,112,0,0,560,620,2,5,71
+Women in Public Policy,speaker,,112,220,0,560,620,2,5,71
+Women in Public Policy,social,,112,0,0,560,620,2,5,71
+Women in Public Policy,promotion,,112,0,0,560,620,2,5,71

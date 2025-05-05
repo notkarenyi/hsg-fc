@@ -100,7 +100,7 @@ extract_event <- function(details, i) {
 # run ---------------------------------------------------------------------
 
 data <- list()
-files <- list.files("data") # get all files in data/ folder
+files <- list.files(current_quarter) # get all files in / folder
 
 for (file in files[1:length(files)]) {
   # for (file in files[25:length(files)]) {
@@ -118,8 +118,8 @@ for (file in files[1:length(files)]) {
       "Actual" = NA,
       "Attendees" = NA
     )
-    budget <- read_excel(paste0("data/", file), sheet = 2)
-    details <- read_excel(paste0("data/", file), sheet = 3)
+    budget <- read_excel(fp, sheet = 2)
+    details <- read_excel(fp, sheet = 3)
   }
 
   # parse detailed expenses page --------------------------------------------

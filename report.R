@@ -224,7 +224,7 @@ planned_events <- function(quarter, caption = "") {
 
 compare_allocation_events <- function(caption = "") {
   # is receiving a low amount of funding correlated with hosting less events than planned?
-  df$devents <- df$events.planned - df$eventsactual
+  df$devents <- df$eventsplanned - df$eventsactual
   lm(totalreceived ~ devents, df) %>% summary()
 
   p <- df %>%

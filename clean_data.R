@@ -27,7 +27,7 @@ extract_event <- function(details, i) {
   #' @param i Which event are we extracting?
 
   # Details about event are between "EXPENSE #X" and "Expenses Breakdown"
-  description <- details[event_starts[i]:(event_middle[i] - 1), ]
+  description <- details[event_starts[i]:(event_middle[i] - 1), 1:3]
   names(description) <- c("column", "v2", "v3")
 
   # Standardize row names to later transpose and combine
@@ -107,10 +107,11 @@ for (file in files[1:length(files)]) {
   print(paste0("Parsing ", file))
 
   # existing orgs have a Retrospective tab for last quarter expenses
-  if (length(excel_sheets(paste0("data/", file))) == 4) {
-    retrospective <- read_excel(paste0("data/", file), sheet = 2, skip = 4)
-    budget <- read_excel(paste0("data/", file), sheet = 3)
-    details <- read_excel(paste0("data/", file), sheet = 4)
+  fp <- paste0(current_quarter, "/", file)
+  if (length(excel_sheets(fp)) == 4) {
+    retrospective <- read_excel(fp, sheet = 2, skip = 4)
+    budget <- read_excel(fp, sheet = 3)
+    details <- read_excel(fp, sheet = 4)
   } else {
     # new orgs may not have a Retrospective tab for last quarter expenses
     retrospective <- data.frame(
@@ -177,10 +178,10 @@ for (file in files[1:length(files)]) {
 
   # combine data for all orgs------------------------------------------------
   print(names(df))
+  print(nrow(df))
   data <- bind_rows(data, df)
 }
 
-write.csv(data, paste0(quarter, ".csv"))
 names(data) <- tolower(names(data))
 
 # pivot by item

@@ -59,6 +59,8 @@ extract_event <- function(details, start_row) {
   expenses <- expenses[!is.na(expenses[,3]),]
   expenses <- expenses %>%
     select(-Details) %>%
+    group_by(Category) %>%
+    summarize(Amount=sum(Amount)) %>%
     t() %>%
     data.frame() %>%
     row_to_names(row_number = 1)

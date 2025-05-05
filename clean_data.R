@@ -9,15 +9,24 @@ remove_punc <- function(x) {
 
 process_attendees <- function(x) {
   x <- map(x, ~ str_split(., "-")[[1]])
-  x <- lapply(x, gsub, "+", "")
+  x <- lapply(x, str_replace, "\\+", "")
   x <- lapply(x, as.numeric)
   x <- lapply(x, mean)
   x <- unlist(x)
   return(x)
 }
 
-extract_event <- function(start_row, end_row = NULL) {
-  description <- details[event_starts[i] + 1:((event_middle[i] - 1) - (event_starts[i] + 2)), ] %>%
+extract_event <- function(details, start_row) {
+  description <- details[event_starts[i]:(event_middle[i] - 1), ]
+  names(description) <- c('column','v2','v3')
+  description <- description %>%
+    remove_empty(c("rows", "cols")) %>% 
+    mutate(column=str_replace(column,regex(".*attendees"),"ExpectedAttendees")) %>% 
+    mutate(column=str_replace(column,regex(".*UChicago.*"),"CollabRSO")) %>% 
+    mutate(column=str_replace(column,regex("Collabo.*"),"CollabHSO")) %>% 
+    mutate(column=str_replace(column,regex(".*speaker.*"),"Speaker"))
+  
+  description <- description %>%
     t() %>%
     data.frame() %>%
     row_to_names(row_number = 1)
@@ -25,29 +34,42 @@ extract_event <- function(start_row, end_row = NULL) {
     remove_punc() %>%
     tolower() %>%
     str_trim()
-  description <- description %>%
-    filter(!is.na(2))
 
-  description$`expected of attendees` <- description$`expected of attendees` %>%
+  description$expectedattendees <- description$expectedattendees %>%
     process_attendees()
 
-  expenses <- details[event_middle[i] + 1:(event_ends[i] - event_middle[i]), ]
+  expenses <- details[event_middle[i] + 1:(event_ends[i] - event_middle[i]), 1:3]
 
   expenses <- expenses %>%
     remove_empty(c("rows", "cols")) %>%
     row_to_names(row_number = 1)
   names(expenses) <- c("Category", "Details", "Amount")
   expenses <- expenses %>%
-    filter(!is.na(3)) %>%
+    mutate(Details=na_if(str_trim(expenses$Details), "")) %>%
+    distinct()
+  expenses$Amount <- as.numeric(expenses$Amount)
+  expenses <- expenses %>% 
+    mutate(Category=str_replace(Category,regex("Miscellaneous.*"),"Miscellaneous")) %>% 
+    mutate(Category=str_replace(Category,regex("Supplies.*"),"Supplies")) %>% 
+    mutate(Category=str_replace(Category,regex("Equipment.*"),"Equipment")) %>% 
+    mutate(Category=str_replace(Category,regex("Refreshments.*"),"Refreshments")) %>% 
+    mutate(Category=str_replace(Category,regex("Contractual.*"),"Services")) %>% 
+    mutate(Category=str_replace(Category,regex("TOTAL.*|Total.*"),"EventTotal")) %>% 
+    mutate(Category=str_replace(Category,regex("EXPENSE .*"),"EXPENSE"))
+  expenses <- expenses[!is.na(expenses[,3]),]
+  expenses <- expenses %>%
     select(-Details) %>%
     t() %>%
     data.frame() %>%
     row_to_names(row_number = 1)
-  names(expenses) <- gsub(":.*", "", names(expenses))
-
+  
+  expenses <- expenses %>%
+    mutate(across(everything(), as.numeric))
+  
   result <- cbind(description, expenses)
   row.names(result) <- NULL
 
+  # print(result)
   return(result)
 }
 
@@ -55,8 +77,10 @@ extract_event <- function(start_row, end_row = NULL) {
 # run ---------------------------------------------------------------------
 
 data <- list()
-for (file in list.files("data")) {
-  print(paste0("Parsing ", file))
+files <- list.files("data")
+for (file in files[1:length(files)]) {
+# for (file in files[25:length(files)]) {
+    print(paste0("Parsing ", file))
   if (length(excel_sheets(paste0("data/", file))) == 4) {
     retrospective <- read_excel(paste0("data/", file), sheet = 2, skip = 4)
     budget <- read_excel(paste0("data/", file), sheet = 3)
@@ -77,6 +101,9 @@ for (file in list.files("data")) {
   # details2 <- details %>% t()
   details <- details[!is.na(details[, 1]), ]
   event_starts <- which(str_detect(unlist(details[, 1]), "^Expense Name"))
+  if (any(str_detect(unlist(details[, 1]), "^EXAMPLE"))) {
+    event_starts <- event_starts[2:length(event_starts)]
+  }
   event_middle <- which(str_detect(unlist(details[, 1]), "^Expenses Breakdown"))
   event_middle <- event_middle[((length(event_middle) - length(event_starts)) + 1):(length(event_middle))]
   event_ends <- which(str_detect(unlist(details[, 1]), "^TOTAL EXPENSE"))
@@ -86,8 +113,8 @@ for (file in list.files("data")) {
   }
 
   df <- data.frame()
-  for (i in length(event_starts)) {
-    df <- bind_rows(df, extract_event(i))
+  for (i in 1:length(event_starts)) {
+    df <- bind_rows(df, extract_event(details, i))
   }
 
   # parse retrospective page ------------------------------------------------
@@ -111,6 +138,8 @@ for (file in list.files("data")) {
     sum(na.rm = T)
   df$totalexternal <- rollover + external
 
+  print(names(df))
   data <- bind_rows(data, df)
 }
 
+write.csv(data,paste0(quarter,'.csv'))

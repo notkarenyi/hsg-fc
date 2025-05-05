@@ -50,12 +50,22 @@ extract_event <- function(start_row, end_row = NULL) {
 # run ---------------------------------------------------------------------
 
 data <- list()
-for (file in list.files('data')) {
-  print(paste0('Parsing ', file))
-  retrospective <- read_excel(paste0('data/',file),sheet=2, skip=4)
-  budget <- read_excel(paste0('data/',file),sheet=3)
-  details <- read_excel(paste0('data/',file),sheet=4)
-  
+for (file in list.files("data")) {
+  print(paste0("Parsing ", file))
+  if (length(excel_sheets(paste0("data/", file))) == 4) {
+    retrospective <- read_excel(paste0("data/", file), sheet = 2, skip = 4)
+    budget <- read_excel(paste0("data/", file), sheet = 3)
+    details <- read_excel(paste0("data/", file), sheet = 4)
+  } else {
+    retrospective <- data.frame(
+      "Budgeted" = NA,
+      "Actual" = NA,
+      "Attendees" = NA
+    )
+    budget <- read_excel(paste0("data/", file), sheet = 2)
+    details <- read_excel(paste0("data/", file), sheet = 3)
+  }
+
   # parse detailed expenses page --------------------------------------------
   print('Parsing detailed expenses')
 

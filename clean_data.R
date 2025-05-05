@@ -190,3 +190,26 @@ data <- data %>%
     names_to = "type"
   )
 
+# categorize events
+data$category <- "speaker"
+search <- function(col, x, category, orig) {
+  pattern <- regex(paste0(".*", paste(x, collapse = ".*|.*"), ".*"))
+  col <- tolower(col)
+  return(ifelse(str_detect(col, pattern), category, orig))
+}
+data <- data %>%
+  mutate(category = search(`expense name`, c("cultur", "reyes", "celebration"), "cultural", category)) %>%
+  mutate(category = search(`expense name`, c("publication", "print"), "publication", category)) %>%
+  mutate(category = search(`expense name`, c("conference", "strategic"), "conference", category)) %>%
+  mutate(category = search(`expense name`, c("budd", "genera", "party", "welcome", "potluck", "mixer", "alumni", "pub\\b"), "social", category)) %>%
+  mutate(category = search(`expense name`, c("speaker", "policy", "talk"), "speaker", category)) %>%
+  mutate(category = search(`expense name`, c("recruit", "swag", "sticker", "canva", "subscri", "email"), "promotion", category)) %>%
+  mutate(category = search(`expense name`, c("network", "hire", "workshop", "resume"), "workshop", category)) %>%
+  mutate(category = search(`expense name`, c("debate"), "debate", category)) %>%
+  mutate(category = search(`expense name`, c("film", "movie", "screen"), "film screening", category)) %>%
+  mutate(category = search(`expense name`, c("museum", "volunteer", "trip", "visit", "service"), "community engagement", category))
+
+# reorder columns
+other_names <- names(data)[!(names(data) %in% c("org", "type", "category"))]
+data <- data[, c("org", "category", "type", other_names)]
+write.csv(data, paste0(current_quarter, ".csv"))

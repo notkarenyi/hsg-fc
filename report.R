@@ -222,6 +222,33 @@ planned_events <- function(quarter, caption = "") {
     scale_y_continuous(breaks = seq(0, 20, 2))
 }
 
+planned_spending <- function(quarter, caption = "") {
+  p <- df %>%
+    group_by(org) %>%
+    summarize(
+      actual = min(`total allocated`, mean(actual, na.rm = T)),
+      planned = min(1500, sum(amount, na.rm = T))
+    ) %>%
+    filter(!is.na(actual)) %>%
+    ggplot() +
+    geom_bar(
+      aes(org, planned, fill = Category),
+      stat = "identity",
+      fill = "#C16622"
+    ) +
+    geom_bar(
+      aes(org, actual, fill = Category),
+      stat = "identity",
+      fill = "#800000"
+    ) +
+    labs(
+      title = paste0("   Planned vs. Actual Spending\n   by Organization, ", quarter),
+      caption = paste0("   ", caption)
+    )
+
+  barstyle(p)
+}
+
 compare_allocation_events <- function(caption = "") {
   # is receiving a low amount of funding correlated with hosting less events than planned?
   df$devents <- df$eventsplanned - df$eventsactual

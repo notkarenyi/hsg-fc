@@ -31,7 +31,7 @@ hours <- read.csv("hours.csv")
 
 The overall budget for `r quarter` was `r dollar_format()(sum(summarize(group_by(df,org),n=mean(totalreceived))["n"],na.rm=T))`.
 
-In `r quarter`, HSG Finance Committee funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported `r sum(summarize(group_by(df,org),n=mean(attendactual,na.rm=T))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-quarter reviews. 
+In `r quarter`, HSG Finance Committee funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported at least `r sum(summarize(group_by(df,org),n=mean(attendactual,na.rm=T))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-quarter reviews. 
 
 Breakdowns by event type, item type, and organization are included in this transparency report. 
 

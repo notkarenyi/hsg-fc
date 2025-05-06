@@ -2,15 +2,15 @@
 
 setup <- function(quarter) {
   #' Read and clean data
-  
+
   actual <- read.csv(paste0(current_quarter, ".csv"))
   # standardize org names
   actual <- update_names(actual)
-  
+
   # add totals requested and planned from last quarter
   planned <- read.csv(paste0(report_quarter, ".csv")) %>%
     update_names()
-  
+
   planned <- planned %>%
     select(-actual, -attendactual, -eventsactual)
   actual <- actual %>%
@@ -20,19 +20,20 @@ setup <- function(quarter) {
       attendactual = mean(attendactual),
       eventsactual = mean(eventsactual)
     )
-  
+
   df <- left_join(planned, actual)
-  
+
   # add totals allocated for last quarter
   allocated <- read_excel(paste0(report_quarter, " Allocations.xlsx")) %>%
-    remove_empty('rows')
-  names(allocated)[1] <- 'org'
+    remove_empty("rows")
+  names(allocated)[1] <- "org"
   allocated <- update_names(allocated)
-  
+
   df <- left_join(df, allocated)
   df$totalreceived <- df$`Total Allocated`
+  # df$totalreceived[is.na(df$totalreceived)] <- 0
   names(df) <- tolower(names(df))
-  
+
   # create totalrequested
   df <- df %>%
     group_by(org) %>%
@@ -41,6 +42,7 @@ setup <- function(quarter) {
       org = str_wrap(org, 60)
     ) %>%
     ungroup() %>%
+    # make org categorical and ordered
     mutate(
       org = factor(org, levels = rev(unique(org)), ordered = T)
     )
@@ -58,7 +60,7 @@ setup <- function(quarter) {
 
   # recalculate total requested for only those events held
   df <- df %>%
-    filter(actual != 0) %>%
+    # filter(actual != 0) %>%
     group_by(org) %>%
     mutate(totalrequested = sum(amount, na.rm = T))
 
@@ -199,7 +201,7 @@ compare_rollover_allocation <- function(quarter) {
   # not significant
   # lm(received~rollover, rollover) %>% summary()
 
-  pointstyle(p, dist = 2000)
+  pointstyle(p, dist = 4000)
 }
 
 planned_events <- function(quarter, caption = "") {

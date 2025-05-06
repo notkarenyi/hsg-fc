@@ -72,7 +72,7 @@ extract_event <- function(details, i) {
     mutate(Category = str_replace(Category, regex("Equipment.*"), "Equipment")) %>%
     mutate(Category = str_replace(Category, regex("Refreshments.*"), "Refreshments")) %>%
     mutate(Category = str_replace(Category, regex("Contractual.*"), "Services")) %>%
-    mutate(Category = str_replace(Category, regex("TOTAL.*|Total.*"), "Amount")) %>%
+    mutate(Category = str_replace(Category, regex("TOTAL.*|Total.*"), "EventTotal")) %>%
     mutate(Category = str_replace(Category, regex("EXPENSE .*"), "EXPENSE"))
 
   # Group items in the same category
@@ -190,8 +190,15 @@ names(data) <- tolower(names(data))
 # pivot by item
 data <- data %>%
   pivot_longer(
-    cols = c("refreshments", "supplies", "equipment", "services", "miscellaneous"),
-    names_to = "type"
+    cols = c(
+      "refreshments",
+      "supplies",
+      "equipment",
+      "services",
+      "miscellaneous"
+    ),
+    names_to = "type",
+    values_to = "amount"
   )
 
 # categorize events

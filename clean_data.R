@@ -156,6 +156,9 @@ for (file in files[1:length(files)]) {
   # parse retrospective page ------------------------------------------------
   print("Parsing retrospective")
 
+  retrospective <- retrospective %>%
+    remove_empty(c("rows", "cols"))
+
   # people do not accurately report amount budgeted
   # so we will get this data from last quarter's applications
   # df$budgeted <- sum(retrospective$Budgeted)

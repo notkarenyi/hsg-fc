@@ -46,7 +46,15 @@ setup <- function(quarter) {
     )
 
   # if we don't know how much they spent, assume received plus some rollover
-  df[is.na(df$actual), "actual"] <- df[is.na(df$actual), "totalreceived"] + df[is.na(df$actual), "externalreceived"] + round(df[is.na(df$actual), "totalrollover"] * .2)
+  df$partrollover <- round(df$totalrollover * .2)
+  df[is.na(df$actual), "actual"] <- rowSums(
+    df[is.na(df$actual), c("totalreceived", "externalreceived", "partrollover")],
+    na.rm = T
+  )
+  df[df$actual == 0, "actual"] <- rowSums(
+    df[df$actual == 0, c("totalreceived", "externalreceived", "partrollover")],
+    na.rm = T
+  )
 
   # recalculate total requested for only those events held
   df <- df %>%

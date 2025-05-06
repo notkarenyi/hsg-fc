@@ -65,6 +65,14 @@ compare_rollover_allocation(quarter)
 
 \newpage 
 
+## Funding Outcomes: Planned versus Actual Spending
+
+```{r, fig.height = 7}
+planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual. Because this graph focuses on HSG funds,\nactual amounts are capped by the amount allocated to each HSO by HSG.")
+```
+
+\newpage 
+
 ## Funding Outcomes: Number of Events
 
 ```{r, fig.height = 7}

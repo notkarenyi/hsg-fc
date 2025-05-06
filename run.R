@@ -1,3 +1,8 @@
+library(tidyverse)
+library(scales)
+library(readxl)
+library(readr)
+library(janitor)
 
 # config ------------------------------------------------------------------
 

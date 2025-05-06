@@ -1,8 +1,3 @@
-library(tidyverse)
-library(readxl)
-library(readr)
-library(janitor)
-
 # define functions --------------------------------------------------------
 
 remove_punc <- function(x) {

@@ -14,8 +14,6 @@ title: "Harris Student Government Finance Committee Transparency Report"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
-library(tidyverse)
-library(scales)
 quarter <- params$quarter
 ```
 

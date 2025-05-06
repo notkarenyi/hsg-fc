@@ -14,7 +14,7 @@ update_names <- function(x) {
   x <- x %>%
     mutate(org = search(org, c("acpf", "caste"), "Anti-Caste Policy Forum", org)) %>%
     mutate(org = search(org, c("apf", "asian policy"), "Asian Policy Forum", org)) %>%
-    mutate(org = search(org, c("alas", "latinx"), "Association of Latinx Students for Social Justice", org)) %>%
+    mutate(org = search(org, c("alas", "latinx", "social justice"), "Association of Latinx Students for Social Justice", org)) %>%
     mutate(org = search(org, c("bapps", "black"), "Black Action in Public Policy Studies", org)) %>%
     mutate(org = search(org, c("bep", "behavior"), "Behavioral Science and Public Policy", org)) %>%
     mutate(org = search(org, c("cjpa", "crime"), "Crime & Justice Policy Association", org)) %>%
@@ -44,9 +44,8 @@ update_names <- function(x) {
     mutate(org = search(org, c("uc3p", "podcast"), "University of Chicago Public Policy Podcasts", org)) %>%
     mutate(org = search(org, c("unum"), "Unum", org)) %>%
     mutate(org = search(org, c("upsa", "urban"), "Urban Policy Student Association", org)) %>%
-    mutate(org = search(org, c("wipp", "women"), "Women in Public Policy", org)) %>%
-    mutate(org = search(org, c("heea", "environment"), "Unum", org))
-  
+    mutate(org = search(org, c("wipp", "women"), "Women in Public Policy", org))
+
   return(x)
 }
 

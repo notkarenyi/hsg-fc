@@ -15,22 +15,21 @@ title: "Harris Student Government Finance Committee Transparency Report"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
 library(tidyverse)
+library(scales)
 quarter <- params$quarter
 ```
 
 # Harris Student Government Finance Committee Transparency Report `r quarter`
 
 ```{r data}
-source("utils.R")
+source("report.R")
 df <- setup(quarter)
-hours <- read.csv("hours.csv")
 ```
 
 ## Summary
+The overall budget for `r quarter` was `r dollar_format()(sum(summarize(group_by(df,org),n=mean(totalreceived))["n"],na.rm=T))`.
 
-The overall budget for `r quarter` was `r sum(summarize(group_by(df,org),n=mean(totalreceived))["n"],na.rm=T)`.
-
-In `r quarter`, HSG Finance Committee met `r nrow(hours)` times for a total of `r sum(hours$minutes)` minutes. HSG funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported `r sum(summarize(group_by(df,org),n=mean(attendactual))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-quarter reviews. 
+In `r quarter`, HSG Finance Committee funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported `r sum(summarize(group_by(df,org),n=mean(attendactual,na.rm=T))["n"],na.rm=T)` attendees across `r sum(summarize(group_by(df,org),n=mean(eventsactual))["n"],na.rm=T)` events in their post-quarter reviews. 
 
 Breakdowns by event type, item type, and organization are included in this transparency report. 
 
@@ -51,7 +50,7 @@ Planned improvements for next quarter are included at the end of this document.
 The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)`.
 
 ```{r, fig.height = 6.5}
-allocations_by_org(quarter, caption = "Note: BePP did not submit a budget request")
+allocations_by_org(quarter, caption = "")
 ```
 
 \newpage 
@@ -69,7 +68,7 @@ compare_rollover_allocation(quarter)
 ## Funding Outcomes: Number of Events
 
 ```{r, fig.height = 7}
-planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual. IDPA and TAP did not report how many events they held in Fall")
+planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 ```
 
 \newpage 

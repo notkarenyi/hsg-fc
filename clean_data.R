@@ -154,14 +154,20 @@ for (file in files[1:length(files)]) {
   retrospective <- retrospective %>%
     remove_empty(c("rows", "cols"))
 
-  # people do not accurately report amount budgeted
-  # so we will get this data from last quarter's applications
-  # df$budgeted <- sum(retrospective$Budgeted)
-  df$actual <- sum(retrospective$Actual)
-  df$attendactual <- retrospective$`Attendees (if applicable)` %>%
-    process_attendees() %>%
-    sum()
-  df$eventsactual <- nrow(retrospective)
+  if (nrow(retrospective)) {
+    # people do not accurately report amount budgeted
+    # so we will get this data from last quarter's applications
+    # df$budgeted <- sum(retrospective$Budgeted)
+    df$actual <- sum(retrospective$Actual)
+    df$attendactual <- retrospective$`Attendees (if applicable)` %>%
+      process_attendees() %>%
+      sum()
+    names(retrospective)[1] <- "event"
+    df$eventsactual <- retrospective %>%
+      distinct(event) %>%
+      count() %>%
+      sum()
+  }
 
   # parse budget page -------------------------------------------------------
   print("Parsing budget")

@@ -277,7 +277,7 @@ planned_spending <- function(quarter, caption = "") {
       caption = paste0("   ", caption)
     )
 
-  barstyle(p)
+  barstyle(p, dist = 2000)
 }
 
 compare_allocation_events <- function(caption = "") {

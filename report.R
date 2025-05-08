@@ -177,8 +177,8 @@ compare_rollover_allocation <- function(quarter) {
   p <- df %>%
     group_by(org) %>%
     summarize(
-      totalrollover = mean(totalrollover + externalreceived),
-      received = mean(totalreceived)
+      totalrollover = mean(totalrollover + externalreceived, na.rm = T),
+      received = mean(totalreceived, na.rm = T)
     ) %>%
     ggplot(aes(totalrollover, received)) +
     geom_point(color = "#800000") +
@@ -219,7 +219,7 @@ planned_attendance <- function(quarter, caption = "") {
       title = paste0("   Planned vs. Actual Attendance\n   by Organization, ", quarter),
       caption = paste0("   ", caption)
     )
-  
+
   barstyle(p, dist = 100, dollars = F)
 }
 
@@ -228,8 +228,8 @@ planned_events <- function(quarter, caption = "") {
   p <- df %>%
     group_by(org) %>%
     summarize(
-      total = mean(eventsactual),
-      planned = mean(eventsplanned)
+      total = mean(eventsactual, na.rm = T),
+      planned = mean(eventsplanned, na.rm = T)
     ) %>%
     filter(!is.na(total)) %>%
     ggplot() +

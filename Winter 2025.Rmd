@@ -68,7 +68,7 @@ compare_rollover_allocation(quarter)
 ## Funding Outcomes: Planned versus Actual Spending
 
 ```{r, fig.height = 7}
-planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual. Because this graph focuses on HSG funds,\nactual amounts are capped by the amount allocated to each HSO by HSG.")
+planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\n Amounts spent may include both HSG allocations and external funding.\nTo improve readability, this graph only shows amounts up to $15,000.")
 ```
 
 \newpage 
@@ -94,7 +94,9 @@ compare_allocation_events(caption = "Low allocation not associated with number o
 
 ## Spending by Event Type
 
-We allocated funds on an organizational level, not on an item-by-item basis. While we collected total actual spending for fall quarter per HSO, the following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, if 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We would scale this proportion by the total amount awarded to estimate the amount that would have been spent on cultural events. In this analysis, we only considered funds allocated by HSG, not external grants or funds.
+```{r, fig.height = 8}
+orgs_by_event_type(quarter, caption = "Only HSG funds are considered.")
+```
 
 Notation:
 
@@ -105,7 +107,7 @@ Notation:
 * **Workshop**: e.g., career fairs and writing workshops
 
 ```{r, fig.height = 3}
-spending_by_event_type(quarter)
+spending_by_event_type(quarter, caption = "Only HSG funds are considered.")
 ```
 
 ## Spending by Item Type

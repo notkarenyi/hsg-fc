@@ -317,6 +317,28 @@ spending_by_event_type <- function(quarter, caption) {
   barstyle(p, dist = 500)
 }
 
+orgs_by_event_type <- function(quarter, caption) {
+  p <- df %>%
+    distinct(org,category, `expense.name`,expenditureactualhsg) %>%
+    group_by(org, category) %>%
+    filter(!is.na(expenditureactualhsg), category != "") %>%
+    summarize(expenditureactual = sum(expenditureactualhsg, na.rm = T)) %>%
+    mutate(
+      category = fct_reorder(str_to_sentence(category), expenditureactual)
+    ) %>%
+    ggplot(aes(org, expenditureactual, fill=category)) +
+    geom_bar(stat = "identity") +
+    labs(
+      title = paste0("    HSG Funds Spending by Event Type, ", quarter),
+      subtitle = "     ",
+      caption = caption
+    ) +
+    scale_fill_paletteer_d("ggthemes::Green_Orange_Teal",guide=guide_legend())
+  
+  barstyle(p, dist = 2000) +
+    theme(legend.position="bottom", legend.direction="horizontal", legend.title=element_blank())
+}
+
 spending_by_item_type <- function(quarter) {
   p <- df %>%
     group_by(org, type) %>%

@@ -152,9 +152,21 @@ for (file in files[1:length(files)]) {
   print("Parsing retrospective")
 
   retrospective <- retrospective %>%
-    remove_empty(c("rows", "cols"))
+    remove_empty(c("rows"))
+
+  if (!(any(grepl("Budgeted", names(retrospective))))) {
+    retrospective <- retrospective %>%
+      row_to_names(row_number = 1) # turn first row into col names
+  }
 
   if (nrow(retrospective)) {
+    names(retrospective) <- c("Event", "Date", "Attendees", "Budgeted", "Actual", "Notes")
+    retrospective <- retrospective %>%
+      mutate(
+        Budgeted = as.numeric(Budgeted),
+        Actual = as.numeric(Actual),
+        Attendees = as.numeric(Attendees),
+      )
     # people do not accurately report amount budgeted
     # so we will get this data from last quarter's applications
     # df$budgeted <- sum(retrospective$Budgeted)
@@ -173,12 +185,12 @@ for (file in files[1:length(files)]) {
   print("Parsing budget")
 
   df$org <- names(budget)[4]
-  rollover <- budget[[9, 3]] %>% parse_number()
+  df$rollover <- budget[[9, 3]] %>% parse_number()
   df$externalreceived <- budget[10:15, 3] %>%
     map(parse_number) %>%
     unlist() %>%
     sum(na.rm = T)
-  df$totalrollover <- rollover + df$externalreceived
+  df$totalrollover <- df$rollover + df$externalreceived
 
   # combine data for all orgs------------------------------------------------
   # print(names(df))

@@ -202,6 +202,34 @@ compare_rollover_allocation <- function(quarter) {
   pointstyle(p, dist = 4000)
 }
 
+planned_attendance <- function(quarter, caption = "") {
+  p <- df %>%
+    # filter(!is.na(expenditureactual)) %>%
+    group_by(org) %>%
+    summarize(
+      expectedattendees = min(300, mean(expectedattendees, na.rm = T)),
+      attendactual = min(300, mean(attendactual, na.rm = T))
+    ) %>%
+    ggplot() +
+    geom_bar(
+      aes(org, expectedattendees, fill = Category),
+      stat = "identity",
+      fill = "#C16622"
+    ) +
+    geom_bar(
+      aes(org, attendactual, fill = Category),
+      stat = "identity",
+      fill = "#800000"
+    ) +
+    labs(
+      title = paste0("   Planned vs. Actual Attendance\n   by Organization, ", quarter),
+      caption = paste0("   ", caption)
+    )
+  
+  barstyle(p, dist = 100, dollars = F)
+}
+
+
 planned_events <- function(quarter, caption = "") {
   p <- df %>%
     group_by(org) %>%

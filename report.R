@@ -12,11 +12,11 @@ setup <- function(quarter) {
     update_names()
 
   planned <- planned %>%
-    select(-actual, -attendactual, -eventsactual)
+    select(-expenditureactual, -attendactual, -eventsactual)
   actual <- actual %>%
     group_by(org) %>%
     summarize(
-      actual = mean(actual),
+      expenditureactual = mean(expenditureactual),
       attendactual = mean(attendactual),
       eventsactual = mean(eventsactual)
     )
@@ -27,45 +27,44 @@ setup <- function(quarter) {
   allocated <- read_excel(paste0(report_quarter, " Allocations.xlsx")) %>%
     remove_empty("rows")
   names(allocated)[1] <- "org"
-  allocated <- update_names(allocated)
+  allocated <- update_names(allocated) %>%
+    select(org, `Total Allocated`)
 
   df <- left_join(df, allocated)
   df$totalreceived <- df$`Total Allocated`
   # df$totalreceived[is.na(df$totalreceived)] <- 0
   names(df) <- tolower(names(df))
 
-  # create totalrequested
+  # make org categorical and ordered
   df <- df %>%
-    group_by(org) %>%
-    mutate(
-      totalrequested = sum(amount),
-      org = str_wrap(org, 60)
-    ) %>%
-    ungroup() %>%
-    # make org categorical and ordered
     mutate(
       org = factor(org, levels = rev(unique(org)), ordered = T)
     )
 
   # if we don't know how much they spent, assume received plus some rollover
   df$partrollover <- round(df$totalrollover * .2)
-  df[is.na(df$actual), "actual"] <- rowSums(
-    df[is.na(df$actual), c("totalreceived", "externalreceived", "partrollover")],
+  df[is.na(df$expenditureactual), "expenditureactual"] <- rowSums(
+    df[is.na(df$expenditureactual), c("totalreceived", "externalreceived", "partrollover")],
     na.rm = T
   )
-  df[df$actual == 0, "actual"] <- rowSums(
-    df[df$actual == 0, c("totalreceived", "externalreceived", "partrollover")],
+  df[df$expenditureactual == 0, "expenditureactual"] <- rowSums(
+    df[df$expenditureactual == 0, c("totalreceived", "externalreceived", "partrollover")],
     na.rm = T
   )
 
   # recalculate total requested for only those events held
   df <- df %>%
-    # filter(actual != 0) %>%
+    filter(expenditureactual != 0) %>%
+    filter(!is.na(expenditureactual)) %>%
     group_by(org) %>%
     mutate(totalrequested = sum(amount, na.rm = T))
 
   # cap actual spent by amount we granted
-  df <- mutate(df, actualhsg = min(totalreceived, actual))
+  df <- mutate(df, expenditureactualhsg = min(totalreceived, expenditureactual))
+  
+  df <- df %>%
+    mutate(collab = any(collabhso, collabrso)) %>%
+    select(-collabhso, -date, -collabrso, -x, -event.off.campus, -partrollover, -`total allocated`, -rollover)
 
   return(df)
 }
@@ -159,7 +158,7 @@ rollover_by_org <- function(quarter) {
 
   p <- df %>%
     group_by(org) %>%
-    summarize(leftover = mean(totalreceived, na.rm = T) + mean(externalreceived, na.rm = T) + mean(totalrollover, na.rm = T) - mean(actual, na.rm = T)) %>%
+    summarize(leftover = mean(totalreceived, na.rm = T) + mean(externalreceived, na.rm = T) + mean(totalrollover, na.rm = T) - mean(expenditureactual, na.rm = T)) %>%
     ggplot(aes(org, leftover)) +
     geom_bar(stat = "identity", show.legend = F, fill = "#800000") +
     labs(
@@ -180,15 +179,14 @@ compare_rollover_allocation <- function(quarter) {
   #' Plots amount of external funding + rollover by allocation per organization.
   #' Attempts to establish a correlation, since rollover is one of the considerations in total allocation
 
-  rollover <- df %>%
+
+  p <- df %>%
     group_by(org) %>%
     summarize(
-      rollover = mean(totalrollover + externalreceived),
+      totalrollover = mean(totalrollover + externalreceived),
       received = mean(totalreceived)
-    )
-
-  p <- rollover %>%
-    ggplot(aes(rollover, received)) +
+    ) %>%
+    ggplot(aes(totalrollover, received)) +
     geom_point(color = "#800000") +
     labs(
       title = paste0("   Allocations Compared to Rollover +\n   External Funding by Organization, ", quarter)
@@ -199,7 +197,7 @@ compare_rollover_allocation <- function(quarter) {
   # geom_smooth(method="lm")
 
   # not significant
-  # lm(received~rollover, rollover) %>% summary()
+  # lm(received~totalrollover, totalrollover) %>% summary()
 
   pointstyle(p, dist = 4000)
 }
@@ -236,18 +234,19 @@ planned_spending <- function(quarter, caption = "") {
   p <- df %>%
     group_by(org) %>%
     summarize(
-      actual = min(`total allocated`, mean(actual, na.rm = T)),
-      planned = min(1500, sum(amount, na.rm = T))
+      expenditureactual = min(15000, mean(expenditureactual, na.rm = T)),
+      # assume they will use some of their rollover
+      expenditureplanned = min(15000, sum(amount, na.rm = T))
     ) %>%
-    filter(!is.na(actual)) %>%
+    filter(!is.na(expenditureactual)) %>%
     ggplot() +
     geom_bar(
-      aes(org, planned, fill = Category),
+      aes(org, expenditureplanned, fill = Category),
       stat = "identity",
       fill = "#C16622"
     ) +
     geom_bar(
-      aes(org, actual, fill = Category),
+      aes(org, expenditureactual, fill = Category),
       stat = "identity",
       fill = "#800000"
     ) +
@@ -280,7 +279,7 @@ spending_by_event_type <- function(quarter) {
     summarize(
       # we are missing detailed information for actual spending, so impute:
       # scale the amount requested by actual spending
-      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(actualhsg, na.rm = T)
+      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(expenditureactualhsg, na.rm = T)
     ) %>%
     group_by(category) %>%
     summarize(adjusted = round(sum(adjusted, na.rm = T))) %>%
@@ -303,7 +302,7 @@ spending_by_item_type <- function(quarter) {
     group_by(org, type) %>%
     summarize(
       # scale the amount requested by
-      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(actualhsg, na.rm = T)
+      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(expenditureactualhsg, na.rm = T)
     ) %>%
     group_by(type) %>%
     summarize(adjusted = round(sum(adjusted, na.rm = T))) %>%

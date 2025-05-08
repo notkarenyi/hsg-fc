@@ -170,7 +170,7 @@ for (file in files[1:length(files)]) {
     # people do not accurately report amount budgeted
     # so we will get this data from last quarter's applications
     # df$budgeted <- sum(retrospective$Budgeted)
-    df$actual <- sum(retrospective$Actual)
+    df$expenditureactual <- sum(retrospective$Actual)
     df$attendactual <- retrospective %>%
       mutate(Attendees = process_attendees(Attendees)) %>%
       group_by(Event) %>%

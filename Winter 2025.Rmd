@@ -152,3 +152,14 @@ Faris Alrakhis, First-Year Finance Committee Member
 Moe Alsharif, First-Year Finance Committee Member
 
 Tiffany Tu, First-Year Finance Committee Member
+
+## Appendix: Data
+
+```{r}
+df <- df[, order(colnames(df))]
+df <- df[, names(select(df, -org))]
+df %>%
+  filter(!((is.na(amount) | amount == 0) & (is.na(expenditureactual) | expenditureactual == 0))) %>%
+  select(-description) %>%
+  reactable()
+```

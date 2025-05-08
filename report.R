@@ -16,12 +16,15 @@ setup <- function(quarter) {
   actual <- actual %>%
     group_by(org) %>%
     summarize(
-      expenditureactual = mean(expenditureactual),
+      expense.name = expense.name,
+      expenditureactual = expenditureactual,
+      category = category,
       attendactual = mean(attendactual),
       eventsactual = mean(eventsactual)
-    )
+    ) %>%
+    distinct(org, category, expense.name, expenditureactual, attendactual, eventsactual)
 
-  df <- left_join(planned, actual)
+  df <- bind_rows(planned, actual)
 
   # add totals allocated for last quarter
   allocated <- read_excel(paste0(report_quarter, " Allocations.xlsx")) %>%
@@ -41,30 +44,21 @@ setup <- function(quarter) {
       org = factor(org, levels = rev(unique(org)), ordered = T)
     )
 
-  # if we don't know how much they spent, assume received plus some rollover
-  df$partrollover <- round(df$totalrollover * .2)
-  df[is.na(df$expenditureactual), "expenditureactual"] <- rowSums(
-    df[is.na(df$expenditureactual), c("totalreceived", "externalreceived", "partrollover")],
-    na.rm = T
-  )
-  df[df$expenditureactual == 0, "expenditureactual"] <- rowSums(
-    df[df$expenditureactual == 0, c("totalreceived", "externalreceived", "partrollover")],
-    na.rm = T
-  )
-
   # recalculate total requested for only those events held
   df <- df %>%
-    filter(expenditureactual != 0) %>%
-    filter(!is.na(expenditureactual)) %>%
     group_by(org) %>%
-    mutate(totalrequested = sum(amount, na.rm = T))
+    mutate(
+      totalrequested = sum(amount, na.rm = T),
+      totalreceived = mean(totalreceived, na.rm=T)
+    )
 
   # cap actual spent by amount we granted
-  df <- mutate(df, expenditureactualhsg = min(totalreceived, expenditureactual))
-  
+  df$expenditureactualhsg <- NA
+  df[!is.na(df$expenditureactual),"expenditureactualhsg"] <- rowMins(as.matrix(df[!is.na(df$expenditureactual),c("totalreceived","expenditureactual")]))
+
   df <- df %>%
     mutate(collab = any(collabhso, collabrso)) %>%
-    select(-collabhso, -date, -collabrso, -x, -event.off.campus, -partrollover, -`total allocated`, -rollover)
+    select(-collabhso, -date, -collabrso, -x, -event.off.campus, -`total allocated`, -rollover)
 
   return(df)
 }

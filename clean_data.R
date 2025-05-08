@@ -72,6 +72,7 @@ extract_event <- function(details, i) {
 
   # Group items in the same category
   expenses <- expenses %>%
+    filter(Category != "EventTotal") %>% # event total is duplicate of itemized amounts
     select(-Details) %>%
     group_by(Category) %>%
     mutate(Amount = as.numeric(Amount)) %>%

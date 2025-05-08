@@ -346,8 +346,8 @@ spending_by_item_type <- function(quarter) {
   p <- df %>%
     group_by(org, type) %>%
     summarize(
-      # scale the amount requested by
-      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(expenditureactualhsg, na.rm = T)
+      # scale the proportion of item type requested by amount received
+      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(totalreceived, na.rm = T)
     ) %>%
     group_by(type) %>%
     summarize(adjusted = round(sum(adjusted, na.rm = T))) %>%

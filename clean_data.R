@@ -211,15 +211,15 @@ search <- function(col, x, category, orig) {
 }
 data <- data %>%
   mutate(category = search(`expense name`, c("cultur", "reyes", "celebration"), "cultural", category)) %>%
-  mutate(category = search(`expense name`, c("publication", "print"), "publication", category)) %>%
-  mutate(category = search(`expense name`, c("conference", "strategic"), "conference", category)) %>%
-  mutate(category = search(`expense name`, c("budd", "genera", "party", "welcome", "potluck", "mixer", "alumni", "pub\\b"), "social", category)) %>%
   mutate(category = search(`expense name`, c("speaker", "policy", "talk"), "speaker", category)) %>%
-  mutate(category = search(`expense name`, c("recruit", "swag", "sticker", "canva", "subscri", "email"), "promotion", category)) %>%
-  mutate(category = search(`expense name`, c("network", "hire", "workshop", "resume"), "workshop", category)) %>%
+  mutate(category = search(`expense name`, c("equipment", "publication", "print"), "publication", category)) %>%
+  mutate(category = search(`expense name`, c("forum", "conference", "strategic"), "conference", category)) %>%
+  mutate(category = search(`expense name`, c("drag", "museum", "hca", "volunteer", "food bank", "trip", "visit", "service"), "community engagement", category)) %>%
+  mutate(category = search(`expense name`, c("transition", "study hall", "raise your glass", "eoy", "game night", "bonfire", "gala", "cookout", "all hands", "board", "greet", "social", "budd", "genera", "party", "welcome", "potluck", "mixer", "alumni", "pub\\b"), "social", category)) %>%
+  mutate(category = search(`expense name`, c("merch", "regalia", "recruit", "swag", "sticker", "canva", "subscri", "email"), "promotion", category)) %>%
+  mutate(category = search(`expense name`, c("personal finance", "program", "case", "negotiation", "challenge", "bootcamp", "interview", "thon", "course", "network", "training", "hire", "workshop", "resume"), "workshop", category)) %>%
   mutate(category = search(`expense name`, c("debate"), "debate", category)) %>%
-  mutate(category = search(`expense name`, c("film", "movie", "screen"), "film screening", category)) %>%
-  mutate(category = search(`expense name`, c("museum", "volunteer", "trip", "visit", "service"), "community engagement", category))
+  mutate(category = search(`expense name`, c("film", "movie", "screen"), "film screening", category))
 
 # reorder columns
 other_names <- names(data)[!(names(data) %in% c("org", "type", "category"))]

@@ -290,7 +290,10 @@ compare_allocation_events <- function(caption = "") {
     geom_point(color = "#800000") +
     xlab("Allocation") +
     ylab("Number of events canceled") +
-    labs(caption = caption)
+    labs(
+      caption = caption,
+      title = "Difference between events planned and implemented,\nby allocation amount"
+    )
 
   pointstyle(p, dollars = F)
 }

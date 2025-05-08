@@ -181,7 +181,7 @@ for (file in files[1:length(files)]) {
       select(`expense name`, expenditureactual) %>%
       bind_rows(df)
     df$attendactual <- retrospective %>%
-      mutate(Attendees = process_attendees(attendees)) %>%
+      mutate(attendees = process_attendees(attendees)) %>%
       group_by(event) %>%
       summarize(total = mean(attendees, na.rm = T)) %>%
       select(total) %>%

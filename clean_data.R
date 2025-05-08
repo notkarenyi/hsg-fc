@@ -99,7 +99,7 @@ data <- list()
 files <- list.files(current_quarter) # get all files in / folder
 
 for (file in files[1:length(files)]) {
-  # for (file in files[25:length(files)]) {
+  # for (file in files[3]) {
   print(paste0("Parsing ", file))
 
   # existing orgs have a Retrospective tab for last quarter expenses
@@ -173,11 +173,11 @@ for (file in files[1:length(files)]) {
     names(retrospective)[1] <- "Event"
     names(retrospective) <- tolower(names(retrospective))
     retrospective <- retrospective %>%
-      filter(!is.na(event))  %>%
+      filter(!is.na(event)) %>%
       filter(event != "Example")
     df <- retrospective %>%
-      mutate(expenditureactual=actual) %>%
-      mutate(`expense name`=event) %>%
+      mutate(expenditureactual = actual) %>%
+      mutate(`expense name` = event) %>%
       select(`expense name`, expenditureactual) %>%
       bind_rows(df)
     df$attendactual <- retrospective %>%
@@ -188,8 +188,7 @@ for (file in files[1:length(files)]) {
       sum(na.rm = T)
     df$eventsactual <- retrospective %>%
       distinct(event) %>%
-      count() %>%
-      sum()
+      nrow()
   }
 
   # parse budget page -------------------------------------------------------
@@ -197,18 +196,18 @@ for (file in files[1:length(files)]) {
 
   df$org <- names(budget)[4]
   rollover_i <- which(str_detect(unlist(budget[, 2]), "^Rollover$"))
-  rollover <- budget[rollover_i,3] %>% unlist() 
-  if (any(grepl('\\d',rollover))) {
+  rollover <- budget[rollover_i, 3] %>% unlist()
+  if (any(grepl("\\d", rollover))) {
     df$rollover <- parse_number(rollover) %>% sum()
   } else {
     df$rollover <- as.numeric(rollover) %>% sum()
   }
-  
-  df$externalreceived <- budget[(rollover_i+1):15, 3] %>%
+
+  df$externalreceived <- budget[(rollover_i + 1):15, 3] %>%
     map(parse_number) %>%
     unlist() %>%
     sum(na.rm = T)
-  df$totalrollover <- rowSums(df[,c('rollover', 'externalreceived')],na.rm=T)
+  df$totalrollover <- rowSums(df[, c("rollover", "externalreceived")], na.rm = T)
 
   # combine data for all orgs------------------------------------------------
   # print(names(df))

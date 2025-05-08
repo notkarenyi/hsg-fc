@@ -49,12 +49,12 @@ setup <- function(quarter) {
     group_by(org) %>%
     mutate(
       totalrequested = sum(amount, na.rm = T),
-      totalreceived = mean(totalreceived, na.rm=T)
+      totalreceived = mean(totalreceived, na.rm = T)
     )
 
   # cap actual spent by amount we granted
   df$expenditureactualhsg <- NA
-  df[!is.na(df$expenditureactual),"expenditureactualhsg"] <- rowMins(as.matrix(df[!is.na(df$expenditureactual),c("totalreceived","expenditureactual")]))
+  df[!is.na(df$expenditureactual), "expenditureactualhsg"] <- rowMins(as.matrix(df[!is.na(df$expenditureactual), c("totalreceived", "expenditureactual")]))
 
   df <- df %>%
     mutate(collab = any(collabhso, collabrso)) %>%
@@ -147,6 +147,7 @@ allocations_by_org <- function(quarter, caption = "") {
   barstyle(p)
 }
 
+
 rollover_by_org <- function(quarter) {
   #' Plots amount of external funding + rollover by organization.
 
@@ -172,7 +173,6 @@ rollover_by_org <- function(quarter) {
 compare_rollover_allocation <- function(quarter) {
   #' Plots amount of external funding + rollover by allocation per organization.
   #' Attempts to establish a correlation, since rollover is one of the considerations in total allocation
-
 
   p <- df %>%
     group_by(org) %>%
@@ -283,7 +283,7 @@ planned_spending <- function(quarter, caption = "") {
 compare_allocation_events <- function(caption = "") {
   # is receiving a low amount of funding correlated with hosting less events than planned?
   df$devents <- df$eventsplanned - df$eventsactual
-  lm(totalreceived ~ devents, df) %>% summary()
+  # lm(totalreceived ~ devents, df) %>% summary()
 
   p <- df %>%
     ggplot(aes(totalreceived, devents)) +
@@ -322,24 +322,24 @@ spending_by_event_type <- function(quarter, caption) {
 
 orgs_by_event_type <- function(quarter, caption) {
   p <- df %>%
-    distinct(org,category, `expense.name`,expenditureactualhsg) %>%
+    distinct(org, category, `expense.name`, expenditureactualhsg) %>%
     group_by(org, category) %>%
     filter(!is.na(expenditureactualhsg), category != "") %>%
     summarize(expenditureactual = sum(expenditureactualhsg, na.rm = T)) %>%
     mutate(
       category = fct_reorder(str_to_sentence(category), expenditureactual)
     ) %>%
-    ggplot(aes(org, expenditureactual, fill=category)) +
+    ggplot(aes(org, expenditureactual, fill = category)) +
     geom_bar(stat = "identity") +
     labs(
       title = paste0("    HSG Funds Spending by Event Type, ", quarter),
       subtitle = "     ",
       caption = caption
     ) +
-    scale_fill_paletteer_d("ggthemes::Green_Orange_Teal",guide=guide_legend())
-  
+    scale_fill_paletteer_d("ggthemes::Green_Orange_Teal", guide = guide_legend())
+
   barstyle(p, dist = 2000) +
-    theme(legend.position="bottom", legend.direction="horizontal", legend.title=element_blank())
+    theme(legend.position = "bottom", legend.direction = "horizontal", legend.title = element_blank())
 }
 
 spending_by_item_type <- function(quarter) {

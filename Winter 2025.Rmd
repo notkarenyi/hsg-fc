@@ -79,7 +79,6 @@ planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\n Amount
 planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 ```
 
-
 ## Funding Outcomes: Attendance
 
 ```{r, fig.height = 7}

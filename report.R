@@ -295,28 +295,26 @@ compare_allocation_events <- function(caption = "") {
   pointstyle(p, dollars = F)
 }
 
-spending_by_event_type <- function(quarter) {
+spending_by_event_type <- function(quarter, caption) {
   p <- df %>%
+    filter(!is.na(expenditureactualhsg), category != "") %>%
     group_by(org, category) %>%
-    summarize(
-      # we are missing detailed information for actual spending, so impute:
-      # scale the amount requested by actual spending
-      adjusted = sum(amount, na.rm = T) / mean(totalrequested, na.rm = T) * mean(expenditureactualhsg, na.rm = T)
-    ) %>%
+    summarize(expenditureactual = sum(expenditureactualhsg, na.rm = T)) %>%
+    # distinct(category, type, org) %>%
     group_by(category) %>%
-    summarize(adjusted = round(sum(adjusted, na.rm = T))) %>%
-    filter(!is.na(adjusted), category != "") %>%
+    summarize(expenditureactual = mean(expenditureactual, na.rm = T)) %>%
     mutate(
-      category = fct_reorder(str_to_sentence(category), adjusted)
+      category = fct_reorder(str_to_sentence(category), expenditureactual)
     ) %>%
-    ggplot(aes(category, adjusted)) +
+    ggplot(aes(category, expenditureactual)) +
     geom_bar(stat = "identity", show.legend = F, fill = "#800000") +
     labs(
       title = paste0("    HSG Funds Spending by Event Type, ", quarter),
-      subtitle = "     Estimated from amount requested per category"
+      subtitle = "     ",
+      caption = caption
     )
 
-  barstyle(p, dist = 1000)
+  barstyle(p, dist = 500)
 }
 
 spending_by_item_type <- function(quarter) {

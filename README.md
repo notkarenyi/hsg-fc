@@ -2,6 +2,8 @@
 
 Creates data visualizations for financial transparency in a student government with an annual budget of over $60,000.
 
+Combines data from current quarter applications with previous quarter applications to give a picture of planned and actual expenses.
+
 ## Prerequisites
 
 To use this repository, you should know how to run an R script. It helps if you have an understanding of how to write R, RMarkdown, and/or Markdown files.
@@ -15,6 +17,8 @@ Each quarter, the Finance Committee should create a new report by completing the
 ### Get the data
 
 1. Download all current quarter finance applications as a ZIP file and unzip it on your computer.
+2. Put it in a folder called `/Quarter Year` in this repository, (see below for how to download the repository). For example: `/Spring 2024`.
+3. You may need to edit lines in the Excel applications as needed to overcome bugs in how people filled it out compared to how the computer is expecting the data to look, but hopefully this will be minimal.
 
 ### Get the code
 
@@ -34,4 +38,4 @@ Each quarter, the Finance Committee should create a new report by completing the
    FIRST LAST, Finance Committee Chair
    ```
 
-5. Run `knit.R`. You should get both a PDF and an HTML output.
+5. Run `run.R` in RStudio. You should get an HTML output.

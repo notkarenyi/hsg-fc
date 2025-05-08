@@ -4,7 +4,8 @@ header-includes:
 output:
   pdf_document: 
     latex_engine: xelatex
-  html_document: default
+  html_document: 
+    css: style.css
 mainfont: Georgia
 sansfont: Arial
 fontsize: 16pt
@@ -17,7 +18,7 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 quarter <- params$quarter
 ```
 
-# Harris Student Government Finance Committee Transparency Report `r quarter`
+<img src="Cover.png" width=1800 alt="Harris Student Government Finance Committee Transparency Report `r quarter`" />
 
 ```{r data}
 source("report.R")
@@ -36,9 +37,9 @@ Breakdowns by event type, item type, and organization are included in this trans
 Funding criteria used in this round included:
 
 * Collaboration with other HSOs or non-Harris organizations
-* Speaker events and career events (prioritize events that are open to the broader Harris community), see page 5
+* Speaker events and career events (prioritize events that are open to the broader Harris community)
 * Diversity and inclusion (inviting speakers of color, speakers who are disabled or are women)
-* How much non-HSG funding each HSO has access to (including rollover from previous quarters, non-Harris grants, or non-Harris RSO funding), see page 3
+* How much non-HSG funding each HSO has access to (including rollover from previous quarters, non-Harris grants, or non-Harris RSO funding)
 * Detailed, itemized documentation with regards to planned expenses and justification for why unusual expenses are necessary
 
 Planned improvements for next quarter are included at the end of this document.
@@ -127,6 +128,7 @@ spending_by_item_type(quarter)
 ## Future improvements
 
 Improvement goals for next quarter:
+
 * Release a list of vendors and vendor information to promote knowledge sharing among HSOs.
 * Expedite timelines by doing the following:
   * Gaining direct access to the email inbox so that HSG Finance Committee does not have to go through the Student Engagement & Belonging team to send email updates about application timelines

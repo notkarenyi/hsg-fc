@@ -3,6 +3,9 @@ library(scales)
 library(readxl)
 library(readr)
 library(janitor)
+library(reactable)
+library(paletteer)
+library(matrixStats)
 
 # config ------------------------------------------------------------------
 

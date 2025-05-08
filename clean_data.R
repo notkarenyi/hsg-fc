@@ -171,20 +171,23 @@ for (file in files[1:length(files)]) {
     # so we will get this data from last quarter's applications
     # df$budgeted <- sum(retrospective$Budgeted)
     names(retrospective)[1] <- "Event"
-    df$expenditureactual <- retrospective %>%
-      filter(Event != "Example") %>%
-      select(Actual) %>%
-      sum()
+    names(retrospective) <- tolower(names(retrospective))
+    retrospective <- retrospective %>%
+      filter(!is.na(event))  %>%
+      filter(event != "Example")
+    df <- retrospective %>%
+      mutate(expenditureactual=actual) %>%
+      mutate(`expense name`=event) %>%
+      select(`expense name`, expenditureactual) %>%
+      bind_rows(df)
     df$attendactual <- retrospective %>%
-      mutate(Attendees = process_attendees(Attendees)) %>%
-      group_by(Event) %>%
-      summarize(total = mean(Attendees, na.rm = T)) %>%
+      mutate(Attendees = process_attendees(attendees)) %>%
+      group_by(event) %>%
+      summarize(total = mean(attendees, na.rm = T)) %>%
       select(total) %>%
       sum(na.rm = T)
     df$eventsactual <- retrospective %>%
-      filter(Event != "Example") %>%
-      filter(!is.na(Event)) %>%
-      distinct(Event) %>%
+      distinct(event) %>%
       count() %>%
       sum()
   }

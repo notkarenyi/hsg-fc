@@ -190,12 +190,19 @@ for (file in files[1:length(files)]) {
   print("Parsing budget")
 
   df$org <- names(budget)[4]
-  df$rollover <- budget[[9, 3]] %>% parse_number()
-  df$externalreceived <- budget[10:15, 3] %>%
+  rollover_i <- which(str_detect(unlist(budget[, 2]), "^Rollover$"))
+  rollover <- budget[rollover_i,3] %>% unlist() 
+  if (any(grepl('\\d',rollover))) {
+    df$rollover <- parse_number(rollover) %>% sum()
+  } else {
+    df$rollover <- as.numeric(rollover) %>% sum()
+  }
+  
+  df$externalreceived <- budget[(rollover_i+1):15, 3] %>%
     map(parse_number) %>%
     unlist() %>%
     sum(na.rm = T)
-  df$totalrollover <- df$rollover + df$externalreceived
+  df$totalrollover <- rowSums(df[,c('rollover', 'externalreceived')],na.rm=T)
 
   # combine data for all orgs------------------------------------------------
   # print(names(df))

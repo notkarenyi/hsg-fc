@@ -170,18 +170,21 @@ for (file in files[1:length(files)]) {
     # people do not accurately report amount budgeted
     # so we will get this data from last quarter's applications
     # df$budgeted <- sum(retrospective$Budgeted)
-    df$expenditureactual <- sum(retrospective$Actual)
+    names(retrospective)[1] <- "Event"
+    df$expenditureactual <- retrospective %>%
+      filter(Event != "Example") %>%
+      select(Actual) %>%
+      sum()
     df$attendactual <- retrospective %>%
       mutate(Attendees = process_attendees(Attendees)) %>%
       group_by(Event) %>%
       summarize(total = mean(Attendees, na.rm = T)) %>%
       select(total) %>%
       sum(na.rm = T)
-    names(retrospective)[1] <- "event"
     df$eventsactual <- retrospective %>%
-      filter(event != "Example") %>%
-      filter(!is.na(event)) %>%
-      distinct(event) %>%
+      filter(Event != "Example") %>%
+      filter(!is.na(Event)) %>%
+      distinct(Event) %>%
       count() %>%
       sum()
   }

@@ -2,9 +2,8 @@
 header-includes:
   \usepackage[breaklinks]{hyperref}
 output:
-  pdf_document: 
-    latex_engine: xelatex
-  html_document: default
+  html_document: 
+    css: style.css
 mainfont: Georgia
 sansfont: Arial
 fontsize: 16pt

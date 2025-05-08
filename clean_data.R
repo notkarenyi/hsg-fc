@@ -176,6 +176,7 @@ for (file in files[1:length(files)]) {
       sum()
     names(retrospective)[1] <- "event"
     df$eventsactual <- retrospective %>%
+      filter(event != "Example") %>%
       distinct(event) %>%
       count() %>%
       sum()

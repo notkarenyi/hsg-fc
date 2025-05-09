@@ -322,7 +322,7 @@ spending_by_event_type <- function(quarter, caption) {
       caption = caption
     )
 
-  barstyle(p, dist = 500)
+  barstyle(p, dist = 200)
 }
 
 orgs_by_event_type <- function(quarter, caption) {

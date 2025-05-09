@@ -28,10 +28,11 @@ update_names <- function(x) {
     mutate(org = search(org, c("hca", "community"), "Harris Community Action", org)) %>%
     mutate(org = search(org, c("hcc", "consult"), "Harris Consulting Club", org)) %>%
     mutate(org = search(org, c("heea", "he&ea", "environment"), "Harris Energy and Environmental Association", org)) %>%
+    mutate(org = search(org, c("hfg", "finance"), "Harris Finance Group", org)) %>%
+    mutate(org = search(org, c("hii", "invest"), "Harris Impact Investing", org)) %>%
+    mutate(org = search(org, c("hive", "venture"), "Harris Innovation & Venture Ecosystem", org)) %>%
     mutate(org = search(org, c("hfp", "palestine"), "Harris Students for Palestine", org)) %>%
     mutate(org = search(org, c("hsg", "government"), "Harris Student Government", org)) %>%
-    mutate(org = search(org, c("hive", "venture"), "Harris Innovation & Venture Ecosystem", org)) %>%
-    mutate(org = search(org, c("hii", "invest"), "Harris Impact Investing", org)) %>%
     mutate(org = search(org, c("hni", "health"), "Health Nexus Initiative", org)) %>%
     mutate(org = search(org, c("idpa", "international"), "International Development Policy Association", org)) %>%
     mutate(org = search(org, c("lam", "latin america"), "Latin America Matters", org)) %>%

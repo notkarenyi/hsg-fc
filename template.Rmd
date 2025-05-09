@@ -23,8 +23,7 @@ source("report.R")
 df <- setup(quarter)
 ```
 
-## Summary
-The overall budget for `r quarter` was $`r count_x("totalreceived")`.
+## Executive Summary
 
 <div style="display:flex;">
   <div class="callout">Overall budget<br />$`r count_x("totalreceived")`</div>
@@ -50,7 +49,7 @@ Planned improvements for next quarter are included at the end of this document.
 
 \newpage 
 
-## Allocations by Organization
+## Total Allocations
 
 The minimum amount received by any HSO was \$`r min(df$totalreceived,na.rm=T)` and the maximum was \$`r max(df$totalreceived,na.rm=T)`.
 
@@ -60,7 +59,7 @@ allocations_by_org(quarter, caption = "")
 
 \newpage 
 
-## Funding Criteria: Existing and External Funds 
+## Funding Criteria
 
 Organizations with large amounts of unexplained rollover received limited funding.
 
@@ -70,15 +69,13 @@ compare_rollover_allocation(quarter)
 
 \newpage 
 
-## Funding Outcomes: Planned versus Actual Spending
+## Funding Outcomes
 
 ```{r, fig.height = 7}
 planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 ```
 
 \newpage 
-
-## Funding Outcomes: Number of Events
 
 ```{r, fig.height = 7}
 planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
@@ -90,9 +87,15 @@ planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 compare_allocation_events(caption = "Low allocation not associated with number of canceled events")
 ```
 
-## Spending by Event Type
+## Spending Breakdowns
 
-We allocated funds on an organizational level, not on an item-by-item basis. While we collected total actual spending for fall quarter per HSO, the following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, if 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We would scale this proportion by the total amount awarded to estimate the amount that would have been spent on cultural events. In this analysis, we only considered funds allocated by HSG, not external grants or funds.
+```{r, fig.height = 7}
+orgs_by_event_type(quarter, caption = "Only HSG funds are considered, no external funds.")
+```
+
+```{r, fig.height = 3}
+spending_by_event_type(quarter)
+```
 
 Notation:
 
@@ -102,13 +105,7 @@ Notation:
 * **Promotion**: e.g., graphic design, and recruitment activities
 * **Workshop**: e.g., career fairs and writing workshops
 
-```{r, fig.height = 3}
-spending_by_event_type(quarter)
-```
-
-## Spending by Item Type
-
-See previous section for a description of how these items were calculated.
+We allocated funds on an organizational level, not on an item-by-item basis. While we collected total actual spending for fall quarter per HSO, the following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, if 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We would scale this proportion by the total amount awarded to estimate the amount that would have been spent on cultural events. In this analysis, we only considered funds allocated by HSG, not external grants or funds.
 
 Notation:
 
@@ -121,7 +118,7 @@ Notation:
 spending_by_item_type(quarter)
 ```
 
-## Future improvements
+## Conclusion and Future Improvements
 
 Improvement goals for next quarter:
 

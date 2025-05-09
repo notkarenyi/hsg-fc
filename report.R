@@ -352,7 +352,7 @@ orgs_by_event_type <- function(quarter, caption) {
     guides(fill=guide_legend(nrow=3,byrow=TRUE))
 }
 
-spending_by_item_type <- function(quarter) {
+spending_by_item_type <- function(quarter, caption) {
   p <- df %>%
     group_by(org, type) %>%
     summarize(

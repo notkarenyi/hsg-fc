@@ -170,9 +170,13 @@ Tiffany Tu, First-Year Finance Committee Member
 
 ```{r}
 df <- df[, order(colnames(df))]
-df <- df[, names(select(df, -org))]
+df <- df[, c("org","expense.name", names(df)[!(names(df) %in% c("org","expense.name"))])]
 df %>%
   filter(!((is.na(amount) | amount == 0) & (is.na(expenditureactual) | expenditureactual == 0))) %>%
   select(-description) %>%
-  reactable()
+  reactable(columns = list(
+    org = colDef(width = 200),
+    expense.name = colDef(name = "expense", width = 300),
+    speaker = colDef(width = 250)
+  ))
 ```

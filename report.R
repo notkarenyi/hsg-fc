@@ -354,7 +354,7 @@ orgs_by_event_type <- function(quarter, caption) {
       subtitle = "     ",
       caption = caption
     ) +
-    scale_fill_paletteer_d("ggthemes::Green_Orange_Teal", guide = guide_legend())
+    scale_fill_paletteer_d("ggthemes::Color_Blind", guide = guide_legend())
 
   barstyle(p, dist = 1000) +
     theme(

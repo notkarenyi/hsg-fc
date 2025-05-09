@@ -10,7 +10,11 @@ To use this repository, you should know how to run an R script. It helps if you 
 
 If you know how to use GitHub, you can contribute to the code of this project and improve it over time. If you don't know how to use GitHub, you don't need it.
 
-## Instructions
+## Generating the rubrics
+
+TBD
+
+## Running the transparency report
 
 Each quarter, the Finance Committee should create a new report by completing the following steps:
 

@@ -26,7 +26,9 @@ df <- setup(quarter)
 hours <- read.csv("hours.csv")
 ```
 
-## Summary
+## Executive Summary
+
+The Harris Student Government Finance Committee oversees an annual budget of about \$60,000, which is allocated to Harris Student Organizations by the Office of Student Engagement and Belonging. The purpose of this report is to provide budgetary transparency to the [1,419](https://info.harris.uchicago.edu/harris-by-the-numbers) students at the Harris School of Public Policy at the University of Chicago. The Finance Committee has no bearing on other student engagement-related expenses, such as the Harris Professional Development Fund.
 
 The overall budget for `r quarter` was `r dollar_format()(sum(summarize(group_by(df,org),n=mean(totalreceived))["n"],na.rm=T))`.
 
@@ -46,7 +48,7 @@ Planned improvements for next quarter are included at the end of this document.
 
 \newpage 
 
-## Allocations by Organization
+## Total Allocations
 
 The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)`.
 
@@ -56,7 +58,7 @@ allocations_by_org(quarter, caption = "")
 
 \newpage 
 
-## Funding Criteria: Existing and External Funds 
+## Funding Criteria
 
 Organizations with large amounts of unexplained rollover received limited funding.
 
@@ -66,7 +68,7 @@ compare_rollover_allocation(quarter)
 
 \newpage 
 
-## Funding Outcomes: Planned versus Actual Spending
+## Funding Outcomes
 
 ```{r, fig.height = 7}
 planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\n Amounts spent may include both HSG allocations and external funding.\nTo improve readability, this graph only shows amounts up to $15,000.")
@@ -74,13 +76,9 @@ planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\n Amount
 
 \newpage 
 
-## Funding Outcomes: Number of Events
-
 ```{r, fig.height = 7}
 planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 ```
-
-## Funding Outcomes: Attendance
 
 ```{r, fig.height = 7}
 planned_attendance(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\nMiPPS, PMPSA, SASPA, UPSA, and WiPP did not report attendance for Winter quarter events.\nFor readability, this graph only shows attendance up to 300.\nMost orgs saw higher attendance than anticipated.")
@@ -92,10 +90,10 @@ planned_attendance(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\nMiPPS
 compare_allocation_events(caption = "Low allocation not associated with number of canceled events")
 ```
 
-## Spending by Event Type
+## Spending Breakdowns
 
-```{r, fig.height = 8}
-orgs_by_event_type(quarter, caption = "Only HSG funds are considered.")
+```{r, fig.height = 7}
+orgs_by_event_type(quarter, caption = "Only HSG funds are considered, no external funds.")
 ```
 
 Notation:
@@ -107,10 +105,8 @@ Notation:
 * **Workshop**: e.g., career fairs and writing workshops
 
 ```{r, fig.height = 3}
-spending_by_event_type(quarter, caption = "Only HSG funds are considered.")
+spending_by_event_type(quarter, caption = "Only HSG funds are considered, no external funds.")
 ```
-
-## Spending by Item Type
 
 We allocated funds on an organizational level, not on an item-by-item basis. While we collected total actual spending for fall quarter per HSO, the following analyses are estimates based on the proportion of funding requests dedicated to each category. For example, if 38\% of requests by Asian Policy Forum related to their annual Southeast Asian cultural show. We would scale this proportion by the total amount awarded to estimate the amount that would have been spent on cultural events. In this analysis, we only considered funds allocated by HSG, not external grants or funds.
 
@@ -122,7 +118,9 @@ Notation:
 * **Non-reusable supplies**: e.g., utensils and firewood
 
 ```{r, fig.height = 3}
-spending_by_item_type(quarter)
+spending_by_item_type(quarter, caption = "Only HSG funds are considered, no external funds.")
+```
+
 ## Funding Priorities
 
 ```{r, echo=F}
@@ -135,9 +133,9 @@ The HSG Finance Committee conducted a survey in Winter 2025 to ask the Harris st
 print_results()
 ```
 
-## Future improvements
 <button id="survey"><a href="https://docs.google.com/forms/d/13AY3pScfDefIhoDTiEyqoUU0PzJFsFsCiKWmWpi2W8E/viewform?edit_requested=true&edit_requested=true">Disagree? Add your opinion!</a></button>
 
+## Conclusion and Future Improvements
 
 Improvement goals for next quarter:
 
@@ -165,6 +163,10 @@ Faris Alrakhis, First-Year Finance Committee Member
 Moe Alsharif, First-Year Finance Committee Member
 
 Tiffany Tu, First-Year Finance Committee Member
+
+## References
+
+This report was made with Figma and R. Illustrations from Shubhangi Kaushal via Figma.
 
 ## Appendix: Data
 

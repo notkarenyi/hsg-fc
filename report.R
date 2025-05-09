@@ -343,7 +343,7 @@ orgs_by_event_type <- function(quarter, caption) {
     ) +
     scale_fill_paletteer_d("ggthemes::Green_Orange_Teal", guide = guide_legend())
 
-  barstyle(p, dist = 2000) +
+  barstyle(p, dist = 1000) +
     theme(
       legend.position = "bottom", 
       legend.direction = "horizontal", 

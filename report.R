@@ -134,7 +134,7 @@ allocations_by_org <- function(quarter, caption = "") {
 
   p <- df %>%
     group_by(org) %>%
-    filter(!is.na(totalreceived),totalreceived!=0) %>%
+    filter(!is.na(totalreceived), totalreceived != 0) %>%
     summarize(total = mean(totalreceived)) %>%
     ggplot(aes(org, total)) +
     geom_bar(stat = "identity", show.legend = F, fill = "#800000") +
@@ -345,11 +345,11 @@ orgs_by_event_type <- function(quarter, caption) {
 
   barstyle(p, dist = 1000) +
     theme(
-      legend.position = "bottom", 
-      legend.direction = "horizontal", 
+      legend.position = "bottom",
+      legend.direction = "horizontal",
       legend.title = element_blank()
     ) +
-    guides(fill=guide_legend(nrow=3,byrow=TRUE))
+    guides(fill = guide_legend(nrow = 3, byrow = TRUE))
 }
 
 spending_by_item_type <- function(quarter, caption) {

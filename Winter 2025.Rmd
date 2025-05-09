@@ -172,7 +172,7 @@ This report was made with Figma and R. Illustrations from Shubhangi Kaushal via 
 
 ```{r}
 df <- df[, order(colnames(df))]
-df <- df[, c("org","expense.name", names(df)[!(names(df) %in% c("org","expense.name"))])]
+df <- df[, c("org", "expense.name", names(df)[!(names(df) %in% c("org", "expense.name"))])]
 df %>%
   filter(!((is.na(amount) | amount == 0) & (is.na(expenditureactual) | expenditureactual == 0))) %>%
   select(-description) %>%

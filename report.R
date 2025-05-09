@@ -70,7 +70,9 @@ barstyle <- function(p, dist = 200, dollars = T) {
     xlab("") +
     ylab("") +
     coord_flip() +
-    theme_classic(base_family = "serif") +
+    theme_classic(
+      # base_family = "sans-serif"
+    ) +
     theme(
       axis.line.y = element_blank(),
       axis.ticks.y = element_blank(),
@@ -96,7 +98,9 @@ pointstyle <- function(p, dist = 200, dollars = T) {
   #' Define styles for scatter plots
 
   p <- p +
-    theme_classic(base_family = "serif") +
+    theme_classic(
+      # base_family = "sans-serif"
+    ) +
     theme(
       axis.line.y = element_blank(),
       axis.ticks.y = element_blank(),

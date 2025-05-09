@@ -203,7 +203,7 @@ compare_rollover_allocation <- function(quarter) {
 
 planned_attendance <- function(quarter, caption = "") {
   p <- df %>%
-    # filter(!is.na(expenditureactual)) %>%
+    filter(!(is.na(expectedattendees) & is.na(attendactual))) %>%
     group_by(org) %>%
     summarize(
       expectedattendees = min(300, mean(expectedattendees, na.rm = T)),

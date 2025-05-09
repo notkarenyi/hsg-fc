@@ -340,7 +340,7 @@ spending_by_event_type <- function(quarter, caption = "", dist = 2000) {
   barstyle(p, dist)
 }
 
-orgs_by_event_type <- function(quarter, caption = "", limit = 10000, dist = 1000) {
+orgs_by_event_type <- function(quarter, caption = "", limit = 10000, dist = 500) {
   p <- df %>%
     distinct(org, category, `expense.name`, expenditureactualhsg) %>%
     group_by(org, category) %>%

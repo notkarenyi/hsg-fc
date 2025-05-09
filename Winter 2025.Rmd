@@ -29,11 +29,21 @@ hours <- read.csv("hours.csv")
 ## Executive Summary
 
 <div style="display:flex;">
-  <div class="callout">Overall budget<br />$`r count_x("totalreceived")`</div>
-  <div class="callout">Number of organizations<br />`r nrow(summarize(group_by(df,org),n=n()))`</div>
-  <div class="callout">Student population<br />1,419</div>
-  <div class="callout">Total events<br />`r count_x("eventsactual")`</div>
-  <div class="callout">Total attendees<br />`r count_x("attendactual")`</div>
+  <div class="callout">Overall budget<br />
+    <span class="callout-text">$`r count_x("totalreceived")`</span>
+  </div>
+  <div class="callout">Number of organizations<br />
+    <span class="callout-text">`r nrow(summarize(group_by(df,org),n=n()))`</span>
+  </div>
+  <div class="callout">Student population<br />
+    <span class="callout-text">1,419</span>
+  </div>
+  <div class="callout">Total events<br />
+    <span class="callout-text">`r count_x("eventsactual")`</span>
+  </div>
+  <div class="callout">Total attendees<br />
+    <span class="callout-text">`r count_x("attendactual")`</span>
+  </div>
 </div>
 
 The Finance Committee of the Harris School of Public Policy Student Government at the University of Chicago oversees an annual budget of about \$60,000, which is allocated to Harris Student Organizations by the Office of Student Engagement and Belonging. The purpose of this report is to provide budgetary transparency to the Harris student body. The Finance Committee has no bearing on other student engagement-related expenses, such as the Harris Professional Development Fund.

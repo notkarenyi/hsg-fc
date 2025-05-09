@@ -348,7 +348,7 @@ orgs_by_event_type <- function(quarter, caption) {
       category = fct_reorder(str_to_sentence(category), expenditureactual)
     ) %>%
     ggplot(aes(org, expenditureactual, fill = category)) +
-    geom_bar(stat = "identity") +
+    geom_bar(stat = "identity",color="white") +
     labs(
       title = paste0("   HSG Funds Spending by Event Type,\n   ", quarter),
       subtitle = "     ",

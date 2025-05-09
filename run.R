@@ -62,7 +62,10 @@ if (!file.exists(paste0(current_quarter, ".csv"))) {
 
 # run reports -------------------------------------------------------------
 
-for (format in c("pdf", "html")) {
+for (format in c(
+  # "pdf",
+  "html"
+)) {
   fp <- paste0(
     "Harris Student Government Finance Committee Transparency Report ",
     report_quarter

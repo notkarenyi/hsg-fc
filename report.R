@@ -310,7 +310,7 @@ spending_by_event_type <- function(quarter, caption) {
     summarize(expenditureactual = sum(expenditureactualhsg, na.rm = T)) %>%
     # distinct(category, type, org) %>%
     group_by(category) %>%
-    summarize(expenditureactual = mean(expenditureactual, na.rm = T)) %>%
+    summarize(expenditureactual = sum(expenditureactual, na.rm = T)) %>%
     mutate(
       category = fct_reorder(str_to_sentence(category), expenditureactual)
     ) %>%
@@ -322,7 +322,7 @@ spending_by_event_type <- function(quarter, caption) {
       caption = caption
     )
 
-  barstyle(p, dist = 200)
+  barstyle(p, dist = 2000)
 }
 
 orgs_by_event_type <- function(quarter, caption) {

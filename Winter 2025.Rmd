@@ -28,11 +28,15 @@ hours <- read.csv("hours.csv")
 
 ## Executive Summary
 
-The Harris Student Government Finance Committee oversees an annual budget of about \$60,000, which is allocated to Harris Student Organizations by the Office of Student Engagement and Belonging. The purpose of this report is to provide budgetary transparency to the [1,419](https://info.harris.uchicago.edu/harris-by-the-numbers) students at the Harris School of Public Policy at the University of Chicago. The Finance Committee has no bearing on other student engagement-related expenses, such as the Harris Professional Development Fund.
+<div style="display:flex;">
+  <div class="callout">Overall budget<br />$`r count_x("totalreceived")`</div>
+  <div class="callout">Number of organizations<br />`r nrow(summarize(group_by(df,org),n=n()))`</div>
+  <div class="callout">Student population<br />1,419</div>
+  <div class="callout">Total events<br />`r count_x("eventsactual")`</div>
+  <div class="callout">Total attendees<br />`r count_x("attendactual")`</div>
+</div>
 
-The overall budget for `r quarter` was `r count_x("totalreceived")`.
-
-In `r quarter`, HSG Finance Committee funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported at least `r count_x("attendactual")` attendees across `r count_x("eventsactual")` events in their post-quarter reviews. 
+The Finance Committee of the Harris School of Public Policy Student Government at the University of Chicago oversees an annual budget of about \$60,000, which is allocated to Harris Student Organizations by the Office of Student Engagement and Belonging. The purpose of this report is to provide budgetary transparency to the Harris student body. The Finance Committee has no bearing on other student engagement-related expenses, such as the Harris Professional Development Fund.
 
 Breakdowns by event type, item type, and organization are included in this transparency report. 
 

@@ -28,3 +28,12 @@ h2 {
 #survey a, #survey a:hover, #survey a:focus, #survey a:active {
   color: white;
 }
+
+.callout {
+  background-color: #FFE0C0;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 10px;
+}

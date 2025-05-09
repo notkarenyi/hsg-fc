@@ -123,9 +123,21 @@ Notation:
 
 ```{r, fig.height = 3}
 spending_by_item_type(quarter)
+## Funding Priorities
+
+```{r, echo=F}
+source("priorities.R")
+```
+
+The HSG Finance Committee conducted a survey in Winter 2025 to ask the Harris student populace what events they would like to prioritize funding. `r nrow(priorities)` students out of 1,419 total responded to the survey, for a response rate of `r round(nrow(priorities)/1419*100)`%.
+
+```{r, results='asis'}
+print_results()
 ```
 
 ## Future improvements
+<button id="survey"><a href="https://docs.google.com/forms/d/13AY3pScfDefIhoDTiEyqoUU0PzJFsFsCiKWmWpi2W8E/viewform?edit_requested=true&edit_requested=true">Disagree? Add your opinion!</a></button>
+
 
 Improvement goals for next quarter:
 

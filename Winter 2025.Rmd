@@ -85,7 +85,7 @@ compare_rollover_allocation(quarter)
 ## Funding Outcomes
 
 ```{r, fig.height = 7}
-planned_spending(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\n Amounts spent may include both HSG allocations and external funding.\nTo improve readability, this graph only shows amounts up to $15,000.")
+planned_spending(quarter, limit = 15000, caption = "Note: Gold=Planned, Maroon=Actual.\n Amounts spent may include both HSG allocations and external funding.\nTo improve readability, this graph only shows amounts up to $15,000.")
 ```
 
 \newpage 
@@ -95,7 +95,7 @@ planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 ```
 
 ```{r, fig.height = 7}
-planned_attendance(quarter, caption = "Note: Gold=Planned, Maroon=Actual.\nMiPPS, PMPSA, SASPA, UPSA, and WiPP did not report attendance for Winter quarter events.\nFor readability, this graph only shows attendance up to 300.\nMost orgs saw higher attendance than anticipated.")
+planned_attendance(quarter, limit = 300, caption = "Note: Gold=Planned, Maroon=Actual.\nMiPPS, PMPSA, SASPA, UPSA, and WiPP did not report attendance for Winter quarter events.\nFor readability, this graph only shows attendance up to 300.\nMost orgs saw higher attendance than anticipated.")
 ```
 
 \newpage 
@@ -107,7 +107,7 @@ compare_allocation_events(caption = "Low allocation not associated with number o
 ## Spending Breakdowns
 
 ```{r, fig.height = 7}
-orgs_by_event_type(quarter, caption = "Only HSG funds are considered, no external funds.")
+orgs_by_event_type(quarter, caption = "Only HSG funds are considered, no external funds.\nFor readability, this graph only shows expenditures up to $3,000.", limit = 3000)
 ```
 
 Notation:

@@ -166,7 +166,7 @@ allocations_by_org <- function(quarter, caption = "") {
 }
 
 
-rollover_by_org <- function(quarter) {
+rollover_by_org <- function(quarter, dist = 1000) {
   #' Plots amount of external funding + rollover by organization.
 
   p <- df %>%
@@ -185,10 +185,10 @@ rollover_by_org <- function(quarter) {
       size = .6
     )
 
-  barstyle(p, dist = 1000)
+  barstyle(p, dist)
 }
 
-compare_rollover_allocation <- function(quarter) {
+compare_rollover_allocation <- function(quarter, dist = 4000) {
   #' Plots amount of external funding + rollover by allocation per organization.
   #' Attempts to establish a correlation, since rollover is one of the considerations in total allocation
 
@@ -211,16 +211,16 @@ compare_rollover_allocation <- function(quarter) {
   # not significant
   # lm(received~totalrollover, totalrollover) %>% summary()
 
-  pointstyle(p, dist = 4000)
+  pointstyle(p, dist)
 }
 
-planned_attendance <- function(quarter, caption = "") {
+planned_attendance <- function(quarter, caption = "", dist = 20, limit = 1000) {
   p <- df %>%
     filter(!(is.na(expectedattendees) & is.na(attendactual))) %>%
     group_by(org) %>%
     summarize(
-      expectedattendees = min(300, mean(expectedattendees, na.rm = T)),
-      attendactual = min(300, mean(attendactual, na.rm = T))
+      expectedattendees = mean(expectedattendees, na.rm = T),
+      attendactual = mean(attendactual, na.rm = T)
     ) %>%
     ggplot() +
     geom_bar(
@@ -238,7 +238,8 @@ planned_attendance <- function(quarter, caption = "") {
       caption = paste0("   ", caption)
     )
 
-  barstyle(p, dist = 100, dollars = F)
+  barstyle(p, dist = dist, dollars = F) +
+    coord_flip(ylim = c(0, limit))
 }
 
 
@@ -270,13 +271,13 @@ planned_events <- function(quarter, caption = "") {
     scale_y_continuous(breaks = seq(0, 20, 2))
 }
 
-planned_spending <- function(quarter, caption = "") {
+planned_spending <- function(quarter, caption = "", dist = 2000, limit = 100000) {
   p <- df %>%
     group_by(org) %>%
     summarize(
-      expenditureactual = min(15000, mean(expenditureactual, na.rm = T)),
+      expenditureactual = mean(expenditureactual, na.rm = T),
       # assume they will use some of their rollover
-      expenditureplanned = min(15000, sum(amount, na.rm = T))
+      expenditureplanned = sum(amount, na.rm = T)
     ) %>%
     filter(!is.na(expenditureactual)) %>%
     ggplot() +
@@ -295,7 +296,8 @@ planned_spending <- function(quarter, caption = "") {
       caption = paste0("   ", caption)
     )
 
-  barstyle(p, dist = 2000)
+  barstyle(p, dist = dist) +
+    coord_flip(ylim = c(0, limit))
 }
 
 compare_allocation_events <- function(caption = "") {
@@ -316,7 +318,7 @@ compare_allocation_events <- function(caption = "") {
   pointstyle(p, dollars = F)
 }
 
-spending_by_event_type <- function(quarter, caption) {
+spending_by_event_type <- function(quarter, caption = "", dist = 2000) {
   p <- df %>%
     filter(!is.na(expenditureactualhsg), category != "") %>%
     group_by(org, category) %>%
@@ -335,10 +337,10 @@ spending_by_event_type <- function(quarter, caption) {
       caption = caption
     )
 
-  barstyle(p, dist = 2000)
+  barstyle(p, dist)
 }
 
-orgs_by_event_type <- function(quarter, caption) {
+orgs_by_event_type <- function(quarter, caption = "", limit = 10000, dist = 1000) {
   p <- df %>%
     distinct(org, category, `expense.name`, expenditureactualhsg) %>%
     group_by(org, category) %>%
@@ -356,16 +358,17 @@ orgs_by_event_type <- function(quarter, caption) {
     ) +
     scale_fill_paletteer_d("ggthemes::Color_Blind", guide = guide_legend())
 
-  barstyle(p, dist = 1000) +
+  barstyle(p, dist) +
     theme(
       legend.position = "bottom",
       legend.direction = "horizontal",
       legend.title = element_blank()
     ) +
-    guides(fill = guide_legend(nrow = 3, byrow = TRUE))
+    guides(fill = guide_legend(nrow = 3, byrow = TRUE)) +
+    coord_flip(ylim = c(0, limit))
 }
 
-spending_by_item_type <- function(quarter, caption) {
+spending_by_item_type <- function(quarter, caption = "", dist = 2000) {
   p <- df %>%
     group_by(org, type) %>%
     summarize(
@@ -386,5 +389,5 @@ spending_by_item_type <- function(quarter, caption) {
       caption = caption
     )
 
-  barstyle(p, dist = 2000)
+  barstyle(p, dist)
 }

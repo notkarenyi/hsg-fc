@@ -134,6 +134,7 @@ allocations_by_org <- function(quarter, caption = "") {
 
   p <- df %>%
     group_by(org) %>%
+    filter(!is.na(totalreceived),totalreceived!=0) %>%
     summarize(total = mean(totalreceived)) %>%
     ggplot(aes(org, total)) +
     geom_bar(stat = "identity", show.legend = F, fill = "#800000") +

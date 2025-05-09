@@ -129,6 +129,19 @@ pointstyle <- function(p, dist = 200, dollars = T) {
 
 # graphs ------------------------------------------------------------------
 
+count_x <- function(variable, func=mean) {
+  df <- df[,c("org",variable)]
+  names(df) <- c("org","v")
+  x <- df %>%
+    group_by(org) %>%
+    summarize(n=func(v,na.rm=T)) %>%
+    select(n) %>%
+    sum(na.rm=T) %>%
+    round() %>%
+    comma()
+  return(x)
+}
+
 allocations_by_org <- function(quarter, caption = "") {
   #' Plots total amounts allocated by HSG Finance Committee to each organization.
 

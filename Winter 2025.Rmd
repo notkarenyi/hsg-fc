@@ -30,9 +30,9 @@ hours <- read.csv("hours.csv")
 
 The Harris Student Government Finance Committee oversees an annual budget of about \$60,000, which is allocated to Harris Student Organizations by the Office of Student Engagement and Belonging. The purpose of this report is to provide budgetary transparency to the [1,419](https://info.harris.uchicago.edu/harris-by-the-numbers) students at the Harris School of Public Policy at the University of Chicago. The Finance Committee has no bearing on other student engagement-related expenses, such as the Harris Professional Development Fund.
 
-The overall budget for `r quarter` was `r dollar_format()(sum(summarize(group_by(df,org),n=mean(totalreceived))["n"],na.rm=T))`.
+The overall budget for `r quarter` was `r count_x("totalreceived")`.
 
-In `r quarter`, HSG Finance Committee funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported at least `r round(sum(summarize(group_by(df,org),n=mean(attendactual,na.rm=T))["n"],na.rm=T))` attendees across `r round(sum(summarize(group_by(df,org),n=mean(eventsactual,na.rm=T))["n"],na.rm=T))` events in their post-quarter reviews. 
+In `r quarter`, HSG Finance Committee funded `r nrow(summarize(group_by(df,org),n=n()))` HSOs, which reported at least `r count_x("attendactual")` attendees across `r count_x("eventsactual")` events in their post-quarter reviews. 
 
 Breakdowns by event type, item type, and organization are included in this transparency report. 
 
@@ -50,7 +50,7 @@ Planned improvements for next quarter are included at the end of this document.
 
 ## Total Allocations
 
-The minimum amount received by any HSO was \$`r min(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)` and the maximum was \$`r max(summarize(group_by(df,org),totalreceived)["totalreceived"],na.rm=T)`.
+The minimum amount received by any HSO was \$`r min(df$totalreceived,na.rm=T)` and the maximum was \$`r max(df$totalreceived,na.rm=T)`.
 
 ```{r, fig.height = 6.5}
 allocations_by_org(quarter, caption = "")

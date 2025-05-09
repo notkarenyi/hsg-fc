@@ -339,7 +339,12 @@ orgs_by_event_type <- function(quarter, caption) {
     scale_fill_paletteer_d("ggthemes::Green_Orange_Teal", guide = guide_legend())
 
   barstyle(p, dist = 2000) +
-    theme(legend.position = "bottom", legend.direction = "horizontal", legend.title = element_blank())
+    theme(
+      legend.position = "bottom", 
+      legend.direction = "horizontal", 
+      legend.title = element_blank()
+    ) +
+    guides(fill=guide_legend(nrow=3,byrow=TRUE))
 }
 
 spending_by_item_type <- function(quarter) {

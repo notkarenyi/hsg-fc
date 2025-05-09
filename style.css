@@ -3,3 +3,28 @@
 body {
   font-family: 'Inter', Sans-Serif !important;
 }
+
+h1 {
+  color: white;
+  font-size: 2px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 48px;
+}
+
+#survey {
+  background-color: #800000;
+  padding: 20px;
+  font-size: 14px;
+  margin: 20px 30%;
+  width: 20vw;
+  border: none;
+  border-radius: 10px;
+}
+
+#survey a, #survey a:hover, #survey a:focus, #survey a:active {
+  color: white;
+}

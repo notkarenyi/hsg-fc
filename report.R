@@ -332,7 +332,7 @@ orgs_by_event_type <- function(quarter, caption) {
     ggplot(aes(org, expenditureactual, fill = category)) +
     geom_bar(stat = "identity") +
     labs(
-      title = paste0("    HSG Funds Spending by Event Type, ", quarter),
+      title = paste0("   HSG Funds Spending by Event Type,\n   ", quarter),
       subtitle = "     ",
       caption = caption
     ) +
@@ -364,7 +364,8 @@ spending_by_item_type <- function(quarter) {
     geom_bar(stat = "identity", show.legend = F, fill = "#800000") +
     labs(
       title = paste0("    HSG Funds Spending by Item Type, ", quarter),
-      subtitle = "     Estimated from amount requested per item type"
+      subtitle = "     Estimated from amount requested per item type",
+      caption = caption
     )
 
   barstyle(p, dist = 2000)

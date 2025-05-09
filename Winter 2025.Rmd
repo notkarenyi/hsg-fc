@@ -171,11 +171,15 @@ This report was made with Figma and R. Illustrations from Shubhangi Kaushal via 
 ## Appendix: Data
 
 ```{r}
-df <- df[, order(colnames(df))]
+df <- df[, order(colnames(df))] %>%
+  filter(!((is.na(amount) | amount == 0) & (is.na(expenditureactual) | expenditureactual == 0))) %>%
+  group_by(org, expense.name) %>%
+  mutate(eventtotal = sum(amount, na.rm = T)) %>%
+  ungroup() %>%
+  distinct(expense.name, .keep_all = T)
 df <- df[, c("org", "expense.name", names(df)[!(names(df) %in% c("org", "expense.name"))])]
 df %>%
-  filter(!((is.na(amount) | amount == 0) & (is.na(expenditureactual) | expenditureactual == 0))) %>%
-  select(-description) %>%
+  select(-description, -type, -amount) %>%
   reactable(columns = list(
     org = colDef(width = 200),
     expense.name = colDef(name = "expense", width = 300),

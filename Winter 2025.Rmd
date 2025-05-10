@@ -18,7 +18,9 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 quarter <- params$quarter
 ```
 
-<img src="Cover.png" width=1800 alt="Harris Student Government Finance Committee Transparency Report `r quarter`" />
+### *`r quarter`*
+
+<img src="images/Cover.png" width=1800 alt="Harris Student Government Finance Committee Transparency Report `r quarter`" />
 
 ```{r data}
 source("report.R")

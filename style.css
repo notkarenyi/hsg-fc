@@ -4,10 +4,14 @@ body {
   font-family: 'Inter', Sans-Serif !important;
 }
 
-h2 {
+h1, h2 {
   font-size: 48px;
   font-weight: 700;
   margin-top: 48px;
+}
+
+h3 {
+  font-size: 40px;
 }
 
 #survey {

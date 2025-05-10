@@ -30,7 +30,7 @@ Each quarter, the Finance Committee should create a new report by completing the
 
    ![image-20250504181314709](images/image-20250504181314709.png)
 
-2. Make a new copy of `template.csv` and `template.Rmd` and rename with the current quarter, following the example of previous years.
+2. Make a new copy of `data/template.csv` and `template.Rmd` and rename with the current quarter, following the example of previous years.
 
 3. Update the quarter in line 1 of `knit.R`: 
    ```r
@@ -39,7 +39,7 @@ Each quarter, the Finance Committee should create a new report by completing the
 
 4. Update text in`CURRENT_QUARTER.Rmd`, as needed, to explain the findings. Also update commitee members at the end of the document: 
    ```r
-   FIRST LAST, Finance Committee Chair
+   FIRST LAST, Finance Committee Member
    ```
 
 5. Run `run.R` in RStudio. You should get an HTML output.

@@ -91,6 +91,12 @@ planned_spending(quarter, limit = 15000, caption = "Note: Gold=Planned, Maroon=A
 \newpage 
 
 ```{r, fig.height = 7}
+pct_allocation_used(quarter, caption = "Note: Amounts spent may include both HSG allocations and external funding.")
+```
+
+\newpage 
+
+```{r, fig.height = 7}
 planned_events(quarter, caption = "Note: Gold=Planned, Maroon=Actual.")
 ```
 

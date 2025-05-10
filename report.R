@@ -300,6 +300,33 @@ planned_spending <- function(quarter, caption = "", dist = 2000, limit = 100000)
     coord_flip(ylim = c(0, limit))
 }
 
+
+pct_allocation_used <- function(quarter, caption = "", dist = 10) {
+  p <- df %>%
+    group_by(org) %>%
+    filter(!is.na(expenditureactual), !is.na(totalreceived)) %>%
+    summarize(
+      pct = mean(expenditureactual, na.rm = T) / mean(totalreceived, na.rm = T),
+    ) %>%
+    # mutate(
+    #   org = fct_reorder(org, pct)
+    # ) %>%
+    ggplot() +
+    geom_bar(
+      aes(org, pct, fill = Category),
+      stat = "identity",
+      fill = "#800000"
+    ) +
+    labs(
+      title = paste0("   Percent of Allocations Spent\n   by Organization, ", quarter),
+      caption = paste0("   ", caption)
+    )
+
+  barstyle(p, dist = dist, dollars = F) +
+    coord_flip(ylim = c(0, 1)) +
+    scale_y_continuous(labels = percent_format())
+}
+
 compare_allocation_events <- function(caption = "") {
   # is receiving a low amount of funding correlated with hosting less events than planned?
   df$devents <- df$eventsplanned - df$eventsactual

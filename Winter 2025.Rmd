@@ -25,7 +25,6 @@ quarter <- params$quarter
 ```{r data}
 source("report.R")
 df <- setup(quarter)
-hours <- read.csv("hours.csv")
 ```
 
 ## Executive Summary
@@ -45,6 +44,9 @@ hours <- read.csv("hours.csv")
   </div>
   <div class="callout">Total attendees<br />
     <span class="callout-text">`r count_x("attendactual")`</span>
+  </div>
+  <div class="callout">Hours of committee meetings<br />
+    <span class="callout-text">7.5</span>
   </div>
 </div>
 

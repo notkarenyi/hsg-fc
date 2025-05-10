@@ -8,7 +8,7 @@ setup <- function(quarter) {
   actual <- update_names(actual)
 
   # add totals requested and planned from last quarter
-  planned <- read.csv(paste0(report_quarter, ".csv")) %>%
+  planned <- read.csv(paste0("data/", report_quarter, ".csv")) %>%
     update_names()
 
   planned <- planned %>%
@@ -27,7 +27,7 @@ setup <- function(quarter) {
   df <- bind_rows(planned, actual)
 
   # add totals allocated for last quarter
-  allocated <- read_excel(paste0(report_quarter, " Allocations.xlsx")) %>%
+  allocated <- read_excel(paste0("data/", report_quarter, " Allocations.xlsx")) %>%
     remove_empty("rows")
   names(allocated)[1] <- "org"
   allocated <- update_names(allocated) %>%

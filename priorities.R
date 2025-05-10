@@ -2,7 +2,7 @@ library(vote)
 library(tidyverse)
 library(readxl)
 
-priorities <- read_excel("Priorities 2025.xlsx")
+priorities <- read_excel("data/Priorities 2025.xlsx")
 names(priorities) <- str_replace(names(priorities), ".*\\[", "")
 names(priorities) <- str_replace(names(priorities), " \\(.*", "")
 priorities <- priorities %>%

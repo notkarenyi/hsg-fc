@@ -28,7 +28,7 @@ Each quarter, the Finance Committee should create a new report by completing the
 
 1. Download this repository as a ZIP file and unzip it on your computer.
 
-   ![image-20250504181314709](../notes/attachments/image-20250504181314709.png)
+   ![image-20250504181314709](image-20250504181314709.png)
 
 2. Make a new copy of `template.csv` and `template.Rmd` and rename with the current quarter, following the example of previous years.
 

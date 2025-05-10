@@ -196,12 +196,20 @@ This report was made with Figma and R. Illustrations from Shubhangi Kaushal via 
 df <- df[, order(colnames(df))] %>%
   filter(!((is.na(amount) | amount == 0) & (is.na(expenditureactual) | expenditureactual == 0))) %>%
   group_by(org, expense.name) %>%
-  mutate(eventtotal = sum(amount, na.rm = T)) %>%
+  mutate(
+    eventtotal = sum(amount, na.rm = T),
+    eventsactual = mean(eventsactual, na.rm = T)
+  ) %>%
   ungroup() %>%
+  mutate(
+    attend = ifelse(is.na(attendactual), expectedattendees, attendactual),
+    event.amount = ifelse(is.na(expenditureactual), eventtotal, expenditureactual),
+    eventtype = ifelse(is.na(attendactual), "planned", "actual")
+  ) %>%
   distinct(expense.name, .keep_all = T)
 df <- df[, c("org", "expense.name", names(df)[!(names(df) %in% c("org", "expense.name"))])]
 df %>%
-  select(-description, -type, -amount) %>%
+  select(-description, -type, -amount, -expenditureactualhsg, -expenditureactual, -eventtotal, -attendactual, -expectedattendees) %>%
   reactable(columns = list(
     org = colDef(width = 200),
     expense.name = colDef(name = "expense", width = 300),

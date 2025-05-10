@@ -19,8 +19,8 @@ h2 {
   background-color: #800000;
   padding: 20px;
   font-size: 14px;
-  margin: 20px 30%;
-  width: 20vw;
+  margin: 20px 35%;
+  width: 30%;
   border: none;
   border-radius: 10px;
 }
@@ -35,7 +35,7 @@ h2 {
   border-radius: 10px;
   font-size: 20px;
   font-weight: 800;
-  margin: 20px 10px;
+  margin: 10px;
   line-height: 18px;
 }
 

@@ -28,7 +28,7 @@ hours <- read.csv("hours.csv")
 
 ## Executive Summary
 
-<div style="display:flex;">
+<div style="display:flex; flex-wrap: wrap; margin: 20px 0;">
   <div class="callout">`r quarter` budget<br />
     <span class="callout-text">$`r count_x("totalreceived")`</span>
   </div>

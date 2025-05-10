@@ -147,7 +147,7 @@ The HSG Finance Committee conducted a survey in Winter 2025 to ask the Harris st
 print_results()
 ```
 
-<button id="survey"><a href="https://docs.google.com/forms/d/13AY3pScfDefIhoDTiEyqoUU0PzJFsFsCiKWmWpi2W8E/viewform?edit_requested=true&edit_requested=true" target="_blank">Disagree? Add your opinion!</a></button>
+<a id="button-link" href="https://docs.google.com/forms/d/13AY3pScfDefIhoDTiEyqoUU0PzJFsFsCiKWmWpi2W8E/viewform?edit_requested=true&edit_requested=true" target="_blank"><button id="survey">Disagree? Add your opinion!</button></a>
 
 ## Conclusion and Future Improvements
 

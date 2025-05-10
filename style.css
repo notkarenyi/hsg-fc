@@ -25,7 +25,7 @@ h2 {
   border-radius: 10px;
 }
 
-#survey a, #survey a:hover, #survey a:focus, #survey a:active {
+#button-link, #button-link:hover, #button-link:focus, #button-link:active {
   color: white;
 }
 

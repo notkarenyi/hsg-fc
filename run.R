@@ -56,7 +56,7 @@ update_names <- function(x) {
 # prepping ----------------------------------------------------------------
 
 # compile data for this quarter's allocations
-if (!file.exists(paste0(current_quarter, ".csv"))) {
+if (!file.exists(paste0("data/", current_quarter, ".csv"))) {
   source("clean_data.R")
 }
 
@@ -67,6 +67,7 @@ for (format in c(
   "html"
 )) {
   fp <- paste0(
+    "output/",
     "Harris Student Government Finance Committee Transparency Report ",
     report_quarter
   )

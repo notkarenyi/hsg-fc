@@ -3,7 +3,7 @@
 setup <- function(quarter) {
   #' Read and clean data
 
-  actual <- read.csv(paste0(current_quarter, ".csv"))
+  actual <- read.csv(paste0("data/", current_quarter, ".csv"))
   # standardize org names
   actual <- update_names(actual)
 

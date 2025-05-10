@@ -96,14 +96,14 @@ extract_event <- function(details, i) {
 # run ---------------------------------------------------------------------
 
 data <- list()
-files <- list.files(current_quarter) # get all files in / folder
+files <- list.files(paste0("data/", current_quarter)) # get all files in / folder
 
 for (file in files[1:length(files)]) {
   # for (file in files[3]) {
   print(paste0("Parsing ", file))
 
   # existing orgs have a Retrospective tab for last quarter expenses
-  fp <- paste0(current_quarter, "/", file)
+  fp <- paste0("data/", current_quarter, "/", file)
   if (length(excel_sheets(fp)) == 4) {
     retrospective <- read_excel(fp, sheet = 2, skip = 4)
     budget <- read_excel(fp, sheet = 3)
@@ -253,4 +253,4 @@ data <- data %>%
 # reorder columns
 other_names <- names(data)[!(names(data) %in% c("org", "type", "category"))]
 data <- data[, c("org", "category", "type", other_names)]
-write.csv(data, paste0(current_quarter, ".csv"))
+write.csv(data, paste0("data/", current_quarter, ".csv"))

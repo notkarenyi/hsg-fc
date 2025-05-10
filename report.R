@@ -129,14 +129,14 @@ pointstyle <- function(p, dist = 200, dollars = T) {
 
 # graphs ------------------------------------------------------------------
 
-count_x <- function(variable, func=mean) {
-  df <- df[,c("org",variable)]
-  names(df) <- c("org","v")
+count_x <- function(variable, func = mean) {
+  df <- df[, c("org", variable)]
+  names(df) <- c("org", "v")
   x <- df %>%
     group_by(org) %>%
-    summarize(n=func(v,na.rm=T)) %>%
+    summarize(n = func(v, na.rm = T)) %>%
     select(n) %>%
-    sum(na.rm=T) %>%
+    sum(na.rm = T) %>%
     round() %>%
     comma()
   return(x)
@@ -292,7 +292,7 @@ planned_spending <- function(quarter, caption = "", dist = 2000, limit = 100000)
       fill = "#800000"
     ) +
     labs(
-      title = paste0("   Planned vs. Actual Spending\n   by Organization, ", quarter),
+      title = paste0("   Requested vs. Actual Spending\n   by Organization, ", quarter),
       caption = paste0("   ", caption)
     )
 
@@ -377,7 +377,7 @@ orgs_by_event_type <- function(quarter, caption = "", limit = 10000, dist = 500)
       category = fct_reorder(str_to_sentence(category), expenditureactual)
     ) %>%
     ggplot(aes(org, expenditureactual, fill = category)) +
-    geom_bar(stat = "identity",color="white") +
+    geom_bar(stat = "identity", color = "white") +
     labs(
       title = paste0("   HSG Funds Spending by Event Type,\n   ", quarter),
       subtitle = "     ",

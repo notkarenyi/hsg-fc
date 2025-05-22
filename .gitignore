@@ -5,7 +5,7 @@
 *.Rproj
 *.pdf
 *.log
-*.html
+output/
 *.md
 data/Fall 2024/*.xlsx
 data/Winter 2025/*.xlsx
